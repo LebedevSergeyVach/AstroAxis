@@ -1,5 +1,6 @@
 package com.example.astroaxis;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,10 +36,12 @@ public class ButtonAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     public static class LabelViewHolder extends RecyclerView.ViewHolder {
         public TextView label;
+        public TextView labels;
 
         public LabelViewHolder(View itemView) {
             super(itemView);
             label = itemView.findViewById(R.id.label);
+            labels = itemView.findViewById(R.id.labels);
         }
     }
 
@@ -66,18 +69,8 @@ public class ButtonAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         }
     }
 
-//    @Override
-//    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-//        if (holder instanceof ButtonViewHolder) {
-//            String buttonText = buttonList.get(position - 1);
-//            ((ButtonViewHolder) holder).button.setText(buttonText);
-//        } else if (holder instanceof LabelViewHolder) {
-//            ((LabelViewHolder) holder).label.setText("AstroAxis");
-//        }
-//    }
-
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         if (holder instanceof ButtonViewHolder) {
             String buttonText = buttonList.get(position - 1);
             ((ButtonViewHolder) holder).button.setText(buttonText);
@@ -92,6 +85,7 @@ public class ButtonAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             });
         } else if (holder instanceof LabelViewHolder) {
             ((LabelViewHolder) holder).label.setText("AstroAxis");
+            ((LabelViewHolder) holder).labels.setText("astronomical reference book");
         }
     }
 

@@ -2,6 +2,7 @@ package com.example.astroaxis;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
@@ -16,7 +17,8 @@ import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "APP:MainActivity";
+    private static final int REGISTRATION_REQUEST_CODE = 1;
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
@@ -38,30 +40,80 @@ public class MainActivity extends AppCompatActivity {
 
         // Создайте список кнопок
         ArrayList<String> buttonList = new ArrayList<>();
-        buttonList.add("Кнопка 1");
-        buttonList.add("Кнопка 2");
-        buttonList.add("Кнопка 3");
-        buttonList.add("Кнопка 4");
-        buttonList.add("Кнопка 5");
-        buttonList.add("Кнопка 6");
-        buttonList.add("Кнопка 7");
-        buttonList.add("Кнопка 8");
-        buttonList.add("Кнопка 9");
-        buttonList.add("Кнопка 10");
+        buttonList.add("Меркурий");
+        buttonList.add("Венера");
+        buttonList.add("Земля");
+        buttonList.add("Марс");
+        buttonList.add("Юпитер");
+        buttonList.add("Сатурн");
+        buttonList.add("Уран");
+        buttonList.add("Нептун");
+        buttonList.add("Плутон");
 
         // Создайте адаптер для списка кнопок
         adapter = new ButtonAdapter(buttonList);
         recyclerView.setAdapter(adapter);
 
-        ((ButtonAdapter) adapter).setOnButtonClickListener(new ButtonAdapter.OnButtonClickListener() {
-            @Override
-            public void onButtonClick(int position) {
-                if (position == 4) {
-                    startActivity(new Intent(MainActivity.this, PlanetActivity.class));
-                    // Обработка нажатия на пятую кнопку
-                    Log.d(TAG, "Button 5 clicked");
-                    // Добавьте здесь код для обработки нажатия на пятую кнопку
-                }
+        ((ButtonAdapter) adapter).setOnButtonClickListener(position -> {
+            if (position == 0) {
+                Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
+                intent.putExtra("planetName", "Меркурий");
+                startActivity(intent);
+            }
+
+            if (position == 1) {
+                Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
+                intent.putExtra("planetName", "Венера");
+                startActivity(intent);
+
+            }
+
+            if (position == 2) {
+                Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
+                intent.putExtra("planetName", "Земля");
+                startActivity(intent);
+
+            }
+
+            if (position == 3) {
+                Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
+                intent.putExtra("planetName", "Марс");
+                startActivity(intent);
+
+            }
+
+            if (position == 4) {
+                Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
+                intent.putExtra("planetName", "Юпитер");
+                startActivity(intent);
+            }
+
+            if (position == 5) {
+                Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
+                intent.putExtra("planetName", "Сатурн");
+                startActivity(intent);
+
+            }
+
+            if (position == 6) {
+                Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
+                intent.putExtra("planetName", "Уран");
+                startActivity(intent);
+
+            }
+
+            if (position == 7) {
+                Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
+                intent.putExtra("planetName", "Нептун");
+                startActivity(intent);
+
+            }
+
+            if (position == 8) {
+                Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
+                intent.putExtra("planetName", "Плутон");
+                startActivity(intent);
+
             }
         });
     }

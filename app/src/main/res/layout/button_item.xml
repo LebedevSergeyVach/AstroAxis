@@ -2,8 +2,9 @@
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:padding="30dp"
-        android:backgroundTint="@color/blue"
+        android:textSize="30sp"
+        android:padding="22dp"
+        android:backgroundTint="@color/dark_blue"
         android:textColor="@color/white"
+        style="@font/samsungone700c"
 />
