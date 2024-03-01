@@ -15,4 +15,10 @@
     <style name="SamsungOne800C">
         <item name="android:fontFamily">@font/samsungone800c</item>
     </style>
+
+    <style name="AstroTheme" parent="Base.Theme.AstroAxis">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:statusBarColor">#80000000</item> <!-- Этот цвет будет определять степень затемнения -->
+    </style>
+
 </resources>

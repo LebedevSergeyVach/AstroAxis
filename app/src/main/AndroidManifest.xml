@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FLUSH_STATUS_BAR" />
 
     <application
         android:allowBackup="true"
@@ -13,24 +14,28 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AstroAxis"
+        android:theme="@style/AstroTheme"
         tools:targetApi="31">
+        <!--android:theme="@style/Theme.AstroAxis"-->
+
+        <activity
+                android:name=".MainMenuActivity"
+                android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".MainActivity"
             android:exported="true">
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
         </activity>
 
         <activity
-                android:name=".PlanetActivity"
-                android:exported="true">
+            android:name=".PlanetActivity"
+            android:exported="true">
         </activity>
 
     </application>

@@ -66,11 +66,30 @@ public class ButtonAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         }
     }
 
+//    @Override
+//    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+//        if (holder instanceof ButtonViewHolder) {
+//            String buttonText = buttonList.get(position - 1);
+//            ((ButtonViewHolder) holder).button.setText(buttonText);
+//        } else if (holder instanceof LabelViewHolder) {
+//            ((LabelViewHolder) holder).label.setText("AstroAxis");
+//        }
+//    }
+
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if (holder instanceof ButtonViewHolder) {
             String buttonText = buttonList.get(position - 1);
             ((ButtonViewHolder) holder).button.setText(buttonText);
+
+            ((ButtonViewHolder) holder).button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (onButtonClickListener != null) {
+                        onButtonClickListener.onButtonClick(position - 1);
+                    }
+                }
+            });
         } else if (holder instanceof LabelViewHolder) {
             ((LabelViewHolder) holder).label.setText("AstroAxis");
         }

@@ -1,6 +1,11 @@
 package com.example.astroaxis;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.util.Log;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -9,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
@@ -16,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,5 +52,17 @@ public class MainActivity extends AppCompatActivity {
         // Создайте адаптер для списка кнопок
         adapter = new ButtonAdapter(buttonList);
         recyclerView.setAdapter(adapter);
+
+        ((ButtonAdapter) adapter).setOnButtonClickListener(new ButtonAdapter.OnButtonClickListener() {
+            @Override
+            public void onButtonClick(int position) {
+                if (position == 4) {
+                    startActivity(new Intent(MainActivity.this, PlanetActivity.class));
+                    // Обработка нажатия на пятую кнопку
+                    Log.d(TAG, "Button 5 clicked");
+                    // Добавьте здесь код для обработки нажатия на пятую кнопку
+                }
+            }
+        });
     }
 }

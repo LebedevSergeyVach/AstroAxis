@@ -1,3 +1,12 @@
 <resources>
+    Название
     <string name="app_name">AstroAxis</string>
+
+    Главное меню входа
+    <string name="planets">Планеты</string>
+    <string name="help">Справка</string>
+    <string name="exit">Выход</string>
+    <string name="tests">Тесты</string>
+    <string name="test">Тест</string>
+
 </resources>

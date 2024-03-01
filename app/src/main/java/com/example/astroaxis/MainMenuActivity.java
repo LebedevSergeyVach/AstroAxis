@@ -4,15 +4,14 @@ import android.os.Bundle;
 import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
 
-
-public class PlanetActivity extends AppCompatActivity {
-    private static final String TAG = "MainActivity";
+public class MainMenuActivity extends AppCompatActivity {
+    private static final String TAG = "APP:MainMenu";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.planet);
+        setContentView(R.layout.activity_main_menu);
 
-        Log.d(TAG, "Start PlanetActivity");
+        Log.d(TAG, "Start Application and Main");
     }
 }
