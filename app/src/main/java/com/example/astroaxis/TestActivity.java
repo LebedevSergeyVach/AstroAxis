@@ -1,23 +1,24 @@
 package com.example.astroaxis;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
-
-public class PlanetActivity extends AppCompatActivity {
-    private static final String TAG = "APP:PlanetActivity";
+public class TestActivity extends AppCompatActivity {
+    private static final String TAG = "APP:TestActivity";
 
     private TextView planetNameTextView;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_planet);
+        setContentView(R.layout.activity_test);
 
-        Log.d(TAG, "Start PlanetActivity");
+        Log.d(TAG, "Start TestActivity");
 
         planetNameTextView = findViewById(R.id.planetName);
 

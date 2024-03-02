@@ -53,8 +53,8 @@
                 android:id="@+id/exit"
                 android:text="@string/exit"
                 android:layout_width="120dp"
-                android:layout_height="60dp"
-                android:backgroundTint="@color/blue"
+                android:layout_height="70dp"
+                android:backgroundTint="@color/dark_blue"
                 android:translationX="50dp"
         />
 

@@ -18,7 +18,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "APP:MainActivity";
-    private static final int REGISTRATION_REQUEST_CODE = 1;
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
@@ -49,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         buttonList.add("Уран");
         buttonList.add("Нептун");
         buttonList.add("Плутон");
+        buttonList.add("Главное меню");
 
         // Создайте адаптер для списка кнопок
         adapter = new ButtonAdapter(buttonList);
@@ -114,6 +114,13 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("planetName", "Плутон");
                 startActivity(intent);
 
+            }
+
+            if (position == 9) {
+                Intent intent = new Intent(MainActivity.this, MainMenuActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                finish();
             }
         });
     }
