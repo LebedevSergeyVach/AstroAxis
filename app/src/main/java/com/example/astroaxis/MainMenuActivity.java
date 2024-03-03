@@ -3,6 +3,7 @@ package com.example.astroaxis;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -51,12 +52,12 @@ public class MainMenuActivity extends AppCompatActivity {
             builder.setTitle("Выход");
             builder.setCancelable(false);
 
-            builder.setPositiveButton("Да \uD83D\uDE2D", (DialogInterface.OnClickListener) (dialog, which) -> {
+            builder.setPositiveButton("Да \uD83D\uDE2D", (dialog, which) -> {
                 finishAffinity();
                 System.exit(0);
             });
 
-            builder.setNegativeButton("Нет \uD83D\uDE01", (DialogInterface.OnClickListener) (dialog, which) -> {
+            builder.setNegativeButton("Нет \uD83D\uDE01", (dialog, which) -> {
                 dialog.cancel();
             });
 

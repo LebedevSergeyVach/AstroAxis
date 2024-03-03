@@ -8,15 +8,9 @@
         tools:context=".HelpActivity"
         android:background="@drawable/backaround">
 
-
-    <FrameLayout
-            android:id="@+id/fragment_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
     <LinearLayout
-            android:layout_width="294dp"
-            android:layout_height="430dp"
+            android:layout_width="500dp"
+            android:layout_height="370dp"
             android:orientation="vertical"
 
             android:background="@drawable/rounded_corner"
@@ -28,24 +22,23 @@
             app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:textColor="@color/white"
                 android:textAlignment="center"
                 android:textSize="50sp"
-                android:translationX="20dp"
                 android:translationY="10dp"
                 android:text="@string/help"
                 style="@font/samsungone800c"/>
 
         <TextView
-                android:layout_width="250dp"
+                android:layout_width="440dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:textAlignment="center"
-                android:textSize="18sp"
-                android:translationX="20dp"
-                android:translationY="15dp"
+                android:textSize="20sp"
+                android:translationY="20dp"
+                android:translationX="30dp"
                 android:text="@string/help_text"
                 style="@font/samsungone800c"/>
 
@@ -53,23 +46,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:translationY="25dp">
+                android:translationY="30dp">
 
-        <Button
-                android:id="@+id/exit"
-                android:text="@string/exit"
-                android:layout_width="120dp"
-                android:layout_height="70dp"
-                android:backgroundTint="@color/dark_blue"
-                android:translationX="50dp"
-        />
+            <Button
+                    android:id="@+id/exit"
+                    android:text="@string/exit"
+                    android:layout_width="120dp"
+                    android:layout_height="70dp"
+                    android:backgroundTint="@color/dark_blue"
+                    android:translationX="150dp"
+            />
 
             <ImageView
                     android:layout_width="58dp"
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/git_white"
                     android:id="@+id/openGithubButton"
-                    android:translationX="60dp"
+                    android:translationX="160dp"
                     android:importantForAccessibility="no"/>
 
         </LinearLayout>
