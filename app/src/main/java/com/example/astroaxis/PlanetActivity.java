@@ -1,6 +1,7 @@
 package com.example.astroaxis;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
@@ -15,7 +16,14 @@ public class PlanetActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_planet);
+
+        int orientation = getResources().getConfiguration().orientation;
+
+        if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            setContentView(R.layout.activity_planet_upheaval);
+        } else {
+            setContentView(R.layout.activity_planet);
+        }
 
         Log.d(TAG, "Start PlanetActivity");
 

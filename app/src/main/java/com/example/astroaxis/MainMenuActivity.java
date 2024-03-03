@@ -19,7 +19,13 @@ public class MainMenuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_menu);
+        int orientation = getResources().getConfiguration().orientation;
+
+        if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            setContentView(R.layout.activity_main_menu_upheaval);
+        } else {
+            setContentView(R.layout.activity_main_menu);
+        }
 
         Log.d(TAG, "Start Application and MainMenuActivity");
 
