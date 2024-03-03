@@ -40,16 +40,16 @@ public class MainActivity extends AppCompatActivity {
 
         // Создайте список кнопок
         ArrayList<String> buttonList = new ArrayList<>();
-        buttonList.add("Меркурий");
-        buttonList.add("Венера");
-        buttonList.add("Земля");
-        buttonList.add("Марс");
-        buttonList.add("Юпитер");
-        buttonList.add("Сатурн");
-        buttonList.add("Уран");
-        buttonList.add("Нептун");
-        buttonList.add("Плутон");
-        buttonList.add("Главное меню");
+        buttonList.add(getString(R.string.Mercury));
+        buttonList.add(getString(R.string.Venus));
+        buttonList.add(getString(R.string.Earth));
+        buttonList.add(getString(R.string.Mars));
+        buttonList.add(getString(R.string.Jupiter));
+        buttonList.add(getString(R.string.Saturn));
+        buttonList.add(getString(R.string.Uranium));
+        buttonList.add(getString(R.string.Neptune));
+        buttonList.add(getString(R.string.Pluto));
+        buttonList.add(getString(R.string.main_menu));
 
         // Создайте адаптер для списка кнопок
         adapter = new ButtonAdapter(buttonList);
@@ -58,61 +58,61 @@ public class MainActivity extends AppCompatActivity {
         ((ButtonAdapter) adapter).setOnButtonClickListener(position -> {
             if (position == 0) {
                 Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
-                intent.putExtra("planetName", "Меркурий");
+                intent.putExtra(getString(R.string.planetName), getString(R.string.Mercury));
                 startActivity(intent);
             }
 
             if (position == 1) {
                 Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
-                intent.putExtra("planetName", "Венера");
+                intent.putExtra(getString(R.string.planetName), getString(R.string.Venus));
                 startActivity(intent);
 
             }
 
             if (position == 2) {
                 Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
-                intent.putExtra("planetName", "Земля");
+                intent.putExtra(getString(R.string.planetName), getString(R.string.Earth));
                 startActivity(intent);
 
             }
 
             if (position == 3) {
                 Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
-                intent.putExtra("planetName", "Марс");
+                intent.putExtra(getString(R.string.planetName), getString(R.string.Mars));
                 startActivity(intent);
 
             }
 
             if (position == 4) {
                 Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
-                intent.putExtra("planetName", "Юпитер");
+                intent.putExtra(getString(R.string.planetName), getString(R.string.Jupiter));
                 startActivity(intent);
             }
 
             if (position == 5) {
                 Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
-                intent.putExtra("planetName", "Сатурн");
+                intent.putExtra(getString(R.string.planetName), getString(R.string.Saturn));
                 startActivity(intent);
 
             }
 
             if (position == 6) {
                 Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
-                intent.putExtra("planetName", "Уран");
+                intent.putExtra(getString(R.string.planetName), getString(R.string.Uranium));
                 startActivity(intent);
 
             }
 
             if (position == 7) {
                 Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
-                intent.putExtra("planetName", "Нептун");
+                intent.putExtra(getString(R.string.planetName), getString(R.string.Neptune));
                 startActivity(intent);
 
             }
 
             if (position == 8) {
                 Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
-                intent.putExtra("planetName", "Плутон");
+                intent.putExtra(getString(R.string.planetName), getString(R.string.Pluto));
                 startActivity(intent);
 
             }

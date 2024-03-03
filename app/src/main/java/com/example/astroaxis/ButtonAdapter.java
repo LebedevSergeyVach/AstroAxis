@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
+
 public class ButtonAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public interface OnButtonClickListener {
         void onButtonClick(int position);
@@ -69,23 +70,23 @@ public class ButtonAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         }
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         if (holder instanceof ButtonViewHolder) {
             String buttonText = buttonList.get(position - 1);
             ((ButtonViewHolder) holder).button.setText(buttonText);
 
-            ((ButtonViewHolder) holder).button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (onButtonClickListener != null) {
-                        onButtonClickListener.onButtonClick(position - 1);
-                    }
+            ((ButtonViewHolder) holder).button.setOnClickListener(v -> {
+                if (onButtonClickListener != null) {
+                    onButtonClickListener.onButtonClick(position - 1);
                 }
             });
         } else if (holder instanceof LabelViewHolder) {
             ((LabelViewHolder) holder).label.setText("AstroAxis");
             ((LabelViewHolder) holder).labels.setText("astronomical reference book");
+        } else {
+            ((LabelViewHolder) holder).label.setText("TEST");
         }
     }
 

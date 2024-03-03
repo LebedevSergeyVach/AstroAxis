@@ -1,8 +1,10 @@
 <resources>
     Название
     <string name="app_name">AstroAxis</string>
+    <string name="description_name">astronomical reference book</string>
 
     Главное меню входа
+    <string name="main_menu">Главное меню</string>
     <string name="planets">Планеты</string>
     <string name="planet">Планета</string>
     <string name="help">Справка</string>
@@ -16,5 +18,15 @@
         В разделе тест вы можете пройти тест по астрономии. В разделе справка вы можете узнать о том,
         как пользоваться приложением.</string>
 
-
+    Планеты
+    <string name="Mercury">Меркурий</string>
+    <string name="Venus">Венера</string>
+    <string name="Earth">Земля</string>
+    <string name="Mars">Марс</string>
+    <string name="Jupiter">Юпитер</string>
+    <string name="Saturn">Сатурн</string>
+    <string name="Uranium">Уран</string>
+    <string name="Neptune">Нептун</string>
+    <string name="Pluto">Плутон</string>
+    <string name="planetName">planetName</string>
 </resources>
