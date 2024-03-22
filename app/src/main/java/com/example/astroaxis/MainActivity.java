@@ -3,11 +3,7 @@ package com.example.astroaxis;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.graphics.Color;
 import android.util.Log;
-import android.view.View;
-import android.view.WindowManager;
-import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
