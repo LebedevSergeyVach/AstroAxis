@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    Название
+    <string name="app_name">AstroAxisPlanet</string>
+    <string name="description_name">astronomical reference book</string>
+
+    Главное меню входа
+    <string name="main_menu">Главное меню</string>
+    <string name="planets">Планеты</string>
+    <string name="planet">Планета</string>
+    <string name="help">Справка</string>
+    <string name="exit">Выход</string>
+    <string name="tests">Тесты</string>
+    <string name="test">Тест</string>
+    <string name="model">Модель</string>
+    <string name="models">Модели</string>
+
+    Справка
+    <string name="help_text">AstroAxis - приложение для изучения астрономии. В приложении есть 3 раздела:
+        планета, тест и справка. В разделе планета вы можете узнать о планетах солнечной системы.
+        В разделе тест вы можете пройти тест по астрономии. В разделе справка вы можете узнать о том,
+        как пользоваться приложением.</string>
+
+    Планеты
+    <string name="Mercury">Меркурий</string>
+    <string name="Venus">Венера</string>
+    <string name="Earth">Земля</string>
+    <string name="Mars">Марс</string>
+    <string name="Jupiter">Юпитер</string>
+    <string name="Saturn">Сатурн</string>
+    <string name="Uranium">Уран</string>
+    <string name="Neptune">Нептун</string>
+    <string name="Pluto">Плутон</string>
+    <string name="planetName">planetName</string>
+
+</resources>
