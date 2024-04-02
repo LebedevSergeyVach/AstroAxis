@@ -65,7 +65,7 @@
             android:translationX="13dp"
             android:translationY="10dp"
 
-            android:id="@+id/planetsButton"
+            android:id="@+id/modelButton"
             android:backgroundTint="@color/dark_blue"
 
             style="@font/samsungone800c"

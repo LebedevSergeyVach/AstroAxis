@@ -61,21 +61,18 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
                 intent.putExtra(getString(R.string.planetName), getString(R.string.Venus));
                 startActivity(intent);
-
             }
 
             if (position == 2) {
                 Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
                 intent.putExtra(getString(R.string.planetName), getString(R.string.Earth));
                 startActivity(intent);
-
             }
 
             if (position == 3) {
                 Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
                 intent.putExtra(getString(R.string.planetName), getString(R.string.Mars));
                 startActivity(intent);
-
             }
 
             if (position == 4) {
@@ -88,28 +85,24 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
                 intent.putExtra(getString(R.string.planetName), getString(R.string.Saturn));
                 startActivity(intent);
-
             }
 
             if (position == 6) {
                 Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
                 intent.putExtra(getString(R.string.planetName), getString(R.string.Uranium));
                 startActivity(intent);
-
             }
 
             if (position == 7) {
                 Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
                 intent.putExtra(getString(R.string.planetName), getString(R.string.Neptune));
                 startActivity(intent);
-
             }
 
             if (position == 8) {
                 Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
                 intent.putExtra(getString(R.string.planetName), getString(R.string.Pluto));
                 startActivity(intent);
-
             }
 
             if (position == 9) {

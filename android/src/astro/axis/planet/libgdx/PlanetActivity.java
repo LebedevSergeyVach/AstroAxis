@@ -13,7 +13,9 @@ public class PlanetActivity extends AppCompatActivity {
     private static final String TAG = "APP:PlanetActivity";
 
     private TextView planetNameTextView;
-    private Button planetsButton;
+    private Button modelButton;
+
+    private static String planetName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,17 +33,38 @@ public class PlanetActivity extends AppCompatActivity {
 
         planetNameTextView = findViewById(R.id.planetName);
 
-        planetsButton = findViewById(R.id.planetsButton);
-        planetsButton.setOnClickListener(view -> {
-            Log.d(TAG, "The transition of their MainMenuActivity to MainActivity");
-
-            startActivity(new Intent(PlanetActivity.this, AndroidLauncher.class));
-        });
-
         Intent intent = getIntent();
         if (intent != null && intent.hasExtra("planetName")) {
-            String planetName = intent.getStringExtra("planetName");
+            planetName = intent.getStringExtra("planetName");
             planetNameTextView.setText(planetName);
+            Log.e(TAG, "planetName  =>   " + planetName);
         }
+
+        modelButton = findViewById(R.id.modelButton);
+
+        if (planetName.equals("Земля")) {
+            modelButton.setOnClickListener(view -> {
+                Log.d(TAG, "The transition of their PlanetActivity to AndroidLauncher");
+                Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
+                intentName.putExtra(getString(R.string.planetName), getString(R.string.Earth));
+                startActivity(intentName);
+            });
+        } else if (planetName.equals("Меркурий")) {
+            modelButton.setOnClickListener(view -> {
+                Log.d(TAG, "The transition of their PlanetActivity to AndroidLauncher");
+                Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
+                intentName.putExtra(getString(R.string.planetName), getString(R.string.Mercury));
+                startActivity(intentName);
+            });
+        } else {
+            modelButton.setOnClickListener(view -> {
+                Log.d(TAG, "The transition of their PlanetActivity to MainActivity");
+                Intent intentHome = new Intent(PlanetActivity.this, MainMenuActivity.class);
+                intentHome.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intentHome);
+                finish();
+            });
+        }
+
     }
 }
