@@ -67,19 +67,6 @@
                 android:exported="true">
         </activity>
 
-        <activity
-                android:name="astro.axis.planet.libgdx.EarthModelActivity"
-                android:screenOrientation="fullSensor"
-                android:configChanges="keyboard|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout|uiMode"
-                android:exported="true">
-        </activity>
-
-        <activity
-                android:name="astro.axis.planet.libgdx.MercuryModelActivity"
-                android:screenOrientation="fullSensor"
-                android:configChanges="keyboard|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout|uiMode"
-                android:exported="true">
-        </activity>
     </application>
 
 </manifest>

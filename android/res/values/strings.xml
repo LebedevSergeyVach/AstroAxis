@@ -22,6 +22,7 @@
         как пользоваться приложением.</string>
 
     Планеты
+    <string name="Sun">Солнце</string>
     <string name="Mercury">Меркурий</string>
     <string name="Venus">Венера</string>
     <string name="Earth">Земля</string>

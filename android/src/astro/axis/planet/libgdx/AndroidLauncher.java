@@ -18,13 +18,49 @@ public class AndroidLauncher extends AndroidApplication {
 			planetName = intent.getStringExtra("planetName");
 		}
 
-		if (planetName.equals("Земля")) {
+		if (planetName.equals(getString(R.string.Sun))) {
 			AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
-			initialize(new EarthModel(), config);
-		} else if (planetName.equals("Меркурий")) {
+			initialize(new SunModel(), config);
+		} else if (planetName.equals(getString(R.string.Mercury))) {
 			AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
 			initialize(new MercuryModel(), config);
-		} else {
+		} else if (planetName.equals(getString(R.string.Venus))) {
+			AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
+			initialize(new VenusModel(), config);
+		} else if (planetName.equals(getString(R.string.Earth))) {
+			AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
+			initialize(new EarthModel(), config);
+		} else if (planetName.equals(getString(R.string.Mars))) {
+			AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
+			initialize(new MarsModel(), config);
+		} else if (planetName.equals(getString(R.string.Jupiter))) {
+			AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
+			initialize(new JupiterModel(), config);
+		} else if (planetName.equals(getString(R.string.Saturn))) {
+
+
+			Intent intentHome = new Intent(AndroidLauncher.this, MainMenuActivity.class);
+			intentHome.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+			startActivity(intentHome);
+			finish();
+
+
+		} else if (planetName.equals(getString(R.string.Uranium))) {
+			AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
+			initialize(new UranusModel(), config);
+		} else if (planetName.equals(getString(R.string.Neptune))) {
+			AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
+			initialize(new NeptuneModel(), config);
+		} else if (planetName.equals(getString(R.string.Pluto))) {
+			AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
+			initialize(new PlutoModel(), config);
+		}
+
+
+
+
+
+		else {
 			Intent intentHome = new Intent(AndroidLauncher.this, MainMenuActivity.class);
 			intentHome.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 			startActivity(intentHome);

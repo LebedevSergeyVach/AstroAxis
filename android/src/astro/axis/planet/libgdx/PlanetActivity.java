@@ -42,21 +42,96 @@ public class PlanetActivity extends AppCompatActivity {
 
         modelButton = findViewById(R.id.modelButton);
 
-        if (planetName.equals("Земля")) {
+        if (planetName.equals(getString(R.string.Sun))) {
             modelButton.setOnClickListener(view -> {
                 Log.d(TAG, "The transition of their PlanetActivity to AndroidLauncher");
                 Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
-                intentName.putExtra(getString(R.string.planetName), getString(R.string.Earth));
+                intentName.putExtra(getString(R.string.planetName), getString(R.string.Sun));
                 startActivity(intentName);
             });
-        } else if (planetName.equals("Меркурий")) {
+        }  else if (planetName.equals(getString(R.string.Mercury))) {
             modelButton.setOnClickListener(view -> {
                 Log.d(TAG, "The transition of their PlanetActivity to AndroidLauncher");
                 Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
                 intentName.putExtra(getString(R.string.planetName), getString(R.string.Mercury));
                 startActivity(intentName);
             });
-        } else {
+        } else if (planetName.equals(getString(R.string.Venus))) {
+            modelButton.setOnClickListener(view -> {
+                Log.d(TAG, "The transition of their PlanetActivity to AndroidLauncher");
+                Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
+                intentName.putExtra(getString(R.string.planetName), getString(R.string.Venus));
+                startActivity(intentName);
+            });
+        } else if (planetName.equals(getString(R.string.Earth))) {
+            modelButton.setOnClickListener(view -> {
+                Log.d(TAG, "The transition of their PlanetActivity to AndroidLauncher");
+                Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
+                intentName.putExtra(getString(R.string.planetName), getString(R.string.Earth));
+                startActivity(intentName);
+            });
+        } else if (planetName.equals(getString(R.string.Mars))) {
+            modelButton.setOnClickListener(view -> {
+                Log.d(TAG, "The transition of their PlanetActivity to AndroidLauncher");
+                Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
+                intentName.putExtra(getString(R.string.planetName), getString(R.string.Mars));
+                startActivity(intentName);
+            });
+        } else if (planetName.equals(getString(R.string.Jupiter))) {
+            modelButton.setOnClickListener(view -> {
+                Log.d(TAG, "The transition of their PlanetActivity to AndroidLauncher");
+                Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
+                intentName.putExtra(getString(R.string.planetName), getString(R.string.Jupiter));
+                startActivity(intentName);
+            });
+        } else if (planetName.equals(getString(R.string.Saturn))) {
+            modelButton.setOnClickListener(view -> {
+
+
+                Log.d(TAG, "The transition of their PlanetActivity to MainActivity");
+                Intent intentHome = new Intent(PlanetActivity.this, MainMenuActivity.class);
+                intentHome.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intentHome);
+                finish();
+
+
+            });
+        } else if (planetName.equals(getString(R.string.Uranium))) {
+            modelButton.setOnClickListener(view -> {
+                Log.d(TAG, "The transition of their PlanetActivity to AndroidLauncher");
+                Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
+                intentName.putExtra(getString(R.string.planetName), getString(R.string.Uranium));
+                startActivity(intentName);
+            });
+        } else if (planetName.equals(getString(R.string.Neptune))) {
+            modelButton.setOnClickListener(view -> {
+                Log.d(TAG, "The transition of their PlanetActivity to AndroidLauncher");
+                Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
+                intentName.putExtra(getString(R.string.planetName), getString(R.string.Neptune));
+                startActivity(intentName);
+            });
+        } else if (planetName.equals(getString(R.string.Pluto))) {
+            modelButton.setOnClickListener(view -> {
+                Log.d(TAG, "The transition of their PlanetActivity to AndroidLauncher");
+                Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
+                intentName.putExtra(getString(R.string.planetName), getString(R.string.Pluto));
+                startActivity(intentName);
+            });
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        else {
             modelButton.setOnClickListener(view -> {
                 Log.d(TAG, "The transition of their PlanetActivity to MainActivity");
                 Intent intentHome = new Intent(PlanetActivity.this, MainMenuActivity.class);

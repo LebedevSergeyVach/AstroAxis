@@ -29,7 +29,7 @@ public class EarthModel extends ApplicationAdapter {
         camera.far = 300f;
 
         // Загрузка текстуры
-        Texture texture = new Texture(Gdx.files.internal("earth_day.jpg"));
+        Texture texture = new Texture(Gdx.files.internal("Earth.jpg"));
         texture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
 
         // Создание материала с текстурой
