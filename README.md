@@ -1,8 +1,8 @@
 # Mobile Android application
 # AstroAxis
 
-The project is written on the [LibGDX](libgdx.com) framework. 
-The backend is written in [Java](java.com).
+The project is written on the [LibGDX](https://libgdx.com) framework. 
+The backend is written in [Java](https://www.java.com).
 
 AstroAxis is an android reference application to help high school students study astronomy.
 The Planets section contains basic information about the planets of the Solar System,
