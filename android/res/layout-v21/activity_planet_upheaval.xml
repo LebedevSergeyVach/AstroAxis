@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".PlanetActivity"
+        android:background="@drawable/backaround">
+
+    <Button
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+
+            android:id="@+id/modelButton"
+            android:backgroundTint="@color/dark_blue"
+
+            style="@font/samsungone800c"
+            android:text="@string/model"
+            android:textSize="28sp"
+            tools:ignore="MissingConstraints"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.971" app:layout_constraintVertical_bias="0.679"/>
+    <Button
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+
+            android:id="@+id/backButton"
+            android:backgroundTint="@color/dark_blue"
+
+            style="@font/samsungone800c"
+            android:text="@string/back"
+            android:textSize="28sp"
+            tools:ignore="MissingConstraints"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.972" app:layout_constraintVertical_bias="0.951"/>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+                android:id="@+id/planetName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="60sp"
+                style="@font/samsungone800c"
+                tools:ignore="MissingConstraints"
+                android:text="@string/planet"
+                android:translationY="30dp"
+        />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
