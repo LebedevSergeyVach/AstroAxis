@@ -14,6 +14,7 @@
     <string name="test">Тест</string>
     <string name="model">Модель</string>
     <string name="models">Модели</string>
+    <string name="back">Назад</string>
 
     Справка
     <string name="help_text">AstroAxis - приложение для изучения астрономии. В приложении есть 3 раздела:

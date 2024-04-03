@@ -22,7 +22,14 @@
 
     <style name="AstroTheme" parent="Base.Theme.AstroAxis">
         <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:statusBarColor">#80000000</item> <!-- Этот цвет будет определять степень затемнения -->
+        <item name="android:statusBarColor">#293133</item> <!-- Этот цвет будет определять степень затемнения -->
     </style>
+
+    <style name="AlertDialogCustom" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/dialog_background</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+
 
 </resources>

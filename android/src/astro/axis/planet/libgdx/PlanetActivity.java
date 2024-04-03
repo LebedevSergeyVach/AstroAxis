@@ -13,7 +13,7 @@ public class PlanetActivity extends AppCompatActivity {
     private static final String TAG = "APP:PlanetActivity";
 
     private TextView planetNameTextView;
-    private Button modelButton;
+    private Button modelButton, backButton;
 
     private static String planetName;
 
@@ -41,6 +41,7 @@ public class PlanetActivity extends AppCompatActivity {
         }
 
         modelButton = findViewById(R.id.modelButton);
+        backButton = findViewById(R.id.backButton);
 
         if (planetName.equals(getString(R.string.Sun))) {
             modelButton.setOnClickListener(view -> {
@@ -86,15 +87,10 @@ public class PlanetActivity extends AppCompatActivity {
             });
         } else if (planetName.equals(getString(R.string.Saturn))) {
             modelButton.setOnClickListener(view -> {
-
-
-                Log.d(TAG, "The transition of their PlanetActivity to MainActivity");
-                Intent intentHome = new Intent(PlanetActivity.this, MainMenuActivity.class);
-                intentHome.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intentHome);
-                finish();
-
-
+                Log.d(TAG, "The transition of their PlanetActivity to AndroidLauncher");
+                Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
+                intentName.putExtra(getString(R.string.planetName), getString(R.string.Saturn));
+                startActivity(intentName);
             });
         } else if (planetName.equals(getString(R.string.Uranium))) {
             modelButton.setOnClickListener(view -> {
@@ -117,21 +113,7 @@ public class PlanetActivity extends AppCompatActivity {
                 intentName.putExtra(getString(R.string.planetName), getString(R.string.Pluto));
                 startActivity(intentName);
             });
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-        else {
+        } else {
             modelButton.setOnClickListener(view -> {
                 Log.d(TAG, "The transition of their PlanetActivity to MainActivity");
                 Intent intentHome = new Intent(PlanetActivity.this, MainMenuActivity.class);
@@ -141,5 +123,6 @@ public class PlanetActivity extends AppCompatActivity {
             });
         }
 
+        backButton.setOnClickListener(view -> finish());
     }
 }

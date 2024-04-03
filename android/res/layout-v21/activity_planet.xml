@@ -34,36 +34,9 @@
         />
     </LinearLayout>
 
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            tools:ignore="MissingConstraints"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintVertical_bias="0.499">
-
-        <ImageView
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                app:srcCompat="@drawable/space"
-                android:id="@+id/imageView"
-                android:textAlignment="center"
-                android:translationX="46dp"
-                tools:ignore="MissingConstraints"
-                android:importantForAccessibility="no"/>
-
-    </LinearLayout>
-
     <Button
-            android:layout_width="305dp"
-            android:layout_height="79dp"
-            android:translationX="13dp"
-            android:translationY="10dp"
+            android:layout_width="210dp"
+            android:layout_height="80dp"
 
             android:id="@+id/modelButton"
             android:backgroundTint="@color/dark_blue"
@@ -77,7 +50,25 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.367" app:layout_constraintVertical_bias="0.921"/>
+            app:layout_constraintHorizontal_bias="0.093" app:layout_constraintVertical_bias="0.947"/>
+
+    <Button
+            android:layout_width="140dp"
+            android:layout_height="80dp"
+
+            android:id="@+id/backButton"
+            android:backgroundTint="@color/dark_blue"
+
+            style="@font/samsungone800c"
+            android:text="@string/back"
+            android:textSize="30sp"
+            tools:ignore="MissingConstraints"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.936" app:layout_constraintVertical_bias="0.947"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

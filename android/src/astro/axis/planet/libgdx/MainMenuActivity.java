@@ -9,6 +9,7 @@ import android.util.Log;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
+
 public class MainMenuActivity extends AppCompatActivity {
     private static final String TAG = "APP:MainMenu";
 
@@ -52,9 +53,10 @@ public class MainMenuActivity extends AppCompatActivity {
         });
 
         exitButton.setOnClickListener(view -> {
-            AlertDialog.Builder builder = new AlertDialog.Builder(MainMenuActivity.this);
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainMenuActivity.this, R.style.AlertDialogCustom);
+            builder.setIcon(android.R.drawable.ic_dialog_alert);
+            builder.setTitle("Выход из приложения");
             builder.setMessage("Вы точно хотите выйти из приложения ?! \uD83E\uDD76\uD83E\uDD76\uD83E\uDD76");
-            builder.setTitle("Выход");
             builder.setCancelable(false);
 
             builder.setPositiveButton("Да \uD83D\uDE2D", (dialog, which) -> {
@@ -70,5 +72,20 @@ public class MainMenuActivity extends AppCompatActivity {
             alertDialog.show();
         });
 
+    }
+
+    @SuppressLint("MissingSuperCall")
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this, R.style.AlertDialogCustom)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setTitle("Выход из приложения")
+                .setMessage("Вы точно хотите выйти из приложения ?! \uD83E\uDD76\uD83E\uDD76\uD83E\uDD76")
+                .setPositiveButton("Да \uD83D\uDE2D", (dialog, which) -> {
+                    // Пользователь подтвердил выход, закрываем приложение
+                    finishAffinity();
+                })
+                .setNegativeButton("Нет \uD83D\uDE01", null)
+                .show();
     }
 }

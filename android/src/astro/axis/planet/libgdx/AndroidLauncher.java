@@ -37,14 +37,8 @@ public class AndroidLauncher extends AndroidApplication {
 			AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
 			initialize(new JupiterModel(), config);
 		} else if (planetName.equals(getString(R.string.Saturn))) {
-
-
-			Intent intentHome = new Intent(AndroidLauncher.this, MainMenuActivity.class);
-			intentHome.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-			startActivity(intentHome);
-			finish();
-
-
+			AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
+			initialize(new SaturnModel(), config);
 		} else if (planetName.equals(getString(R.string.Uranium))) {
 			AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
 			initialize(new UranusModel(), config);
@@ -54,13 +48,7 @@ public class AndroidLauncher extends AndroidApplication {
 		} else if (planetName.equals(getString(R.string.Pluto))) {
 			AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
 			initialize(new PlutoModel(), config);
-		}
-
-
-
-
-
-		else {
+		} else {
 			Intent intentHome = new Intent(AndroidLauncher.this, MainMenuActivity.class);
 			intentHome.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 			startActivity(intentHome);
