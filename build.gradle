@@ -1,6 +1,4 @@
 buildscript {
-
-
     repositories {
         mavenLocal()
         mavenCentral()
@@ -9,10 +7,10 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.2.0'
-
-
+        classpath 'com.android.tools.build:gradle:8.2.2'
+        classpath('com.android.support:multidex:1.0.3')
     }
+
 }
 
 allprojects {
@@ -53,6 +51,13 @@ project(":android") {
         natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86"
         natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86_64"
 
+        implementation 'androidx.multidex:multidex:2.0.1'
+
+    }
+    android {
+        defaultConfig {
+            multiDexEnabled true
+        }
     }
 }
 
