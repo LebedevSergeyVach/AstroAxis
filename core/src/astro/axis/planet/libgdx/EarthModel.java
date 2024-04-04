@@ -3,6 +3,7 @@ package astro.axis.planet.libgdx;
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.*;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g3d.*;
 import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
 import com.badlogic.gdx.graphics.g3d.attributes.TextureAttribute;
@@ -19,8 +20,15 @@ public class EarthModel extends ApplicationAdapter {
     private Environment environment;
     private CameraInputController cameraController;
 
+    private Texture background;
+    private SpriteBatch batch;
+
     @Override
     public void create () {
+        batch = new SpriteBatch();
+        background = new Texture("backaround.jpg"); // Путь к изображению в папке assets
+
+
         modelBatch = new ModelBatch();
 
         camera = new PerspectiveCamera(67, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
@@ -53,6 +61,13 @@ public class EarthModel extends ApplicationAdapter {
 
     @Override
     public void render () {
+        Gdx.gl.glClearColor(0, 0, 0, 1);
+        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+
+        batch.begin();
+        batch.draw(background, 0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+        batch.end();
+
         Gdx.gl.glViewport(0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
 
@@ -68,5 +83,8 @@ public class EarthModel extends ApplicationAdapter {
     public void dispose () {
         modelBatch.dispose();
         earthModel.dispose();
+
+        batch.dispose();
+        background.dispose();
     }
 }

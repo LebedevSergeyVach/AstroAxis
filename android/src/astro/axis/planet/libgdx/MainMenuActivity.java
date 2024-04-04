@@ -54,7 +54,7 @@ public class MainMenuActivity extends AppCompatActivity {
 
         exitButton.setOnClickListener(view -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainMenuActivity.this, R.style.AlertDialogCustom);
-            builder.setIcon(android.R.drawable.ic_dialog_alert);
+            builder.setIcon(R.drawable.space);
             builder.setTitle("Выход из приложения");
             builder.setMessage("Вы точно хотите выйти из приложения ?! \uD83E\uDD76\uD83E\uDD76\uD83E\uDD76");
             builder.setCancelable(false);
@@ -71,14 +71,13 @@ public class MainMenuActivity extends AppCompatActivity {
             AlertDialog alertDialog = builder.create();
             alertDialog.show();
         });
-
     }
 
     @SuppressLint("MissingSuperCall")
     @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this, R.style.AlertDialogCustom)
-                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setIcon(R.drawable.space)
                 .setTitle("Выход из приложения")
                 .setMessage("Вы точно хотите выйти из приложения ?! \uD83E\uDD76\uD83E\uDD76\uD83E\uDD76")
                 .setPositiveButton("Да \uD83D\uDE2D", (dialog, which) -> {
