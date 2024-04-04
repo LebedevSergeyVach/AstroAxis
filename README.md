@@ -1,5 +1,5 @@
 # Mobile Android application
-# AstroAxis
+# AstroAxis astronomical reference book
 
 The project is written on the [LibGDX](https://libgdx.com) framework. 
 The backend is written in [Java](https://www.java.com).
@@ -12,6 +12,15 @@ The Tests section contains theoretical tasks for repeating the material on the p
 ___
 
 * [Lebedev Sergey Vyacheslav](https://github.com/LebedevSergeyVach) – Product Lead & Fullstack Developer.
+
+---
+
+## Project deployment.
+
+#### Download a project.
+```commandline
+git clone git@github.com:LebedevSergeyVach/AstroAxis.git
+```
 
 ---
 
