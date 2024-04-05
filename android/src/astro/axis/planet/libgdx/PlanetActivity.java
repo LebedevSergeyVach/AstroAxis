@@ -157,7 +157,10 @@ public class PlanetActivity extends AppCompatActivity {
                 {getString(R.string.rotation_period), "23.934 часа"},
                 {getString(R.string.the_orbital_period), "365.256 дней"},
                 {getString(R.string.large_semi_axis), "149.600.000\nкм"},
+                {getString(R.string.the_presence_of_an_atmosphere), "Есть"},
+                {getString(R.string.atmospheric_layers), "Тропосфера\nСтратосфера\nМезосфера\nТермосфера\nЭкзосфера"},
                 {getString(R.string.internal_structure), "Кора\nмантия\nядро"},
+                {getString(R.string.features), "Живое вещество\nАтмосфера с кислородом\nИзменения климата"},
 
         };
 

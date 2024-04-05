@@ -51,7 +51,10 @@
     <string name="rotation_period">Период\nвращения</string>
     <string name="the_orbital_period">Орбитальный\nпериод</string>
     <string name="large_semi_axis">Большая\nполуось</string>
+    <string name="the_presence_of_an_atmosphere">Наличие\nатмосферы</string>
+    <string name="atmospheric_layers">Слои\nатмосферы</string>
     <string name="internal_structure">Внутреннее\nстроение</string>
+    <string name="features">Особенности</string>
 
     Теория
     <string name="theory_of_astronomy">Справочник по астрономии</string>
