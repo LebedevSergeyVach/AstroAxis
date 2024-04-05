@@ -145,55 +145,19 @@ public class PlanetActivity extends AppCompatActivity {
         TableLayout tableLayout = findViewById(R.id.tableLayout);
 
         String[][] data = {
-                {"Название", "Земля"},
-                {"Размер", "1000 м"},
-                {"Кол. спутников", "1"},
-                {"Давление", "1 атм."},
-                {"Вода", "Есть"},
-                {"Скорость", "50 м/c"},
-                {"Год", "365 д"},
-                {"Атмосфера", "Есть"},
-                {"Спутники", "Луна\nЛуна\nЛуна\nЛуна\n"},
-                {"Название", "Земля"},
-                {"Размер", "1000 м"},
-                {"Кол. спутников", "1"},
-                {"Давление", "1 атм."},
-                {"Вода", "Есть"},
-                {"Скорость", "50 м/c"},
-                {"Год", "365 д"},
-                {"Атмосфера", "Есть"},
-                {"Название", "Земля"},
-                {"Размер", "1000 м"},
-                {"Кол. спутников", "1"},
-                {"Давление", "1 атм."},
-                {"Вода", "Есть"},
-                {"Скорость", "50 м/c"},
-                {"Год", "365 д"},
-                {"Атмосфера", "Есть"},
-                {"Название", "Земля"},
-                {"Размер", "1000 м"},
-                {"Кол. спутников", "1"},
-                {"Давление", "1 атм."},
-                {"Вода", "Есть"},
-                {"Скорость", "50 м/c"},
-                {"Год", "365 д"},
-                {"Атмосфера", "Есть"},
-                {"Название", "Земля"},
-                {"Размер", "1000 м"},
-                {"Кол. спутников", "1"},
-                {"Давление", "1 атм."},
-                {"Вода", "Есть"},
-                {"Скорость", "50 м/c"},
-                {"Год", "365 д"},
-                {"Атмосфера", "Есть"},
-                {"Название", "Земля"},
-                {"Размер", "1000 м"},
-                {"Кол. спутников", "1"},
-                {"Давление", "1 атм."},
-                {"Вода", "Есть"},
-                {"Скорость", "50 м/c"},
-                {"Год", "365 д"},
-                {"Атмосфера", "Есть"},
+                {getString(R.string.name), planetName},
+                {getString(R.string.radius), "6,371 км"},
+                {getString(R.string.mass), "5.972 × 10^24\nкг"},
+                {getString(R.string.density), "5,515 г/см³"},
+                {getString(R.string.average_temperature), "14°C"},
+                {getString(R.string.number_of_satellites), "1"},
+                {getString(R.string.main_satellites), "Луна"},
+                {getString(R.string.the_speed_of_rotation_around_its_axis), "1,674 км/ч"},
+                {getString(R.string.the_speed_of_rotation_around_the_Sun), "107,225\nкм/ч"},
+                {getString(R.string.rotation_period), "23.934 часа"},
+                {getString(R.string.the_orbital_period), "365.256 дней"},
+                {getString(R.string.large_semi_axis), "149.600.000\nкм"},
+                {getString(R.string.internal_structure), "Кора\nмантия\nядро"},
 
         };
 
@@ -203,9 +167,9 @@ public class PlanetActivity extends AppCompatActivity {
             for (String cell : row) {
                 TextView textView = new TextView(this);
                 textView.setText(cell);
-                textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 28); // Устанавливаем размер текста
+                textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25); // Устанавливаем размер текста
                 textView.setTextColor(getColor(R.color.white)); // Устанавливаем цвет текста
-                textView.setPadding(50, 20, 50, 20);
+                textView.setPadding(50, 15, 50, 15);
 //                textView.setBackgroundResource(R.drawable.cell_border); // Добавляем фоновый рисунок для линий
                 tableRow.addView(textView);
 

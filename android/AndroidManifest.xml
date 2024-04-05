@@ -61,6 +61,11 @@
                 android:exported="true">
         </activity>
 
+        <activity
+                android:name=".TheoryActivity"
+                android:exported="true">
+        </activity>
+
         <!--Активности 3D моделей -->
         <activity
                 android:name="astro.axis.planet.libgdx.AndroidLauncher"

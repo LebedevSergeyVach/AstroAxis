@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         buttonList.add(getString(R.string.Uranium));
         buttonList.add(getString(R.string.Neptune));
         buttonList.add(getString(R.string.Pluto));
+        buttonList.add(getString(R.string.theory));
         buttonList.add(getString(R.string.main_menu));
 
         // Создайте адаптер для списка кнопок
@@ -121,6 +122,10 @@ public class MainActivity extends AppCompatActivity {
             }
 
             if (position == 10) {
+                startActivity(new Intent(MainActivity.this, TheoryActivity.class));
+            }
+
+            if (position == 11) {
                 Intent intent = new Intent(MainActivity.this, MainMenuActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);

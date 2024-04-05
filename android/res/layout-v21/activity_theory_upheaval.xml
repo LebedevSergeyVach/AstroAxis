@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TheoryActivity"
+        android:background="@drawable/backaround">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginBottom="100dp"
+                    android:textSize="54sp"
+                    style="@font/samsungone700c"
+                    android:text="@string/theory_of_astronomy">
+            </TextView>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp"
+                    android:textSize="40sp"
+                    style="@font/samsungone800c"
+                    android:text="@string/schematic_representation_of_the_celestial_sphere">
+            </TextView>
+
+            <ImageView
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/schematic_representation_of_the_celestial_sphere"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/schematic_representation_of_the_celestial_sphere"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp"
+                    android:textSize="25sp"
+                    style="@font/samsungone800c"
+                    android:text="@string/description_schematic_representation_of_the_celestial_sphere">
+            </TextView>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp"
+                    android:textSize="40sp"
+                    style="@font/samsungone800c"
+                    android:text="@string/horizontal_coordinate_system">
+            </TextView>
+
+            <ImageView
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/horizontal_coordinate_system"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/horizontal_coordinate_system"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp"
+                    android:textSize="25sp"
+                    style="@font/samsungone800c"
+                    android:text="@string/description_horizontal_coordinate_system">
+            </TextView>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp">
+
+                <Button
+                        android:layout_width="200dp"
+                        android:layout_height="80dp"
+                        android:translationX="420dp"
+
+                        android:id="@+id/openGLinkGuideButton"
+                        android:backgroundTint="@color/dark_blue"
+                        android:textColor="@color/white"
+
+                        style="@font/samsungone800c"
+                        android:text="@string/guide"
+                        android:textSize="20sp"
+                />
+
+                <Button
+                        android:layout_width="140dp"
+                        android:layout_height="80dp"
+                        android:translationX="450dp"
+
+                        android:id="@+id/exitButton"
+                        android:backgroundTint="@color/dark_blue"
+                        android:textColor="@color/white"
+
+                        style="@font/samsungone800c"
+                        android:text="@string/exit"
+                        android:textSize="20sp"
+                />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
