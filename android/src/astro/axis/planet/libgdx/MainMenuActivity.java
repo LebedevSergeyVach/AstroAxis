@@ -36,55 +36,38 @@ public class MainMenuActivity extends AppCompatActivity {
 
         planetsButton.setOnClickListener(view -> {
             Log.d(TAG, "The transition of their MainMenuActivity to MainActivity");
-
             startActivity(new Intent(MainMenuActivity.this, MainActivity.class));
         });
 
         testsButton.setOnClickListener(view -> {
             Log.d(TAG, "The transition of their MainMenuActivity to TestsActivity");
-
             startActivity(new Intent(MainMenuActivity.this, TestsActivity.class));
         });
 
         helpButton.setOnClickListener(view -> {
             Log.d(TAG, "The transition of their MainMenuActivity to HelpActivity");
-
             startActivity(new Intent(MainMenuActivity.this, HelpActivity.class));
         });
 
-        exitButton.setOnClickListener(view -> {
-            AlertDialog.Builder builder = new AlertDialog.Builder(MainMenuActivity.this, R.style.AlertDialogCustom);
-            builder.setIcon(R.drawable.space);
-            builder.setTitle("Выход из приложения");
-            builder.setMessage("Вы точно хотите выйти из приложения ?! \uD83E\uDD76\uD83E\uDD76\uD83E\uDD76");
-            builder.setCancelable(false);
-
-            builder.setPositiveButton("Да \uD83D\uDE2D", (dialog, which) -> {
-                finishAffinity();
-                System.exit(0);
-            });
-
-            builder.setNegativeButton("Нет \uD83D\uDE01", (dialog, which) -> {
-                dialog.cancel();
-            });
-
-            AlertDialog alertDialog = builder.create();
-            alertDialog.show();
-        });
+        exitButton.setOnClickListener(view -> exitApplication());
     }
 
     @SuppressLint("MissingSuperCall")
     @Override
     public void onBackPressed() {
+        exitApplication();
+    }
+
+    public void exitApplication() {
         new AlertDialog.Builder(this, R.style.AlertDialogCustom)
                 .setIcon(R.drawable.space)
-                .setTitle("Выход из приложения")
-                .setMessage("Вы точно хотите выйти из приложения ?! \uD83E\uDD76\uD83E\uDD76\uD83E\uDD76")
-                .setPositiveButton("Да \uD83D\uDE2D", (dialog, which) -> {
+                .setTitle(getString(R.string.exit_application))
+                .setMessage(getString(R.string.confirmation_exit_application))
+                .setPositiveButton("Да", (dialog, which) -> {
                     // Пользователь подтвердил выход, закрываем приложение
                     finishAffinity();
                 })
-                .setNegativeButton("Нет \uD83D\uDE01", null)
+                .setNegativeButton("Нет", null)
                 .show();
     }
 }

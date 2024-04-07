@@ -1,6 +1,7 @@
 package astro.axis.planet.libgdx;
 
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Typeface;
@@ -19,6 +20,7 @@ import androidx.core.content.res.ResourcesCompat;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.GestureDetector.SimpleOnGestureListener;
+import com.planetgdx.game.PlanetGDX;
 
 
 public class PlanetActivity extends AppCompatActivity {
@@ -60,75 +62,25 @@ public class PlanetActivity extends AppCompatActivity {
         backButton = findViewById(R.id.backButton);
 
         if (planetName.equals(getString(R.string.Sun))) {
-            modelButton.setOnClickListener(view -> {
-                Log.d(TAG, "The transition of their PlanetActivity to AndroidLauncher");
-                Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
-                intentName.putExtra(getString(R.string.planetName), getString(R.string.Sun));
-                startActivity(intentName);
-            });
+            modelButton.setOnClickListener(view -> openModelButton(getString(R.string.Sun)));
         } else if (planetName.equals(getString(R.string.Mercury))) {
-            modelButton.setOnClickListener(view -> {
-                Log.d(TAG, "The transition of their PlanetActivity to AndroidLauncher");
-                Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
-                intentName.putExtra(getString(R.string.planetName), getString(R.string.Mercury));
-                startActivity(intentName);
-            });
+            modelButton.setOnClickListener(view -> openModelButton(getString(R.string.Mercury)));
         } else if (planetName.equals(getString(R.string.Venus))) {
-            modelButton.setOnClickListener(view -> {
-                Log.d(TAG, "The transition of their PlanetActivity to AndroidLauncher");
-                Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
-                intentName.putExtra(getString(R.string.planetName), getString(R.string.Venus));
-                startActivity(intentName);
-            });
+            modelButton.setOnClickListener(view -> openModelButton(getString(R.string.Venus)));
         } else if (planetName.equals(getString(R.string.Earth))) {
-            modelButton.setOnClickListener(view -> {
-                Log.d(TAG, "The transition of their PlanetActivity to AndroidLauncher");
-                Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
-                intentName.putExtra(getString(R.string.planetName), getString(R.string.Earth));
-                startActivity(intentName);
-            });
+            modelButton.setOnClickListener(view -> openModelButton(getString(R.string.Earth)));
         } else if (planetName.equals(getString(R.string.Mars))) {
-            modelButton.setOnClickListener(view -> {
-                Log.d(TAG, "The transition of their PlanetActivity to AndroidLauncher");
-                Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
-                intentName.putExtra(getString(R.string.planetName), getString(R.string.Mars));
-                startActivity(intentName);
-            });
+            modelButton.setOnClickListener(view -> openModelButton(getString(R.string.Mars)));
         } else if (planetName.equals(getString(R.string.Jupiter))) {
-            modelButton.setOnClickListener(view -> {
-                Log.d(TAG, "The transition of their PlanetActivity to AndroidLauncher");
-                Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
-                intentName.putExtra(getString(R.string.planetName), getString(R.string.Jupiter));
-                startActivity(intentName);
-            });
+            modelButton.setOnClickListener(view -> openModelButton(getString(R.string.Jupiter)));
         } else if (planetName.equals(getString(R.string.Saturn))) {
-            modelButton.setOnClickListener(view -> {
-                Log.d(TAG, "The transition of their PlanetActivity to AndroidLauncher");
-                Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
-                intentName.putExtra(getString(R.string.planetName), getString(R.string.Saturn));
-                startActivity(intentName);
-            });
+            modelButton.setOnClickListener(view -> openModelButton(getString(R.string.Saturn)));
         } else if (planetName.equals(getString(R.string.Uranium))) {
-            modelButton.setOnClickListener(view -> {
-                Log.d(TAG, "The transition of their PlanetActivity to AndroidLauncher");
-                Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
-                intentName.putExtra(getString(R.string.planetName), getString(R.string.Uranium));
-                startActivity(intentName);
-            });
+            modelButton.setOnClickListener(view -> openModelButton(getString(R.string.Uranium)));
         } else if (planetName.equals(getString(R.string.Neptune))) {
-            modelButton.setOnClickListener(view -> {
-                Log.d(TAG, "The transition of their PlanetActivity to AndroidLauncher");
-                Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
-                intentName.putExtra(getString(R.string.planetName), getString(R.string.Neptune));
-                startActivity(intentName);
-            });
+            modelButton.setOnClickListener(view -> openModelButton(getString(R.string.Neptune)));
         } else if (planetName.equals(getString(R.string.Pluto))) {
-            modelButton.setOnClickListener(view -> {
-                Log.d(TAG, "The transition of their PlanetActivity to AndroidLauncher");
-                Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
-                intentName.putExtra(getString(R.string.planetName), getString(R.string.Pluto));
-                startActivity(intentName);
-            });
+            modelButton.setOnClickListener(view -> openModelButton(getString(R.string.Pluto)));
         } else {
             modelButton.setOnClickListener(view -> {
                 Log.d(TAG, "The transition of their PlanetActivity to MainActivity");
@@ -140,7 +92,6 @@ public class PlanetActivity extends AppCompatActivity {
         }
 
         backButton.setOnClickListener(view -> finish());
-
 
         TableLayout tableLayout = findViewById(R.id.tableLayout);
 
@@ -160,7 +111,7 @@ public class PlanetActivity extends AppCompatActivity {
                 {getString(R.string.the_presence_of_an_atmosphere), "Есть"},
                 {getString(R.string.atmospheric_layers), "Тропосфера\nСтратосфера\nМезосфера\nТермосфера\nЭкзосфера"},
                 {getString(R.string.internal_structure), "Кора\nмантия\nядро"},
-                {getString(R.string.features), "Живое вещество\nАтмосфера с кислородом\nИзменения климата"},
+                {getString(R.string.features), "Живое\nсущества\nАтмосфера с\nкислородом\nИзменения\nклимата"},
 
         };
 
@@ -182,6 +133,55 @@ public class PlanetActivity extends AppCompatActivity {
             }
             tableLayout.addView(tableRow);
         }
+    }
+
+    private void openModelButton(String namePlanet) {
+        modelButton.setText("Загрузка");
+//        Log.d(TAG, "The transition of their PlanetActivity to AndroidLauncher");
+//        // Отображение спиннера загрузки
+//        ProgressDialog progressDialog = new ProgressDialog(PlanetActivity.this, R.style.AlertDialogCustom);
+//        progressDialog.setMessage("Загрузка модели!!!");
+//        progressDialog.show();
+//        // Запуск новой активности в отдельном потоке
+//        new Thread(() -> {
+//            // Здесь выполняется долгая задача, например, загрузка данных
+//            // После окончания задачи закрываем активность и скрываем диалог загрузки
+//            runOnUiThread(() -> {
+//                // Закрываем активность
+//                finish();
+//                // Запускаем новую активность
+//                Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
+//                intentName.putExtra(getString(R.string.planetName), namePlanet);
+//                startActivity(intentName);
+//                // Скрываем диалог загрузки
+//                progressDialog.dismiss();
+//            });
+//        }).start();
+        // ЖЕСТКИЙ КОСТЫЛЬ
+        // Отображение спиннера загрузки
+        final ProgressDialog progressDialog = new ProgressDialog(PlanetActivity.this, R.style.CustomProgressDialog);
+        progressDialog.setMessage("Загрузка модели");
+        progressDialog.show();
+        // Запуск долгой задачи в фоновом потоке
+        new Thread(() -> {
+            // Здесь выполняется долгая задача, например, загрузка данных
+            // После окончания задачи закрываем диалог загрузки и запускаем новую активность
+            try {
+                // Имитация долгой задачи
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            // Закрываем диалог загрузки и запускаем новую активность
+            runOnUiThread(() -> {
+                progressDialog.dismiss();
+                Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
+                intentName.putExtra(getString(R.string.planetName), namePlanet);
+                startActivity(intentName);
+                // Закрываем текущую активность
+                modelButton.setText(getString(R.string.model));
+            });
+        }).start();
     }
 
     @Override
