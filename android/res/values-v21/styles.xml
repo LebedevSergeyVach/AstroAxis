@@ -34,5 +34,7 @@
     <style name="CustomProgressDialog" parent="Theme.AppCompat.Light.Dialog">
         <item name="android:indeterminateTint">@color/dark_blue</item> <!-- Здесь указывается цвет спиннера -->
         <item name="android:windowBackground">@drawable/dialog_background</item> <!-- Здесь указывается ваш кастомный фон -->
+        <item name="android:textColor">@color/white</item> <!-- Здесь указывается цвет текста -->
     </style>
+
 </resources>

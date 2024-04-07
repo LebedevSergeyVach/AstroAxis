@@ -85,7 +85,7 @@
     </LinearLayout>
 
     <Button
-            android:layout_width="180dp"
+            android:layout_width="165dp"
             android:layout_height="80dp"
 
             android:id="@+id/modelButton"

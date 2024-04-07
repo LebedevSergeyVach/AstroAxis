@@ -7,26 +7,34 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
 
+// Определение класса ButtonAdapter, который расширяет RecyclerView.Adapter
 public class ButtonAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+    // Интерфейс для обработки нажатия на кнопку
     public interface OnButtonClickListener {
         void onButtonClick(int position);
     }
 
+    // Константы для определения типа элемента в списке
     private static final int VIEW_TYPE_LABEL = 0;
     private static final int VIEW_TYPE_BUTTON = 1;
 
-    private ArrayList<String> buttonList;
+    // Список строк для кнопок
+    private final ArrayList<String> buttonList;
 
+    // Слушатель нажатия на кнопку
     private OnButtonClickListener onButtonClickListener;
 
+    // Метод для установки слушателя нажатия на кнопку
     public void setOnButtonClickListener(OnButtonClickListener listener) {
         this.onButtonClickListener = listener;
     }
 
+    // Вложенный статический класс для представления элемента списка с кнопкой
     public static class ButtonViewHolder extends RecyclerView.ViewHolder {
         public Button button;
 
@@ -36,6 +44,7 @@ public class ButtonAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         }
     }
 
+    // Вложенный статический класс для представления элемента списка с текстом
     public static class LabelViewHolder extends RecyclerView.ViewHolder {
         public TextView label;
         public TextView labels;
@@ -47,10 +56,12 @@ public class ButtonAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         }
     }
 
+    // Конструктор класса ButtonAdapter
     public ButtonAdapter(ArrayList<String> buttonList) {
         this.buttonList = buttonList;
     }
 
+    // Метод для определения типа элемента в списке
     @Override
     public int getItemViewType(int position) {
         if (position == 0) {
@@ -60,6 +71,7 @@ public class ButtonAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         }
     }
 
+    // Метод для создания нового ViewHolder'а
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         if (viewType == VIEW_TYPE_LABEL) {
@@ -71,6 +83,7 @@ public class ButtonAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         }
     }
 
+    // Метод для привязки данных к ViewHolder'у
     @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
@@ -91,6 +104,7 @@ public class ButtonAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         }
     }
 
+    // Метод для получения количества элементов в списке
     @Override
     public int getItemCount() {
         return buttonList.size() + 1;

@@ -121,7 +121,7 @@ public class PlanetActivity extends AppCompatActivity {
             for (String cell : row) {
                 TextView textView = new TextView(this);
                 textView.setText(cell);
-                textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25); // Устанавливаем размер текста
+                textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 23); // Устанавливаем размер текста
                 textView.setTextColor(getColor(R.color.white)); // Устанавливаем цвет текста
                 textView.setPadding(50, 15, 50, 15);
 //                textView.setBackgroundResource(R.drawable.cell_border); // Добавляем фоновый рисунок для линий
