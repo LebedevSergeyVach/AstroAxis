@@ -9,8 +9,16 @@
         android:background="@drawable/backaround">
 
     <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            app:layout_constraintEnd_toStartOf="@+id/openGLinkGuideButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
 
 
         <LinearLayout
@@ -29,6 +37,24 @@
                     style="@font/samsungone700c"
                     android:text="@string/theory_of_astronomy">
             </TextView>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@drawable/rounded_corner">
+
+                <TableLayout
+                        android:id="@+id/tableLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp">
+                </TableLayout>
+            </LinearLayout>
 
             <TextView
                     android:layout_width="match_parent"
@@ -101,46 +127,46 @@
                     android:text="@string/description_horizontal_coordinate_system"
                     android:background="@drawable/rounded_corner">
             </TextView>
-
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp">
-
-                <Button
-                        android:layout_width="200dp"
-                        android:layout_height="80dp"
-                        android:translationX="420dp"
-
-                        android:id="@+id/openGLinkGuideButton"
-                        android:backgroundTint="@color/dark_blue"
-                        android:textColor="@color/white"
-
-                        style="@font/samsungone800c"
-                        android:text="@string/guide"
-                        android:textSize="20sp"
-                />
-
-                <Button
-                        android:layout_width="140dp"
-                        android:layout_height="80dp"
-                        android:translationX="450dp"
-
-                        android:id="@+id/exitButton"
-                        android:backgroundTint="@color/dark_blue"
-                        android:textColor="@color/white"
-
-                        style="@font/samsungone800c"
-                        android:text="@string/exit"
-                        android:textSize="20sp"
-                />
-
-            </LinearLayout>
-
         </LinearLayout>
 
     </ScrollView>
+
+    <Button
+            android:layout_width="170dp"
+            android:layout_height="80dp"
+
+            android:id="@+id/openGLinkGuideButton"
+            android:backgroundTint="@color/dark_blue"
+
+            style="@font/samsungone800c"
+            android:text="@string/guide"
+            android:textSize="20sp"
+            tools:ignore="MissingConstraints"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.971"
+            app:layout_constraintVertical_bias="0.679"/>
+
+    <Button
+            android:layout_width="170dp"
+            android:layout_height="80dp"
+
+            android:id="@+id/exitButton"
+            android:backgroundTint="@color/dark_blue"
+
+            style="@font/samsungone800c"
+            android:text="@string/back"
+            android:textSize="20sp"
+            tools:ignore="MissingConstraints"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.971"
+            app:layout_constraintVertical_bias="0.951"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,6 +16,9 @@
     <string name="models">Модели</string>
     <string name="back">Назад</string>
     <string name="theory">Теория</string>
+    <string name="loading">Загрузка</string>
+    <string name="loading_model">Загрузка модели</string>
+    <string name="error_loading_model">Ошибка загрузка модели</string>
     <string name="exit_application">Выход из приложения</string>
     <string name="confirmation_exit_application">Вы точно хотите выйти из приложения ?!</string>
 
@@ -53,6 +56,9 @@
     <string name="rotation_period">Период\nвращения</string>
     <string name="the_orbital_period">Орбитальный\nпериод</string>
     <string name="large_semi_axis">Большая\nполуось</string>
+    <string name="rings">Наличие\nколец</string>
+    <string name="quantity_ring">Количество\nколец</string>
+    <string name="giant">Гигант</string>
     <string name="the_presence_of_an_atmosphere">Наличие\nатмосферы</string>
     <string name="atmospheric_layers">Слои\nатмосферы</string>
     <string name="internal_structure">Внутреннее\nстроение</string>

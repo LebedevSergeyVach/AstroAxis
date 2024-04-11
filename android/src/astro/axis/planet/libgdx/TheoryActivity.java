@@ -1,17 +1,25 @@
 package astro.axis.planet.libgdx;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.widget.Button;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
 
 public class TheoryActivity extends AppCompatActivity {
 
     private Button exitButton, openGLinkGuideButton;
 
+    @SuppressLint("NewApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,5 +39,45 @@ public class TheoryActivity extends AppCompatActivity {
         });
 
         exitButton.setOnClickListener(view -> finish());
+
+        TableLayout tableLayout = findViewById(R.id.tableLayout);
+
+        String[][] data = {
+                {"Астрон.\nединица"},
+                {"Парсек", "4,848 * 10^-6"},
+                {"Световой\nгод", "4,848 * 10^-6"},
+                {"Километр", "1,496 * 10^8"},
+
+                {""},
+                {"Парсек"},
+                {"Астрон.\nединица", "206 265"},
+                {"Световой\nгод", "3,26"},
+                {"Километр", "3,086 * 10^13 "},
+
+                {""},
+                {"Световой\nгод"},
+                {"Астрон.\nединица", "63 241"},
+                {"Парсек", "0,306"},
+                {"Километр", "9,461 * 10^12"},
+        };
+
+        for (String[] row : data) {
+            TableRow tableRow = new TableRow(this);
+            tableRow.setBackgroundResource(R.drawable.table_border); // Добавляем фоновый рисунок для линий
+            for (String cell : row) {
+                TextView textView = new TextView(this);
+                textView.setText(cell);
+                textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25); // Устанавливаем размер текста
+                textView.setTextColor(getColor(R.color.white)); // Устанавливаем цвет текста
+                textView.setPadding(50, 15, 50, 15);
+//                textView.setBackgroundResource(R.drawable.cell_border); // Добавляем фоновый рисунок для линий
+                tableRow.addView(textView);
+
+                // Устанавливаем ваш шрифт
+                Typeface typeface = ResourcesCompat.getFont(this, R.font.samsungone700c);
+                textView.setTypeface(typeface);
+            }
+            tableLayout.addView(tableRow);
+        }
     }
 }
