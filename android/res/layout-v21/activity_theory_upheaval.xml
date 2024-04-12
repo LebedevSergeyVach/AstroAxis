@@ -133,7 +133,7 @@
 
     <Button
             android:layout_width="170dp"
-            android:layout_height="80dp"
+            android:layout_height="86dp"
 
             android:id="@+id/openGLinkGuideButton"
             android:backgroundTint="@color/dark_blue"
@@ -148,11 +148,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintHorizontal_bias="0.971"
-            app:layout_constraintVertical_bias="0.679"/>
+            app:layout_constraintVertical_bias="0.66"/>
 
     <Button
             android:layout_width="170dp"
-            android:layout_height="80dp"
+            android:layout_height="86dp"
 
             android:id="@+id/exitButton"
             android:backgroundTint="@color/dark_blue"

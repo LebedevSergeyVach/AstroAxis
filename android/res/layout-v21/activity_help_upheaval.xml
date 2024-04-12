@@ -10,7 +10,7 @@
 
     <LinearLayout
             android:layout_width="500dp"
-            android:layout_height="370dp"
+            android:layout_height="365dp"
             android:orientation="vertical"
 
             android:background="@drawable/rounded_corner"
@@ -26,8 +26,8 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:textAlignment="center"
-                android:textSize="45sp"
-                android:translationY="10dp"
+                android:textSize="40sp"
+                android:translationY="5dp"
                 android:text="@string/help"
                 style="@font/samsungone800c"/>
 
@@ -36,8 +36,8 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:textAlignment="center"
-                android:textSize="19sp"
-                android:translationY="20dp"
+                android:textSize="18sp"
+                android:translationY="10dp"
                 android:translationX="10dp"
                 android:text="@string/help_text"
                 style="@font/samsungone800c"/>
@@ -46,7 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:translationY="30dp">
+                android:translationY="20dp">
 
             <Button
                     android:id="@+id/exitButton"

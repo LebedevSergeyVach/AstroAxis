@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.GestureDetector.SimpleOnGestureListener;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         buttonList.add(getString(R.string.Uranium));
         buttonList.add(getString(R.string.Neptune));
         buttonList.add(getString(R.string.Pluto));
-        buttonList.add(getString(R.string.theory));
+//        buttonList.add(getString(R.string.theory));
         buttonList.add(getString(R.string.main_menu));
 
         // Создайте адаптер для списка кнопок
@@ -121,11 +122,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
 
-            if (position == 10) {
-                startActivity(new Intent(MainActivity.this, TheoryActivity.class));
-            }
+//            if (position == 10) {
+//                startActivity(new Intent(MainActivity.this, TheoryActivity.class));
+//            }
 
-            if (position == 11) {
+            if (position == 10) {
                 Intent intent = new Intent(MainActivity.this, MainMenuActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
@@ -135,9 +136,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onConfigurationChanged(Configuration newConfig) {
+    public void onConfigurationChanged(@NotNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
             setContentView(R.layout.activity_main);
         } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
@@ -152,7 +152,6 @@ public class MainActivity extends AppCompatActivity {
 
     private class MyGestureListener extends SimpleOnGestureListener {
         private static final int SWIPE_MIN_DISTANCE = 120;
-        private static final int SWIPE_MAX_OFF_PATH = 250;
         private static final int SWIPE_THRESHOLD_VELOCITY = 200;
 
         @Override

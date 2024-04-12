@@ -33,6 +33,7 @@ public class PlanetActivity extends AppCompatActivity {
     private GestureDetector gestureDetector;
 
     private static String planetName;
+    private static int textSizeTable;
 
 //    private String radius, mass, density, averagetTemperature, numberSatellites, mainSatellites,
 //            theSpeedRotationAroundItsAxis, speedRotationAroundSun, rotationPeriod, orbitalPeriod,
@@ -41,8 +42,9 @@ public class PlanetActivity extends AppCompatActivity {
 
     // Диалоговое окно для разметки спиннера
     private ProgressDialog progressDialog;
+
     // Подключение потоков
-    private final ExecutorService executorService = Executors.newFixedThreadPool(1);
+//    private final ExecutorService executorService = Executors.newFixedThreadPool(1);
 
     @SuppressLint({"SetTextI18n", "NewApi"})
     @Override
@@ -54,8 +56,10 @@ public class PlanetActivity extends AppCompatActivity {
 
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
             setContentView(R.layout.activity_planet_upheaval);
+            textSizeTable = 28;
         } else {
             setContentView(R.layout.activity_planet);
+            textSizeTable = 23;
         }
 
         Log.d(TAG, "Start PlanetActivity");
@@ -129,7 +133,7 @@ public class PlanetActivity extends AppCompatActivity {
             for (String cell : row) {
                 TextView textView = new TextView(this);
                 textView.setText(cell);
-                textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 23); // Устанавливаем размер текста
+                textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeTable); // Устанавливаем размер текста
                 textView.setTextColor(getColor(R.color.white)); // Устанавливаем цвет текста
                 textView.setPadding(50, 15, 50, 15);
 //                textView.setBackgroundResource(R.drawable.cell_border); // Добавляем фоновый рисунок для линий
@@ -144,19 +148,23 @@ public class PlanetActivity extends AppCompatActivity {
     }
 
     private void openModelButton(String namePlanet) {
-        modelButton.setText(getString(R.string.loading));
-        // Отображение спиннера загрузки
-        progressDialog = new ProgressDialog(PlanetActivity.this, R.style.CustomProgressDialog);
-        progressDialog.setMessage(getString(R.string.loading_model));
-        // Указывает, можно ли отменить этот диалог с помощью клавиши BACK.
-        progressDialog.setCancelable(false);
-        progressDialog.show();
         // Исполнение асинхронной задачи в отдельном потоке
         // Загружаем следующую активность
 
-        // Выполняемая задача, которая отправляет выполняемую задачу на выполнение и возвращает будущее, представляющее эту задачу.
-        // Метод get в будущем вернет значение null после успешного завершения.
-        executorService.submit(() -> {
+
+        // Первый поток
+        new Thread(() -> runOnUiThread(() -> {
+            modelButton.setText(getString(R.string.loading));
+            // Отображение спиннера загрузки
+            progressDialog = new ProgressDialog(PlanetActivity.this, R.style.CustomProgressDialog);
+            progressDialog.setMessage(getString(R.string.loading_model));
+            // Указывает, можно ли отменить этот диалог с помощью клавиши BACK.
+            progressDialog.setCancelable(false);
+            progressDialog.show();
+        })).start();
+
+        // Второй поток
+        new Thread(() -> {
             try {
                 // Загружаем следующую активность
                 Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
@@ -164,12 +172,31 @@ public class PlanetActivity extends AppCompatActivity {
                 startActivity(intentName);
             } catch (ActivityNotFoundException e) {
                 // Выкидывает на главную активность приложения и выводит тостер
-                exitMainMenuActivity("error");
+                runOnUiThread(() -> exitMainMenuActivity("error"));
             } catch (RejectedExecutionException e) {
-                Toast.makeText(this, getString(R.string.error_loading_model), R.style.AlertDialogCustom).show();
-                throw new RuntimeException(e);
+                runOnUiThread(() -> {
+                    Toast.makeText(PlanetActivity.this, getString(R.string.error_loading_model), R.style.AlertDialogCustom).show();
+                    throw new RuntimeException(e);
+                });
             }
-        });
+        }).start();
+
+        // Выполняемая задача, которая отправляет выполняемую задачу на выполнение и возвращает будущее, представляющее эту задачу.
+        // Метод get в будущем вернет значение null после успешного завершения.
+//        executorService.submit(() -> {
+//            try {
+//                // Загружаем следующую активность
+//                Intent intentName = new Intent(PlanetActivity.this, AndroidLauncher.class);
+//                intentName.putExtra(getString(R.string.planetName), namePlanet);
+//                startActivity(intentName);
+//            } catch (ActivityNotFoundException e) {
+//                // Выкидывает на главную активность приложения и выводит тостер
+//                exitMainMenuActivity("error");
+//            } catch (RejectedExecutionException e) {
+//                Toast.makeText(this, getString(R.string.error_loading_model), R.style.AlertDialogCustom).show();
+//                throw new RuntimeException(e);
+//            }
+//        });
     }
 
     private void exitMainMenuActivity (String errorMessage) {

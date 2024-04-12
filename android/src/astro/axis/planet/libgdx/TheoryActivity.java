@@ -7,6 +7,8 @@ import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.TypedValue;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -14,15 +16,21 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 
+import android.view.GestureDetector.SimpleOnGestureListener;
+
 
 public class TheoryActivity extends AppCompatActivity {
 
     private Button exitButton, openGLinkGuideButton;
 
+    private GestureDetector gestureDetector;
+
     @SuppressLint("NewApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        gestureDetector = new GestureDetector(this, new TheoryActivity.MyGestureListener());
+
         int orientation = getResources().getConfiguration().orientation;
 
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
@@ -78,6 +86,26 @@ public class TheoryActivity extends AppCompatActivity {
                 textView.setTypeface(typeface);
             }
             tableLayout.addView(tableRow);
+        }
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        return gestureDetector.onTouchEvent(event);
+    }
+
+    private class MyGestureListener extends SimpleOnGestureListener {
+        private static final int SWIPE_MIN_DISTANCE = 120;
+        private static final int SWIPE_THRESHOLD_VELOCITY = 200;
+
+        @Override
+        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+            if (e1.getX() - e2.getX() < SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
+                // Смахивание слева направо
+                finish(); // Закрываем активность
+                return true;
+            }
+            return false;
         }
     }
 }

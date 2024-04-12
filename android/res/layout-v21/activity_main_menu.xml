@@ -10,7 +10,7 @@
 
     <LinearLayout
             android:layout_width="294dp"
-            android:layout_height="405dp"
+            android:layout_height="400dp"
             android:orientation="vertical"
 
             android:background="@drawable/rounded_corner"
@@ -73,7 +73,7 @@
                     android:textColor="@color/white"
 
                     style="@font/samsungone800c"
-                    android:text="@string/tests"
+                    android:text="@string/theory"
                     android:textSize="30sp"
             />
 

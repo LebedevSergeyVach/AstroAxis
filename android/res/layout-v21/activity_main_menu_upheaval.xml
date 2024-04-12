@@ -96,7 +96,7 @@
                         android:backgroundTint="@color/dark_blue"
 
                         style="@font/samsungone800c"
-                        android:text="@string/tests"
+                        android:text="@string/theory"
                         android:textSize="30sp"
                 />
 
