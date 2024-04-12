@@ -9,6 +9,7 @@ The Planets section contains basic information about the planets of the Solar Sy
 where you can read brief information about them, as well as consider their 3D models.
 The Theory section contains basic theoretical information on the astronomy course in high school.
 There is also a table with the translation of astronomical units of measurement.
+
 ___
 
 * [Lebedev Sergey Vyacheslav](https://github.com/LebedevSergeyVach) – Product Lead & Fullstack Developer.
@@ -17,6 +18,8 @@ ___
 
 ## Download a project and deployment.
 
+Download and open the project in Android Studio, install all the necessary packages 
+when initializing build.gradle, compile the project on an Android device.
 ```commandline
 git clone git@github.com:LebedevSergeyVach/AstroAxis.git
 ```
