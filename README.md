@@ -4,24 +4,23 @@
 The project is written on the [LibGDX](https://libgdx.com) framework. 
 The backend is written in [Java](https://www.java.com).
 
-AstroAxis is an android reference application to help high school students study astronomy.
+Astral Axis is an android reference application to help high school students learn astronomy.
 The Planets section contains basic information about the planets of the Solar System,
 where you can read brief information about them, as well as consider their 3D models.
-The Tests section contains theoretical tasks for repeating the material on the planets of the Solar System.
-
+The Theory section contains basic theoretical information on the astronomy course in high school.
+There is also a table with the translation of astronomical units of measurement.
 ___
 
 * [Lebedev Sergey Vyacheslav](https://github.com/LebedevSergeyVach) – Product Lead & Fullstack Developer.
 
 ---
 
-## Project deployment.
+## Download a project and deployment.
 
-#### Download a project.
 ```commandline
 git clone git@github.com:LebedevSergeyVach/AstroAxis.git
 ```
 
 ---
 
-Annual project course "Mobile Java Development" at [Samsung IT-Cub school](https://innovationcampus.ru/itschool/). 
+Project on the course "Java Development for mobile devices" Samsung Innovation Campus at [Samsung IT-Cub school](https://innovationcampus.ru/itschool/).
