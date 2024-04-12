@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Создайте список кнопок
         ArrayList<String> buttonList = new ArrayList<>();
-        buttonList.add(getString(R.string.Sun));
+//        buttonList.add(getString(R.string.Sun));
         buttonList.add(getString(R.string.Mercury));
         buttonList.add(getString(R.string.Venus));
         buttonList.add(getString(R.string.Earth));
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         buttonList.add(getString(R.string.Saturn));
         buttonList.add(getString(R.string.Uranium));
         buttonList.add(getString(R.string.Neptune));
-        buttonList.add(getString(R.string.Pluto));
+//        buttonList.add(getString(R.string.Pluto));
 //        buttonList.add(getString(R.string.theory));
         buttonList.add(getString(R.string.main_menu));
 
@@ -62,71 +62,71 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         ((ButtonAdapter) adapter).setOnButtonClickListener(position -> {
-            if (position == 0) {
-                Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
-                intent.putExtra(getString(R.string.planetName), getString(R.string.Sun));
-                startActivity(intent);
-            }
+//            if (position == 0) {
+//                Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
+//                intent.putExtra(getString(R.string.planetName), getString(R.string.Sun));
+//                startActivity(intent);
+//            }
 
-            if (position == 1) {
+            if (position == 0) {
                 Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
                 intent.putExtra(getString(R.string.planetName), getString(R.string.Mercury));
                 startActivity(intent);
             }
 
-            if (position == 2) {
+            if (position == 1) {
                 Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
                 intent.putExtra(getString(R.string.planetName), getString(R.string.Venus));
                 startActivity(intent);
             }
 
-            if (position == 3) {
+            if (position == 2) {
                 Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
                 intent.putExtra(getString(R.string.planetName), getString(R.string.Earth));
                 startActivity(intent);
             }
 
-            if (position == 4) {
+            if (position == 3) {
                 Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
                 intent.putExtra(getString(R.string.planetName), getString(R.string.Mars));
                 startActivity(intent);
             }
 
-            if (position == 5) {
+            if (position == 4) {
                 Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
                 intent.putExtra(getString(R.string.planetName), getString(R.string.Jupiter));
                 startActivity(intent);
             }
 
-            if (position == 6) {
+            if (position == 5) {
                 Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
                 intent.putExtra(getString(R.string.planetName), getString(R.string.Saturn));
                 startActivity(intent);
             }
 
-            if (position == 7) {
+            if (position == 6) {
                 Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
                 intent.putExtra(getString(R.string.planetName), getString(R.string.Uranium));
                 startActivity(intent);
             }
 
-            if (position == 8) {
+            if (position == 7) {
                 Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
                 intent.putExtra(getString(R.string.planetName), getString(R.string.Neptune));
                 startActivity(intent);
             }
 
-            if (position == 9) {
-                Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
-                intent.putExtra(getString(R.string.planetName), getString(R.string.Pluto));
-                startActivity(intent);
-            }
+//            if (position == 9) {
+//                Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
+//                intent.putExtra(getString(R.string.planetName), getString(R.string.Pluto));
+//                startActivity(intent);
+//            }
 
 //            if (position == 10) {
 //                startActivity(new Intent(MainActivity.this, TheoryActivity.class));
 //            }
 
-            if (position == 10) {
+            if (position == 8) {
                 Intent intent = new Intent(MainActivity.this, MainMenuActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);

@@ -112,7 +112,7 @@ public class PlanetActivity extends AppCompatActivity {
                 {getString(R.string.average_temperature), "14°C"},
                 {getString(R.string.number_of_satellites), "1"},
                 {getString(R.string.main_satellites), "Луна"},
-                {getString(R.string.the_speed_of_rotation_around_its_axis), "1,674 км/ч"},
+                {getString(R.string.the_speed_of_rotation_around_its_axis), "23 часа 56 мин\n1,674 км/ч"},
                 {getString(R.string.the_speed_of_rotation_around_the_Sun), "107,225\nкм/ч"},
                 {getString(R.string.rotation_period), "23.934 часа"},
                 {getString(R.string.the_orbital_period), "365.256 дней"},
