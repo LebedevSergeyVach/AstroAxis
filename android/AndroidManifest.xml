@@ -21,7 +21,9 @@
         tools:ignore="UnusedAttribute"
         android:supportsRtl="true"
         tools:targetApi="31"
-        android:theme="@style/AstroTheme">
+        android:theme="@style/AstroTheme"
+        android:versionCode="2"
+        android:versionName="2.0">
 
         <!--Главная активность-->
         <activity

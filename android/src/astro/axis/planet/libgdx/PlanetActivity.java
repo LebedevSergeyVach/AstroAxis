@@ -5,6 +5,8 @@ import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
@@ -36,7 +38,9 @@ public class PlanetActivity extends AppCompatActivity {
     // Диалоговое окно для разметки спиннера
     private ProgressDialog progressDialog;
 
-    @SuppressLint({"SetTextI18n", "NewApi"})
+    private DatabaseHelper dbHelper;
+
+    @SuppressLint("NewApi") // ДЛЯ GetColor
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,7 +99,7 @@ public class PlanetActivity extends AppCompatActivity {
         TableLayout tableLayout = findViewById(R.id.tableLayout);
 
         // Подключение базы данных
-
+        String query = "SELECT * FROM " + DatabaseHelper.TABLE_NAME + " WHERE " + DatabaseHelper.KEY_ID + " = 1";
 
 
         String[][] data = {
