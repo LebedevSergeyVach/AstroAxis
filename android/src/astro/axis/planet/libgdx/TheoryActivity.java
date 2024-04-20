@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.GestureDetector;
+import android.view.Gravity;
 import android.view.MotionEvent;
 import android.widget.Button;
 import android.widget.TableLayout;
@@ -87,6 +88,19 @@ public class TheoryActivity extends AppCompatActivity {
             }
             tableLayout.addView(tableRow);
         }
+
+        TextView schematicView = findViewById(R.id.schematic_representation_of_the_celestial_sphere_text);
+        TextView horizontalView = findViewById(R.id.horizontal_coordinate_system_text);
+
+        schematicView.setText(getString(R.string.description_schematic_representation_of_the_celestial_sphere));
+        schematicView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+        schematicView.setTextColor(getResources().getColor(R.color.white));
+        schematicView.setGravity(Gravity.CENTER);
+
+        horizontalView.setText(getString(R.string.description_horizontal_coordinate_system));
+        horizontalView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+        horizontalView.setTextColor(getResources().getColor(R.color.white));
+        horizontalView.setGravity(Gravity.CENTER);
     }
 
     @Override

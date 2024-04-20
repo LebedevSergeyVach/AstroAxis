@@ -51,6 +51,7 @@
             </LinearLayout>
 
             <TextView
+                    android:id="@+id/schematic_representation_of_the_celestial_sphere"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -73,20 +74,18 @@
                     android:contentDescription="@string/schematic_representation_of_the_celestial_sphere"/>
 
             <TextView
+                    android:id="@+id/schematic_representation_of_the_celestial_sphere_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textAlignment="center"
                     android:layout_marginTop="20dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:textSize="25sp"
                     style="@font/samsungone800c"
-                    android:text="@string/description_schematic_representation_of_the_celestial_sphere"
                     android:background="@drawable/rounded_corner">
             </TextView>
 
             <TextView
+                    android:id="@+id/horizontal_coordinate_system"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -109,16 +108,13 @@
                     android:contentDescription="@string/horizontal_coordinate_system"/>
 
             <TextView
+                    android:id="@+id/horizontal_coordinate_system_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textAlignment="center"
                     android:layout_marginTop="20dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:textSize="25sp"
                     style="@font/samsungone800c"
-                    android:text="@string/description_horizontal_coordinate_system"
                     android:background="@drawable/rounded_corner">
             </TextView>
 
