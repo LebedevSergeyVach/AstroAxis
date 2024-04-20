@@ -25,10 +25,15 @@ when initializing build.gradle, compile the project on an Android device.
 git clone git@github.com:LebedevSergeyVach/AstroAxis.git
 ```
 
+### Downloading the BETA version of the mobile app [AstroAxisBeta](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/BETA/AstroAxisBeta.apk)
+```commandline
+https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/BETA
+```
+
 ---
 
 Project on the course «Java Development for mobile devices» 
-Samsung Innovation Campus at [Samsung IT-Cub school](https://innovationcampus.ru/itschool/).
+Samsung Innovation Campus at [Samsung IT-Cube school](https://innovationcampus.ru/itschool/).
 
 ---
 
@@ -58,7 +63,12 @@ ___
 git clone git@github.com:LebedevSergeyVach/AstroAxis.git
 ```
 
+### Скачивание БЕТА-версии мобильного приложения [AstroAxisBeta](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/BETA/AstroAxisBeta.apk)
+```commandline
+https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/BETA
+```
+
 ---
 
 Проект по курсу «Мобильная разработка на Java» 
-Samsung Innovation Campus в [Samsung IT-Cub school](https://innovationcampus.ru/itschool/).
+Samsung Innovation Campus в [Samsung IT-Cube school](https://innovationcampus.ru/itschool/).
