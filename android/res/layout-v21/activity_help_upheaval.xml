@@ -34,12 +34,8 @@
         <TextView
                 android:layout_width="480dp"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textAlignment="center"
-                android:textSize="18sp"
                 android:translationY="10dp"
                 android:translationX="10dp"
-                android:text="@string/help_text"
                 style="@font/samsungone800c"/>
 
         <LinearLayout

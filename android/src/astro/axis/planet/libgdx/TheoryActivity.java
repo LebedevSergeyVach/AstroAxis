@@ -23,6 +23,7 @@ import android.view.GestureDetector.SimpleOnGestureListener;
 public class TheoryActivity extends AppCompatActivity {
 
     private Button exitButton, openGLinkGuideButton;
+    private TextView schematicView, horizontalView;
 
     private GestureDetector gestureDetector;
 
@@ -89,8 +90,8 @@ public class TheoryActivity extends AppCompatActivity {
             tableLayout.addView(tableRow);
         }
 
-        TextView schematicView = findViewById(R.id.schematic_representation_of_the_celestial_sphere_text);
-        TextView horizontalView = findViewById(R.id.horizontal_coordinate_system_text);
+        schematicView = findViewById(R.id.schematic_representation_of_the_celestial_sphere_text);
+        horizontalView = findViewById(R.id.horizontal_coordinate_system_text);
 
         schematicView.setText(getString(R.string.description_schematic_representation_of_the_celestial_sphere));
         schematicView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);

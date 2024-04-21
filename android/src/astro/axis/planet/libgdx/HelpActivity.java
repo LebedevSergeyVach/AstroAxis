@@ -6,8 +6,11 @@ import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.TypedValue;
+import android.view.Gravity;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.GestureDetector;
@@ -56,6 +59,12 @@ public class HelpActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
+
+        TextView helpTextView = findViewById(R.id.help_text);
+        helpTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+        helpTextView.setText(getString(R.string.help_text));
+        helpTextView.setTextColor(getResources().getColor(R.color.white));
+        helpTextView.setGravity(Gravity.CENTER);
     }
 
     @Override

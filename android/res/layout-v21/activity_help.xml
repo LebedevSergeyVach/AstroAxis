@@ -38,14 +38,11 @@
                 style="@font/samsungone800c"/>
 
         <TextView
+                android:id="@+id/help_text"
                 android:layout_width="290dp"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textAlignment="center"
-                android:textSize="18sp"
                 android:translationX="10dp"
                 android:translationY="10dp"
-                android:text="@string/help_text"
                 style="@font/samsungone800c"/>
 
         <LinearLayout
