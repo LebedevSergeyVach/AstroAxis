@@ -86,7 +86,7 @@
 
     <Button
             android:layout_width="165dp"
-            android:layout_height="80dp"
+            android:layout_height="75dp"
 
             android:id="@+id/modelButton"
             android:backgroundTint="@color/dark_blue"
@@ -100,13 +100,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.147"
+            app:layout_constraintHorizontal_bias="0.13"
             app:layout_constraintVertical_bias="0.997"
     />
 
     <Button
             android:layout_width="140dp"
-            android:layout_height="80dp"
+            android:layout_height="75dp"
 
             android:id="@+id/backButton"
             android:backgroundTint="@color/dark_blue"
@@ -120,7 +120,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.889"
+            app:layout_constraintHorizontal_bias="0.87"
             app:layout_constraintVertical_bias="0.997"
     />
 

@@ -84,7 +84,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintHorizontal_bias="0.971"
-            app:layout_constraintVertical_bias="0.679"/>
+            app:layout_constraintVertical_bias="0.67"/>
 
     <Button
             android:layout_width="200dp"
