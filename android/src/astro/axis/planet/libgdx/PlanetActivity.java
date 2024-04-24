@@ -105,7 +105,7 @@ public class PlanetActivity extends AppCompatActivity {
         String[][] data = {
                 {getString(R.string.name), planetName},
                 {getString(R.string.radius), "6,371 км"},
-                {getString(R.string.mass), "5.972 × 10^24\nкг"},
+                {getString(R.string.mass), "5.972 × 10²⁴\nкг"},
                 {getString(R.string.density), "5,515 г/см³"},
                 {getString(R.string.average_temperature), "14°C"},
                 {getString(R.string.number_of_satellites), "1"},
@@ -121,7 +121,7 @@ public class PlanetActivity extends AppCompatActivity {
                 {getString(R.string.the_presence_of_an_atmosphere), "Есть"},
                 {getString(R.string.atmospheric_layers), "Тропосфера\nСтратосфера\nМезосфера\nТермосфера\nЭкзосфера"},
                 {getString(R.string.internal_structure), "Кора\nмантия\nядро"},
-                {getString(R.string.features), "Живое\nсущества\nАтмосфера с\nкислородом\nИзменения\nклимата"},
+                {getString(R.string.features), "Живые\nсущества\nАтмосфера с\nкислородом\nИзменения\nклимата"},
 
         };
 
