@@ -10,6 +10,7 @@ import com.badlogic.gdx.graphics.g3d.environment.DirectionalLight;
 import com.badlogic.gdx.graphics.g3d.utils.CameraInputController;
 import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
 
+
 public class NeptuneModel extends ApplicationAdapter {
     private PerspectiveCamera camera;
     private ModelBatch modelBatch;

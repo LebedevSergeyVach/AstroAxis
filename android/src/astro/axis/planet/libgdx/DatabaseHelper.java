@@ -67,11 +67,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 KEY_FEATURES + " TEXT)";
 
         db.execSQL(createTable);
+
+        add();
     }
 
     @Override
     public void onOpen(SQLiteDatabase db) {
         super.onOpen(db);
+    }
+
+    public void add() {
         // Insert data for Mercury
         String[] dataMercury = {
                 "Меркурий", "2,439 км", "3.302 × 10^23\nкг", "5,427 кг/м³",
@@ -180,5 +185,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String command = String.format("DROP TABLE IF EXISTS %s", TABLE_NAME);
         db.execSQL(command);
         onCreate(db);
+    }
+
+    public Cursor getDataById(int id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT * FROM " + TABLE_NAME + " WHERE " + KEY_ID + " = " + id;
+        return db.rawQuery(query, null);
     }
 }

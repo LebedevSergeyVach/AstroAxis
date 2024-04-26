@@ -10,8 +10,10 @@ import com.badlogic.gdx.graphics.g3d.environment.DirectionalLight;
 import com.badlogic.gdx.graphics.g3d.utils.CameraInputController;
 import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
 
+import com.badlogic.gdx.graphics.Texture;
+
+
 public class MercuryModel extends ApplicationAdapter {
-    private Texture earthTexture;
     private PerspectiveCamera camera;
     private ModelBatch modelBatch;
     private ModelInstance earthInstance;
@@ -28,7 +30,6 @@ public class MercuryModel extends ApplicationAdapter {
         camera.lookAt(0,0,0);
         camera.near = 0.1f;
         camera.far = 300f;
-
 
         // Загрузка текстуры
         Texture texture = new Texture(Gdx.files.internal("Mercury.jpg"));
