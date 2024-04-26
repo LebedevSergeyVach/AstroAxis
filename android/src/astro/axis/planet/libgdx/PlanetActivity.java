@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,6 +22,9 @@ import java.util.Objects;
 import java.util.concurrent.RejectedExecutionException;
 
 import android.view.GestureDetector.SimpleOnGestureListener;
+
+import static astro.axis.planet.libgdx.DatabaseHelper.DATABASE_NAME;
+import static astro.axis.planet.libgdx.DatabaseHelper.TABLE_NAME;
 
 
 public class PlanetActivity extends AppCompatActivity {
@@ -99,7 +103,21 @@ public class PlanetActivity extends AppCompatActivity {
         TableLayout tableLayout = findViewById(R.id.tableLayout);
 
         // Подключение базы данных
-        String query = "SELECT * FROM " + DatabaseHelper.TABLE_NAME + " WHERE " + DatabaseHelper.KEY_ID + " = 1";
+        String query = "SELECT * FROM " + TABLE_NAME + " WHERE " + DatabaseHelper.KEY_ID + " = 1";
+
+        if (checkDataBase()) {
+            // База данных существует
+            Toast.makeText(this, "БД ЕСТЬ", R.style.AlertDialogCustom).show();
+        } else {
+            // База данных не существует
+            Toast.makeText(this, "БД НЕТ", R.style.AlertDialogCustom).show();
+        }
+
+
+
+
+
+
 
 
         String[][] data = {
@@ -226,5 +244,21 @@ public class PlanetActivity extends AppCompatActivity {
             }
             return false;
         }
+    }
+
+    private boolean checkDataBase() {
+        SQLiteDatabase checkDB = null;
+        try {
+            String myPath = DatabaseHelper.DATABASE_NAME;
+            checkDB = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READONLY);
+        } catch (SQLiteException e) {
+            // База данных еще не существует
+        }
+
+        if (checkDB != null) {
+            checkDB.close();
+        }
+
+        return checkDB != null;
     }
 }

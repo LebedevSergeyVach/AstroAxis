@@ -2,13 +2,14 @@ package astro.axis.planet.libgdx;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    private static final String DATABASE_NAME = "planets.db";
+    public static final String DATABASE_NAME = "planets.db";
     private static final int DATABASE_VERSION = 1;
     public static final String TABLE_NAME = "planets_table";
 
@@ -66,7 +67,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 KEY_FEATURES + " TEXT)";
 
         db.execSQL(createTable);
+    }
 
+    @Override
+    public void onOpen(SQLiteDatabase db) {
+        super.onOpen(db);
         // Insert data for Mercury
         String[] dataMercury = {
                 "Меркурий", "2,439 км", "3.302 × 10^23\nкг", "5,427 кг/м³",
@@ -135,10 +140,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Insert database
         String[][] planetsData = {dataMercury, dataVenus, dataEarth, dataMars, dataJupiter, dataSaturn, dataUranus, dataNeptune};
         DatabaseHelper dbHelper = new DatabaseHelper(context);
-        dbHelper.addPlanets(planetsData);
+        dbHelper.insertData(planetsData);
     }
 
-    public void addPlanets(String[][] planetsData) {
+    public void insertData(String[][] planetsData) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         for (String[] data : planetsData) {
@@ -163,6 +168,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             values.put(KEY_INTERNAL_STRUCTURE, data[17]);
             values.put(KEY_FEATURES, data[18]);
 
+            // Вставляем данные в таблицу
             db.insert(TABLE_NAME, null, values);
         }
 
