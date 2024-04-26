@@ -12,7 +12,7 @@ There is also a table with the translation of astronomical units of measurement.
 
 ___
 
-* [Lebedev Sergey Vyacheslav](https://github.com/LebedevSergeyVach) – Product Lead & Fullstack Developer.
+#### [Lebedev Sergey Vyacheslav](https://github.com/LebedevSergeyVach) – Product Lead & Fullstack Developer.
 
 ---
 
