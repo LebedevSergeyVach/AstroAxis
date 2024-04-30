@@ -17,6 +17,7 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.GestureDetector.SimpleOnGestureListener;
 
+
 public class HelpActivity extends AppCompatActivity {
     private static final String TAG = "APP:HelpActivity";
 
@@ -53,10 +54,9 @@ public class HelpActivity extends AppCompatActivity {
 
         exitButton.setOnClickListener(view -> {
             Log.d(TAG, "~~~ Pressing the button 'exit' ~~~");
-
-            Intent intent = new Intent(HelpActivity.this, MainMenuActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
+//            Intent intent = new Intent(HelpActivity.this, MainMenuActivity.class);
+//            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//            startActivity(intent);
             finish();
         });
 

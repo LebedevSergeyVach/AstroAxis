@@ -27,19 +27,14 @@ import android.view.GestureDetector.SimpleOnGestureListener;
 public class PlanetActivity extends AppCompatActivity {
     private static final String TAG = "APP:PlanetActivity";
 
-    private TextView planetNameTextView;
-    private Button modelButton, backButton;
-
-    // Для жеста назад
-    private GestureDetector gestureDetector;
-
     private static String planetName;
-    private static int textSizeTable;
+
+    private Button modelButton, backButton;
 
     // Диалоговое окно для разметки спиннера
     private ProgressDialog progressDialog;
-
-    private DatabaseHelper dbHelper;
+    // Для жеста назад
+    private GestureDetector gestureDetector;
 
     @SuppressLint("NewApi") // ДЛЯ GetColor
     @Override
@@ -49,17 +44,19 @@ public class PlanetActivity extends AppCompatActivity {
 
         int orientation = getResources().getConfiguration().orientation;
 
+        int textSizeTable;
+
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
             setContentView(R.layout.activity_planet_upheaval);
             textSizeTable = 28;
         } else {
             setContentView(R.layout.activity_planet);
-            textSizeTable = 23;
+            textSizeTable = 22;
         }
 
         Log.d(TAG, "Start PlanetActivity");
 
-        planetNameTextView = findViewById(R.id.planetName);
+        TextView planetNameTextView = findViewById(R.id.planetName);
 
         Intent intent = getIntent();
         if (intent != null && intent.hasExtra("planetName")) {
@@ -143,38 +140,9 @@ public class PlanetActivity extends AppCompatActivity {
             Log.e("qweasd", "Ошибка загрузки бд");
         }
 
+        String[][] planetData = getPlanetDataArray();
 
-
-
-
-
-
-
-
-        String[][] data = {
-                {getString(R.string.name), planetName},
-                {getString(R.string.radius), "6,371 км"},
-                {getString(R.string.mass), "5.972 × 10²⁴\nкг"},
-                {getString(R.string.density), "5,515 г/см³"},
-                {getString(R.string.average_temperature), "14°C"},
-                {getString(R.string.number_of_satellites), "1"},
-                {getString(R.string.main_satellites), "Луна"},
-                {getString(R.string.the_speed_of_rotation_around_its_axis), "23 часа 56 мин\n1,674 км/ч"},
-                {getString(R.string.the_speed_of_rotation_around_the_Sun), "107,225\nкм/ч"},
-                {getString(R.string.rotation_period), "23.934 часа"},
-                {getString(R.string.the_orbital_period), "365.256 дней"},
-                {getString(R.string.large_semi_axis), "149.600.000\nкм"},
-                {getString(R.string.rings), "Нет"},
-                {getString(R.string.quantity_ring), "Нет"},
-                {getString(R.string.giant), "Нет"},
-                {getString(R.string.the_presence_of_an_atmosphere), "Есть"},
-                {getString(R.string.atmospheric_layers), "Тропосфера\nСтратосфера\nМезосфера\nТермосфера\nЭкзосфера"},
-                {getString(R.string.internal_structure), "Кора\nмантия\nядро"},
-                {getString(R.string.features), "Живые\nсущества\nАтмосфера с\nкислородом\nИзменения\nклимата"},
-
-        };
-
-        for (String[] row : data) {
+        for (String[] row : planetData) {
             TableRow tableRow = new TableRow(this);
             tableRow.setBackgroundResource(R.drawable.table_border); // Добавляем фоновый рисунок для линий
             for (String cell : row) {
@@ -182,7 +150,7 @@ public class PlanetActivity extends AppCompatActivity {
                 textView.setText(cell);
                 textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeTable); // Устанавливаем размер текста
                 textView.setTextColor(getColor(R.color.white)); // Устанавливаем цвет текста
-                textView.setPadding(50, 15, 50, 15);
+                textView.setPadding(20, 15, 0, 15);
 //                textView.setBackgroundResource(R.drawable.cell_border); // Добавляем фоновый рисунок для линий
                 tableRow.addView(textView);
 
@@ -192,6 +160,55 @@ public class PlanetActivity extends AppCompatActivity {
             }
             tableLayout.addView(tableRow);
         }
+    }
+
+    private String[][] getPlanetDataArray() {
+        String[] planetData = new String[18];
+
+        PlanetDataArray planetDataArray = new PlanetDataArray();
+
+        if (planetName.equals(getString(R.string.Mercury))) {
+            planetData = planetDataArray.getPlanetData("mercury");
+        } else if (planetName.equals(getString(R.string.Venus))) {
+            planetData = planetDataArray.getPlanetData("venus");
+        } else if (planetName.equals(getString(R.string.Earth))) {
+            planetData = planetDataArray.getPlanetData("earth");
+        } else if (planetName.equals(getString(R.string.Mars))) {
+            planetData = planetDataArray.getPlanetData("mars");
+        } else if (planetName.equals(getString(R.string.Jupiter))) {
+            planetData = planetDataArray.getPlanetData("jupiter");
+        } else if (planetName.equals(getString(R.string.Saturn))) {
+            planetData = planetDataArray.getPlanetData("saturn");
+        } else if (planetName.equals(getString(R.string.Uranium))) {
+            planetData = planetDataArray.getPlanetData("uranus");
+        } else if (planetName.equals(getString(R.string.Neptune))) {
+            planetData = planetDataArray.getPlanetData("neptune");
+        }
+
+        String[][] data = {
+                {getString(R.string.name), planetData[0]},
+                {getString(R.string.radius), planetData[1]},
+                {getString(R.string.mass), planetData[2]},
+                {getString(R.string.density), planetData[3]},
+                {getString(R.string.average_temperature), planetData[4]},
+                {getString(R.string.number_of_satellites), planetData[5]},
+                {getString(R.string.main_satellites), planetData[6]},
+                {getString(R.string.the_speed_of_rotation_around_its_axis), planetData[7]},
+                {getString(R.string.the_speed_of_rotation_around_the_Sun), planetData[8]},
+                {getString(R.string.rotation_period), planetData[9]},
+                {getString(R.string.the_orbital_period), planetData[10]},
+                {getString(R.string.large_semi_axis), planetData[11]},
+                {getString(R.string.rings), planetData[12]},
+                {getString(R.string.quantity_ring), planetData[13]},
+                {getString(R.string.giant), planetData[14]},
+                {getString(R.string.the_presence_of_an_atmosphere), planetData[15]},
+                {getString(R.string.atmospheric_layers), planetData[16]},
+                {getString(R.string.internal_structure), planetData[17]},
+                {getString(R.string.features), planetData[18]},
+
+        };
+
+        return data;
     }
 
     private void openModelButton(String namePlanet) {
