@@ -94,51 +94,51 @@ public class PlanetActivity extends AppCompatActivity {
 
         backButton.setOnClickListener(view -> finish());
 
-        TableLayout tableLayout = findViewById(R.id.tableLayout);
-
         // Подключение базы данных
 
-        if (checkDataBase()) {
-            // База данных существует
-            Toast.makeText(this, "БД ЕСТЬ", R.style.AlertDialogCustom).show();
-        } else {
-            // База данных не существует
-            // Toast.makeText(this, "БД НЕТ", R.style.AlertDialogCustom).show();
-        }
+//        if (checkDataBase()) {
+//            // База данных существует
+//            Toast.makeText(this, "БД ЕСТЬ", R.style.AlertDialogCustom).show();
+//        } else {
+//            // База данных не существует
+//            // Toast.makeText(this, "БД НЕТ", R.style.AlertDialogCustom).show();
+//        }
+//
+//        try {
+//            DatabaseHelper dbHelper = new DatabaseHelper(this); // Создайте экземпляр класса DatabaseHelper
+//
+//            Cursor cursor = dbHelper.getDataById(1); // Получить данные по ID
+//            if (cursor.moveToFirst()) {
+//                @SuppressLint("Range") String name = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_NAME));
+//                @SuppressLint("Range") String radius = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_RADIUS));
+//                @SuppressLint("Range") String mass = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_MASS));
+//                @SuppressLint("Range") String density = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_DENSITY));
+//                @SuppressLint("Range") String averagetTemperature = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_AVERAGE_TEMPERATURE));
+//                @SuppressLint("Range") String numberSatellites = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_NUMBER_OF_SATELLITES));
+//                @SuppressLint("Range") String mainSatellites = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_MAIN_SATELLITES));
+//                @SuppressLint("Range") String SpeedRotationAroundItsAxis = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_SPEED_OF_ROTATION_AROUND_ITS_AXIS));
+//                @SuppressLint("Range") String speedRotationAroundSun = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_SPEED_OF_ROTATION_AROUND_THE_SUN));
+//                @SuppressLint("Range") String rotationPeriod = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_ROTATION_PERIOD));
+//                @SuppressLint("Range") String orbitalPeriod = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_ORBITAL_PERIOD));
+//                @SuppressLint("Range") String largeSemiAxis = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_LARGE_SEMI_AXIS));
+//                @SuppressLint("Range") String quantityRing = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_RINGS));
+//                @SuppressLint("Range") String quantityRin = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_QUANTITY_RING));
+//                @SuppressLint("Range") String gigant = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_GIANT));
+//                @SuppressLint("Range") String presenceAtmosphere = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_PRESENCE_OF_AN_ATMOSPHERE));
+//                @SuppressLint("Range") String layersAtmosphere = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_ATMOSPHERIC_LAYERS));
+//                @SuppressLint("Range") String internalStructure = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_INTERNAL_STRUCTURE));
+//                @SuppressLint("Range") String features = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_FEATURES));
+//            } else {
+//                Log.e("qweasd", "ПИЗДА");
+//            }
+//            cursor.close();
+//            Log.e("qweasd", "Идет загрузки бд");
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            Log.e("qweasd", "Ошибка загрузки бд");
+//        }
 
-        try {
-            DatabaseHelper dbHelper = new DatabaseHelper(this); // Создайте экземпляр класса DatabaseHelper
-
-            Cursor cursor = dbHelper.getDataById(1); // Получить данные по ID
-            if (cursor.moveToFirst()) {
-                @SuppressLint("Range") String name = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_NAME));
-                @SuppressLint("Range") String radius = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_RADIUS));
-                @SuppressLint("Range") String mass = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_MASS));
-                @SuppressLint("Range") String density = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_DENSITY));
-                @SuppressLint("Range") String averagetTemperature = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_AVERAGE_TEMPERATURE));
-                @SuppressLint("Range") String numberSatellites = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_NUMBER_OF_SATELLITES));
-                @SuppressLint("Range") String mainSatellites = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_MAIN_SATELLITES));
-                @SuppressLint("Range") String SpeedRotationAroundItsAxis = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_SPEED_OF_ROTATION_AROUND_ITS_AXIS));
-                @SuppressLint("Range") String speedRotationAroundSun = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_SPEED_OF_ROTATION_AROUND_THE_SUN));
-                @SuppressLint("Range") String rotationPeriod = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_ROTATION_PERIOD));
-                @SuppressLint("Range") String orbitalPeriod = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_ORBITAL_PERIOD));
-                @SuppressLint("Range") String largeSemiAxis = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_LARGE_SEMI_AXIS));
-                @SuppressLint("Range") String quantityRing = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_RINGS));
-                @SuppressLint("Range") String quantityRin = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_QUANTITY_RING));
-                @SuppressLint("Range") String gigant = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_GIANT));
-                @SuppressLint("Range") String presenceAtmosphere = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_PRESENCE_OF_AN_ATMOSPHERE));
-                @SuppressLint("Range") String layersAtmosphere = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_ATMOSPHERIC_LAYERS));
-                @SuppressLint("Range") String internalStructure = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_INTERNAL_STRUCTURE));
-                @SuppressLint("Range") String features = cursor.getString(cursor.getColumnIndex(DatabaseHelper.KEY_FEATURES));
-            } else {
-                Log.e("qweasd", "ПИЗДА");
-            }
-            cursor.close();
-            Log.e("qweasd", "Идет загрузки бд");
-        } catch (Exception e) {
-            e.printStackTrace();
-            Log.e("qweasd", "Ошибка загрузки бд");
-        }
+        TableLayout tableLayout = findViewById(R.id.tableLayout);
 
         String[][] planetData = getPlanetDataArray();
 
@@ -150,7 +150,7 @@ public class PlanetActivity extends AppCompatActivity {
                 textView.setText(cell);
                 textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeTable); // Устанавливаем размер текста
                 textView.setTextColor(getColor(R.color.white)); // Устанавливаем цвет текста
-                textView.setPadding(20, 15, 0, 15);
+                textView.setPadding(15, 20, 0, 20);
 //                textView.setBackgroundResource(R.drawable.cell_border); // Добавляем фоновый рисунок для линий
                 tableRow.addView(textView);
 
