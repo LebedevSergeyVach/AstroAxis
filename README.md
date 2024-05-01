@@ -68,7 +68,7 @@ ___
 git clone git@github.com:LebedevSergeyVach/AstroAxis.git
 ```
 
-### Загрузка основной стабильной мобильного приложения [AstroAxis](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/v1.0.0/AstroAxis.apk)
+### Загрузка основной стабильной версии мобильного приложения [AstroAxis](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/v1.0.0/AstroAxis.apk)
 ```commandline
 https://github.com/LebedevSergeyVach/AstroAxis/releases/download/v1.0.0/AstroAxis.apk
 ```
