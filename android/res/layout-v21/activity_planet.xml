@@ -79,14 +79,14 @@
                   app:layout_constraintTop_toTopOf="parent"
                   android:id="@+id/linearLayout2"
                   app:layout_constraintHorizontal_bias="0.0"
-                  app:layout_constraintVertical_bias="0.9"
+                  app:layout_constraintVertical_bias="0.91"
                   android:orientation="horizontal">
 
     </LinearLayout>
 
     <Button
             android:layout_width="165dp"
-            android:layout_height="75dp"
+            android:layout_height="70dp"
 
             android:id="@+id/modelButton"
             android:backgroundTint="@color/dark_blue"
@@ -106,7 +106,7 @@
 
     <Button
             android:layout_width="140dp"
-            android:layout_height="75dp"
+            android:layout_height="70dp"
 
             android:id="@+id/backButton"
             android:backgroundTint="@color/dark_blue"
