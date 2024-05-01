@@ -25,7 +25,12 @@ when initializing build.gradle, compile the project on an Android device.
 git clone git@github.com:LebedevSergeyVach/AstroAxis.git
 ```
 
-### Downloading the BETA version of the mobile app [AstroAxisBeta](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/BETA/AstroAxisBeta.apk)
+### Downloading the main stable version of the mobile application [AstroAxis](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/v1.0.0/AstroAxis.apk)
+```commandline
+https://github.com/LebedevSergeyVach/AstroAxis/releases/download/v1.0.0/AstroAxis.apk
+```
+
+### Downloading the BETA version of the mobile application [AstroAxisBeta](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/BETA/AstroAxisBeta.apk)
 ```commandline
 https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/BETA
 ```
@@ -63,7 +68,12 @@ ___
 git clone git@github.com:LebedevSergeyVach/AstroAxis.git
 ```
 
-### Скачивание БЕТА-версии мобильного приложения [AstroAxisBeta](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/BETA/AstroAxisBeta.apk)
+### Загрузка основной стабильной мобильного приложения [AstroAxis](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/v1.0.0/AstroAxis.apk)
+```commandline
+https://github.com/LebedevSergeyVach/AstroAxis/releases/download/v1.0.0/AstroAxis.apk
+```
+
+### Загрузка БЕТА-версии мобильного приложения [AstroAxisBeta](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/BETA/AstroAxisBeta.apk)
 ```commandline
 https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/BETA
 ```
