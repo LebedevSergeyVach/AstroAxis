@@ -7,7 +7,9 @@ import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.GestureDetector;
+import android.view.Gravity;
 import android.view.MotionEvent;
 import android.widget.Button;
 import android.widget.TextView;
@@ -17,12 +19,14 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainMenuActivity extends AppCompatActivity {
     private static final String TAG = "APP:MainMenu";
 
-    private Button planetsButton, testsButton, helpButton, exitButton;
+    private Button planetsButton, theoryButton, helpButton, exitButton;
+    private TextView applicationNameTextView, descriptionApplicationNameTextView;
+    private int textSizeButton, textSizeApplicationName, textSizeDescriptionApplication;
     private int clickCount = 0;
 
     private GestureDetector gestureDetector;
 
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint({"MissingInflatedId", "CutPasteId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,23 +36,62 @@ public class MainMenuActivity extends AppCompatActivity {
 
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
             setContentView(R.layout.activity_main_menu_upheaval);
+            textSizeButton = 30;
+            textSizeApplicationName = 70;
+            textSizeDescriptionApplication = 18;
         } else {
             setContentView(R.layout.activity_main_menu);
+            textSizeButton = 19;
+            textSizeApplicationName = 58;
+            textSizeDescriptionApplication = 16;
         }
 
         Log.d(TAG, "Start Application and MainMenuActivity");
 
+        applicationNameTextView = findViewById(R.id.applicationName);
+        descriptionApplicationNameTextView = findViewById(R.id.descriptionApplication);
+
+        applicationNameTextView.setText(getString(R.string.app_name));
+        applicationNameTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeApplicationName);
+        applicationNameTextView.setTextColor(getResources().getColor(R.color.white));
+        applicationNameTextView.setGravity(Gravity.CENTER);
+
+        descriptionApplicationNameTextView.setText(getString(R.string.description_name));
+        descriptionApplicationNameTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeDescriptionApplication);
+        descriptionApplicationNameTextView.setTextColor(getResources().getColor(R.color.white));
+        descriptionApplicationNameTextView.setGravity(Gravity.CENTER);
+
         planetsButton = findViewById(R.id.planetsButton);
-        testsButton = findViewById(R.id.testsButton);
+        theoryButton = findViewById(R.id.theoryButton);
         helpButton = findViewById(R.id.helpButton);
         exitButton = findViewById(R.id.exitButton);
+
+        planetsButton.setText(getString(R.string.planets));
+        planetsButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
+        planetsButton.setTextColor(getResources().getColor(R.color.white));
+        planetsButton.setGravity(Gravity.CENTER);
+
+        theoryButton.setText(getString(R.string.theory));
+        theoryButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
+        theoryButton.setTextColor(getResources().getColor(R.color.white));
+        theoryButton.setGravity(Gravity.CENTER);
+
+        helpButton.setText(getString(R.string.help));
+        helpButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeButton);
+        helpButton.setTextColor(getResources().getColor(R.color.white));
+        helpButton.setGravity(Gravity.CENTER);
+
+        exitButton.setText(getString(R.string.exit));
+        exitButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeButton);
+        exitButton.setTextColor(getResources().getColor(R.color.white));
+        exitButton.setGravity(Gravity.CENTER);
 
         planetsButton.setOnClickListener(view -> {
             Log.d(TAG, "The transition of their MainMenuActivity to MainActivity");
             startActivity(new Intent(MainMenuActivity.this, MainActivity.class));
         });
 
-        testsButton.setOnClickListener(view -> {
+        theoryButton.setOnClickListener(view -> {
             Log.d(TAG, "The transition of their MainMenuActivity to TestsActivity");
             startActivity(new Intent(MainMenuActivity.this, TheoryActivity.class));
         });
@@ -60,7 +103,7 @@ public class MainMenuActivity extends AppCompatActivity {
 
         exitButton.setOnClickListener(view -> exitApplication());
 
-        TextView nameApp = findViewById(R.id.nameApp);
+        TextView nameApp = findViewById(R.id.applicationName);
 
         nameApp.setOnClickListener(view -> {
             clickCount++;

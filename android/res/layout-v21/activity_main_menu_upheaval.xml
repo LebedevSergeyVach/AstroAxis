@@ -22,24 +22,17 @@
             app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-                android:id="@+id/nameApp"
+                android:id="@+id/applicationName"
                 android:layout_width="match_parent"
                 android:layout_height="74dp"
-                android:textColor="@color/white"
-                android:textAlignment="center"
-                android:textSize="70sp"
                 android:translationY="10dp"
-                android:text="@string/app_name"
                 style="@font/samsungone800c"/>
 
         <TextView
+                android:id="@+id/descriptionApplication"
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
-                android:textColor="@color/white"
-                android:textAlignment="center"
-                android:textSize="18sp"
                 android:translationY="14dp"
-                android:text="@string/description_name"
                 style="@font/samsungone800c"/>
 
         <LinearLayout
@@ -61,10 +54,7 @@
 
                     android:id="@+id/planetsButton"
                     android:backgroundTint="@color/dark_blue"
-
                     style="@font/samsungone800c"
-                    android:text="@string/planets"
-                    android:textSize="30sp"
             />
 
             <Button
@@ -74,10 +64,7 @@
 
                     android:id="@+id/helpButton"
                     android:backgroundTint="@color/dark_blue"
-
                     style="@font/samsungone800c"
-                    android:text="@string/help"
-                    android:textSize="30sp"
             />
 
             </LinearLayout>
@@ -93,12 +80,9 @@
                         android:layout_height="90dp"
                         android:translationX="10dp"
 
-                        android:id="@+id/testsButton"
+                        android:id="@+id/theoryButton"
                         android:backgroundTint="@color/dark_blue"
-
                         style="@font/samsungone800c"
-                        android:text="@string/theory"
-                        android:textSize="30sp"
                 />
 
                 <Button
@@ -108,10 +92,8 @@
 
                         android:id="@+id/exitButton"
                         android:backgroundTint="@color/dark_blue"
-
                         style="@font/samsungone800c"
-                        android:text="@string/exit"
-                        android:textSize="30sp"
+
                 />
             </LinearLayout>
 

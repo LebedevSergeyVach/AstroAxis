@@ -217,7 +217,7 @@
     </LinearLayout>
 
     <Button
-            android:layout_width="160dp"
+            android:layout_width="165dp"
             android:layout_height="70dp"
 
             android:id="@+id/openGLinkGuideButton"
@@ -237,7 +237,7 @@
     />
 
     <Button
-            android:layout_width="140dp"
+            android:layout_width="130dp"
             android:layout_height="70dp"
 
             android:id="@+id/exitButton"
