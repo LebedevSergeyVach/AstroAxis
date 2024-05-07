@@ -15,7 +15,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.GestureDetector;
 import android.view.MotionEvent;
-import android.view.GestureDetector.SimpleOnGestureListener;
 
 
 public class HelpActivity extends AppCompatActivity {
@@ -23,16 +22,15 @@ public class HelpActivity extends AppCompatActivity {
 
     private Button exitButton;
     private ImageView openGitHubButton;
-
     private GestureDetector gestureDetector;
+
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        gestureDetector = new GestureDetector(this, new MyGestureListener());
-
+        gestureDetector = new GestureDetector(new SwipeGestureListener(this));
         int orientation = getResources().getConfiguration().orientation;
 
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
@@ -70,21 +68,5 @@ public class HelpActivity extends AppCompatActivity {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         return gestureDetector.onTouchEvent(event);
-    }
-
-    private class MyGestureListener extends SimpleOnGestureListener {
-        private static final int SWIPE_MIN_DISTANCE = 120;
-        private static final int SWIPE_THRESHOLD_VELOCITY = 200;
-
-        @Override
-        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-            if (e1.getX() - e2.getX() < SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
-                // Смахивание слева направо
-                Log.d("MyActivity", "Swipe right to left detected");
-                finish(); // Закрываем активность
-                return true;
-            }
-            return false;
-        }
     }
 }

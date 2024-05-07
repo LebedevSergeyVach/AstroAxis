@@ -5,7 +5,6 @@ import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.graphics.Typeface;
@@ -20,8 +19,6 @@ import androidx.core.content.res.ResourcesCompat;
 
 import java.util.Objects;
 import java.util.concurrent.RejectedExecutionException;
-
-import android.view.GestureDetector.SimpleOnGestureListener;
 
 
 public class PlanetActivity extends AppCompatActivity {
@@ -40,8 +37,8 @@ public class PlanetActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        gestureDetector = new GestureDetector(this, new MyGestureListener());
 
+        gestureDetector = new GestureDetector(new SwipeGestureListener(this));
         int orientation = getResources().getConfiguration().orientation;
 
         int textSizeTable;
@@ -276,22 +273,6 @@ public class PlanetActivity extends AppCompatActivity {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         return gestureDetector.onTouchEvent(event);
-    }
-
-    private class MyGestureListener extends SimpleOnGestureListener {
-        private static final int SWIPE_MIN_DISTANCE = 120;
-        private static final int SWIPE_THRESHOLD_VELOCITY = 200;
-
-        @Override
-        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-            if (e1.getX() - e2.getX() < SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
-                // Смахивание слева направо
-                Log.d("MyActivity", "Swipe right to left detected");
-                finish(); // Закрываем активность
-                return true;
-            }
-            return false;
-        }
     }
 
     private boolean checkDataBase() {

@@ -17,8 +17,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 
-import android.view.GestureDetector.SimpleOnGestureListener;
-
 
 public class TheoryActivity extends AppCompatActivity {
 
@@ -28,8 +26,8 @@ public class TheoryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        gestureDetector = new GestureDetector(this, new TheoryActivity.MyGestureListener());
 
+        gestureDetector = new GestureDetector(new SwipeGestureListener(this));
         int orientation = getResources().getConfiguration().orientation;
 
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
@@ -104,20 +102,5 @@ public class TheoryActivity extends AppCompatActivity {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         return gestureDetector.onTouchEvent(event);
-    }
-
-    private class MyGestureListener extends SimpleOnGestureListener {
-        private static final int SWIPE_MIN_DISTANCE = 120;
-        private static final int SWIPE_THRESHOLD_VELOCITY = 200;
-
-        @Override
-        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-            if (e1.getX() - e2.getX() < SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
-                // Смахивание слева направо
-                finish(); // Закрываем активность
-                return true;
-            }
-            return false;
-        }
     }
 }
