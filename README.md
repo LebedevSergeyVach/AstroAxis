@@ -26,13 +26,17 @@ git clone git@github.com:LebedevSergeyVach/AstroAxis.git
 ```
 
 ### Downloading the main stable version of the mobile application [AstroAxis](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/v1.0.0/AstroAxis.apk)
+### Description of the release of the main stable version of the mobile application [AstroAxisRelease](https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/v1.0.0)
+
 ```commandline
-https://github.com/LebedevSergeyVach/AstroAxis/releases/download/v1.0.0/AstroAxis.apk
+https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/v1.0.0
 ```
 
-### Downloading the BETA version of the mobile application [AstroAxisBeta](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/BETA/AstroAxisBeta.apk)
+### Downloading the ALPHA version of the mobile application [AstroAxisALPHA](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/ALPHA/AstroAxisALPHA.apk)
+### Description of the release of the ALPHA version of the mobile application [AstroAxisALPHARelease](https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/ALPHA)
+
 ```commandline
-https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/BETA
+https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/ALPHA
 ```
 
 ---
@@ -69,13 +73,17 @@ git clone git@github.com:LebedevSergeyVach/AstroAxis.git
 ```
 
 ### Загрузка основной стабильной версии мобильного приложения [AstroAxis](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/v1.0.0/AstroAxis.apk)
+### Описание релиза основной стабильной версии мобильного приложения [AstroAxisRelease](https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/v1.0.0)
+
 ```commandline
-https://github.com/LebedevSergeyVach/AstroAxis/releases/download/v1.0.0/AstroAxis.apk
+https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/v1.0.0
 ```
 
-### Загрузка БЕТА-версии мобильного приложения [AstroAxisBeta](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/BETA/AstroAxisBeta.apk)
+### Загрузка АЛЬФА-версии мобильного приложения [AstroAxisALPHA](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/ALPHA/AstroAxisALPHA.apk)
+### Описание релиза АЛЬФА-версии мобильного приложения [AstroAxisALPHARelease](https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/ALPHA)
+
 ```commandline
-https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/BETA
+https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/ALPHA
 ```
 
 ---
