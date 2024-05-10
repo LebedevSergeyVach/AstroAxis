@@ -20,10 +20,11 @@ import android.view.MotionEvent;
 public class HelpActivity extends AppCompatActivity {
     private static final String TAG = "APP:HelpActivity";
 
-    private Button exitButton;
+    private Button backButton;
     private ImageView openGitHubButton;
-    private GestureDetector gestureDetector;
+    private TextView helpTextView;
 
+    private GestureDetector gestureDetector;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -42,7 +43,7 @@ public class HelpActivity extends AppCompatActivity {
         Log.d(TAG, "Start HelpActivity");
 
         openGitHubButton = findViewById(R.id.openGithubButton);
-        exitButton = findViewById(R.id.exitButton);
+        backButton = findViewById(R.id.backButton);
 
         openGitHubButton.setOnClickListener(view -> {
             Log.d(TAG, "~~~ Pressing the button 'open_github' ~~~");
@@ -50,15 +51,12 @@ public class HelpActivity extends AppCompatActivity {
             startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://github.com/LebedevSergeyVach/AstroAxis")));
         });
 
-        exitButton.setOnClickListener(view -> {
+        backButton.setOnClickListener(view -> {
             Log.d(TAG, "~~~ Pressing the button 'exit' ~~~");
-//            Intent intent = new Intent(HelpActivity.this, MainMenuActivity.class);
-//            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//            startActivity(intent);
             finish();
         });
 
-        TextView helpTextView = findViewById(R.id.help_text);
+        helpTextView = findViewById(R.id.help_text);
         helpTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
         helpTextView.setText(getString(R.string.help_text));
         helpTextView.setTextColor(getResources().getColor(R.color.white));

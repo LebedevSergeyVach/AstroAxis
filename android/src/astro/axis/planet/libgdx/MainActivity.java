@@ -11,8 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.GestureDetector;
 import android.view.MotionEvent;
-import android.view.GestureDetector.SimpleOnGestureListener;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
@@ -20,6 +18,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "APP:MainActivity";
 
+    // Объявление переменных для RecyclerView
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
@@ -31,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        gestureDetector = new GestureDetector(new SwipeGestureListener(this));
         int orientation = getResources().getConfiguration().orientation;
 
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
@@ -39,19 +39,17 @@ public class MainActivity extends AppCompatActivity {
             setContentView(R.layout.activity_main);
         }
 
-        gestureDetector = new GestureDetector(this, new MyGestureListener());
-
         Log.d(TAG, "Start MainActivity and application");
 
+        // Инициализация RecyclerView и его компонентов
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
 
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        // Создайте список кнопок
+        // Создание списка кнопок
         ArrayList<String> buttonList = new ArrayList<>();
-//        buttonList.add(getString(R.string.Sun));
         buttonList.add(getString(R.string.Mercury));
         buttonList.add(getString(R.string.Venus));
         buttonList.add(getString(R.string.Earth));
@@ -60,21 +58,14 @@ public class MainActivity extends AppCompatActivity {
         buttonList.add(getString(R.string.Saturn));
         buttonList.add(getString(R.string.Uranium));
         buttonList.add(getString(R.string.Neptune));
-//        buttonList.add(getString(R.string.Pluto));
-//        buttonList.add(getString(R.string.theory));
         buttonList.add(getString(R.string.main_menu));
 
-        // Создайте адаптер для списка кнопок
+        // Инициализация адаптера и установка его для RecyclerView
         adapter = new ButtonAdapter(buttonList);
         recyclerView.setAdapter(adapter);
 
+        // Установка слушателя нажатий на кнопки в адаптере
         ((ButtonAdapter) adapter).setOnButtonClickListener(position -> {
-//            if (position == 0) {
-//                Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
-//                intent.putExtra(getString(R.string.planetName), getString(R.string.Sun));
-//                startActivity(intent);
-//            }
-
             if (position == 0) {
                 Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
                 intent.putExtra(getString(R.string.planetName), getString(R.string.Mercury));
@@ -123,16 +114,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
 
-//            if (position == 9) {
-//                Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
-//                intent.putExtra(getString(R.string.planetName), getString(R.string.Pluto));
-//                startActivity(intent);
-//            }
-
-//            if (position == 10) {
-//                startActivity(new Intent(MainActivity.this, TheoryActivity.class));
-//            }
-
             if (position == 8) {
                 finish();
             }
@@ -140,34 +121,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onConfigurationChanged(@NotNull Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            setContentView(R.layout.activity_main);
-        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
-            setContentView(R.layout.activity_main);
-        }
-    }
-
-    @Override
     public boolean onTouchEvent(MotionEvent event) {
         return gestureDetector.onTouchEvent(event);
-    }
-
-    private class MyGestureListener extends SimpleOnGestureListener {
-        private static final int SWIPE_MIN_DISTANCE = 120;
-        private static final int SWIPE_THRESHOLD_VELOCITY = 200;
-
-        @Override
-        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-            Log.d("MyActivity", "onFling called");
-            if (e1.getX() - e2.getX() < SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
-                // Смахивание слева направо
-                Log.d("MyActivity", "Swipe right to left detected");
-                finish(); // Закрываем активность
-                return true;
-            }
-            return false;
-        }
     }
 }

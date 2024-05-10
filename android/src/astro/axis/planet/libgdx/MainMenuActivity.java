@@ -21,7 +21,6 @@ public class MainMenuActivity extends AppCompatActivity {
 
     private Button planetsButton, theoryButton, helpButton, exitButton;
     private TextView applicationNameTextView, descriptionApplicationNameTextView;
-    private int textSizeButton, textSizeApplicationName, textSizeDescriptionApplication;
     private int clickCount = 0;
 
     private GestureDetector gestureDetector;
@@ -34,6 +33,9 @@ public class MainMenuActivity extends AppCompatActivity {
 
         int orientation = getResources().getConfiguration().orientation;
 
+        int textSizeButton;
+        int textSizeApplicationName;
+        int textSizeDescriptionApplication;
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
             setContentView(R.layout.activity_main_menu_upheaval);
             textSizeButton = 30;
@@ -64,7 +66,7 @@ public class MainMenuActivity extends AppCompatActivity {
         planetsButton = findViewById(R.id.planetsButton);
         theoryButton = findViewById(R.id.theoryButton);
         helpButton = findViewById(R.id.helpButton);
-        exitButton = findViewById(R.id.exitButton);
+        exitButton = findViewById(R.id.backButton);
 
         planetsButton.setText(getString(R.string.planets));
         planetsButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
@@ -117,6 +119,19 @@ public class MainMenuActivity extends AppCompatActivity {
         });
     }
 
+    private void exitApplication() {
+        new AlertDialog.Builder(this, R.style.AlertDialogCustom)
+                .setIcon(R.drawable.space)
+                .setTitle(getString(R.string.exit_application))
+                .setMessage(getString(R.string.confirmation_exit_application))
+                .setPositiveButton("Да", (dialog, which) -> {
+                    // Пользователь подтвердил выход, закрываем приложение
+                    finishAffinity();
+                })
+                .setNegativeButton("Нет", null)
+                .show();
+    }
+
     @SuppressLint("MissingSuperCall")
     @Override
     public void onBackPressed() {
@@ -129,7 +144,7 @@ public class MainMenuActivity extends AppCompatActivity {
     }
 
     private class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
-        private static final int SWIPE_MIN_DISTANCE = 120;
+        private static final int SWIPE_MIN_DISTANCE = 100;
         private static final int SWIPE_THRESHOLD_VELOCITY = 200;
 
         @Override
@@ -139,18 +154,5 @@ public class MainMenuActivity extends AppCompatActivity {
             }
             return false;
         }
-    }
-
-    public void exitApplication() {
-        new AlertDialog.Builder(this, R.style.AlertDialogCustom)
-                .setIcon(R.drawable.space)
-                .setTitle(getString(R.string.exit_application))
-                .setMessage(getString(R.string.confirmation_exit_application))
-                .setPositiveButton("Да", (dialog, which) -> {
-                    // Пользователь подтвердил выход, закрываем приложение
-                    finishAffinity();
-                })
-                .setNegativeButton("Нет", null)
-                .show();
     }
 }

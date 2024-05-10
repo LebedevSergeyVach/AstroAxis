@@ -14,6 +14,7 @@ import java.util.ArrayList;
 
 // Определение класса ButtonAdapter, который расширяет RecyclerView.Adapter
 public class ButtonAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+
     // Интерфейс для обработки нажатия на кнопку
     public interface OnButtonClickListener {
         void onButtonClick(int position);
@@ -72,6 +73,7 @@ public class ButtonAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     }
 
     // Метод для создания нового ViewHolder'а
+    @NotNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         if (viewType == VIEW_TYPE_LABEL) {
@@ -99,8 +101,6 @@ public class ButtonAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         } else if (holder instanceof LabelViewHolder) {
             ((LabelViewHolder) holder).label.setText("AstroAxis");
             ((LabelViewHolder) holder).labels.setText("astronomical reference book");
-        } else {
-            ((LabelViewHolder) holder).label.setText("TEST");
         }
     }
 

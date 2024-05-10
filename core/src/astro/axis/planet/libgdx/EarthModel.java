@@ -13,12 +13,13 @@ import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
 
 public class EarthModel extends ApplicationAdapter {
     private PerspectiveCamera camera; // Определение камеры
+    private CameraInputController cameraController; // Контроллер ввода для камеры
+
     private ModelBatch modelBatch; // Определение модели для отрисовки
     private ModelInstance earthInstance; // Экземпляр модели Земли
     private Model earthModel; // Модель Земли
-    private Environment environment; // Окружение для модели
-    private CameraInputController cameraController; // Контроллер ввода для камеры
 
+    private Environment environment; // Окружение для модели
 
     @Override
     public void create () {

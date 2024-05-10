@@ -215,7 +215,7 @@
             android:layout_width="170dp"
             android:layout_height="86dp"
 
-            android:id="@+id/exitButton"
+            android:id="@+id/backButton"
             android:backgroundTint="@color/dark_blue"
 
             style="@font/samsungone800c"

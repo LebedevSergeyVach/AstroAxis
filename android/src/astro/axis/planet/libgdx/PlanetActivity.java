@@ -28,6 +28,11 @@ public class PlanetActivity extends AppCompatActivity {
 
     private Button modelButton, backButton;
 
+    private TextView planetNameTextView;
+    private TableLayout tableLayout;
+
+    private String[][] planetData;
+
     // Диалоговое окно для разметки спиннера
     private ProgressDialog progressDialog;
     // Для жеста назад
@@ -53,7 +58,7 @@ public class PlanetActivity extends AppCompatActivity {
 
         Log.d(TAG, "Start PlanetActivity");
 
-        TextView planetNameTextView = findViewById(R.id.planetName);
+        planetNameTextView = findViewById(R.id.planetName);
 
         Intent intent = getIntent();
         if (intent != null && intent.hasExtra("planetName")) {
@@ -135,9 +140,8 @@ public class PlanetActivity extends AppCompatActivity {
 //            Log.e("qweasd", "Ошибка загрузки бд");
 //        }
 
-        TableLayout tableLayout = findViewById(R.id.tableLayout);
-
-        String[][] planetData = getPlanetDataArray();
+        tableLayout = findViewById(R.id.tableLayout);
+        planetData = getPlanetDataArray();
 
         for (String[] row : planetData) {
             TableRow tableRow = new TableRow(this);
