@@ -39,6 +39,8 @@ https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/v1.0.0
 https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/ALPHA
 ```
 
+### View the UML class diagram of the project on the website [app.diagrams.net](https://app.diagrams.net/?page-id=C5RBs43oDa-KdzZeNtuy&hide-pages=1#HLebedevSergeyVach%2FAstroAxis%2Fmain%2FUML%20class%20diagram.drawio)
+
 ---
 
 Project on the course «Java Development for mobile devices» 
@@ -85,6 +87,8 @@ https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/v1.0.0
 ```commandline
 https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/ALPHA
 ```
+
+### Посмотреть UML диаграмму классов проекта на сатйе [app.diagrams.net](https://app.diagrams.net/?page-id=C5RBs43oDa-KdzZeNtuy&hide-pages=1#HLebedevSergeyVach%2FAstroAxis%2Fmain%2FUML%20class%20diagram.drawio)
 
 ---
 
