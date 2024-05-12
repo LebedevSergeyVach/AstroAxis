@@ -20,11 +20,11 @@ android {
         }
     }
     defaultConfig {
-        applicationId "astro.axis.planet.libgdx"
+        applicationId "com.astro.axis.planet.libgdx"
         minSdkVersion 19
         targetSdkVersion 34
         versionCode 1
-        versionName "1.0"
+        versionName "1.5.0"
     }
     buildTypes {
         release {
