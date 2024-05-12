@@ -14,6 +14,7 @@ import android.util.TypedValue;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.widget.*;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 
@@ -43,6 +44,7 @@ public class PlanetActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         gestureDetector = new GestureDetector(new SwipeGestureListener(this));
         int orientation = getResources().getConfiguration().orientation;
 
@@ -50,7 +52,7 @@ public class PlanetActivity extends AppCompatActivity {
 
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
             setContentView(R.layout.activity_planet_upheaval);
-            textSizeTable = 28;
+            textSizeTable = 26;
         } else {
             setContentView(R.layout.activity_planet);
             textSizeTable = 22;
@@ -151,13 +153,17 @@ public class PlanetActivity extends AppCompatActivity {
                 textView.setText(cell);
                 textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeTable); // Устанавливаем размер текста
                 textView.setTextColor(getColor(R.color.white)); // Устанавливаем цвет текста
-                textView.setPadding(15, 20, 0, 20);
-//                textView.setBackgroundResource(R.drawable.cell_border); // Добавляем фоновый рисунок для линий
+                textView.setPadding(25, 20, 15, 20);
+                // textView.setBackgroundResource(R.drawable.cell_border); // Добавляем фоновый рисунок для линий
                 tableRow.addView(textView);
 
                 // Устанавливаем ваш шрифт
                 Typeface typeface = ResourcesCompat.getFont(this, R.font.samsungone700c);
                 textView.setTypeface(typeface);
+
+                // Устанавливаем ширину столбца в зависимости от содержимого
+                TableRow.LayoutParams layoutParams = new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f);
+                textView.setLayoutParams(layoutParams);
             }
             tableLayout.addView(tableRow);
         }

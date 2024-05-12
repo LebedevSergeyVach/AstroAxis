@@ -81,6 +81,7 @@ public class TheoryActivity extends AppCompatActivity {
                 textView.setTextColor(getColor(R.color.white)); // Устанавливаем цвет текста
                 textView.setPadding(50, 15, 50, 15);
 //                textView.setBackgroundResource(R.drawable.cell_border); // Добавляем фоновый рисунок для линий
+                textView.setLayoutParams(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)); // Добавляем параметры для переноса текста
                 tableRow.addView(textView);
 
                 // Устанавливаем ваш шрифт

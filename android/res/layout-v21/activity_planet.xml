@@ -8,13 +8,6 @@
     tools:context=".PlanetActivity"
     android:background="@drawable/backaround">
 
-<!--    <ImageView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            app:srcCompat="@drawable/img"-->
-<!--            android:id="@+id/imageView"-->
-<!--            android:contentDescription="@string/Mercury"/>-->
-
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
