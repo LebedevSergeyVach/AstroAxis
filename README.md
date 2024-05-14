@@ -4,7 +4,7 @@
 The project is written on the [LibGDX](https://libgdx.com) framework. 
 The backend is written in [Java](https://www.java.com).
 
-Astral Axis is an android reference application to help high school students learn astronomy.
+AstraAxis is an android reference application to help high school students learn astronomy.
 The Planets section contains basic information about the planets of the Solar System,
 where you can read brief information about them, as well as consider their 3D models.
 The Theory section contains basic theoretical information on the astronomy course in high school.
