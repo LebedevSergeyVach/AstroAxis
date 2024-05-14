@@ -12,7 +12,7 @@ There is also a table with the translation of astronomical units of measurement.
 
 ___
 
-### [Lebedev Sergey Vyacheslav](https://github.com/LebedevSergeyVach) – Product Lead & Fullstack Developer.
+### [Lebedev Sergey Vyacheslav](https://github.com/LebedevSergeyVach) – Product Lead & Fullstack Java-Developer.
 
 ---
 
@@ -62,7 +62,7 @@ AstroAxis - android приложение-справочник для помощ�
 
 ___
 
-### [Лебедев Сергей Вячеславович](https://github.com/LebedevSergeyVach) – Руководитель продукта и Fullstack-разработчик.
+### [Лебедев Сергей Вячеславович](https://github.com/LebedevSergeyVach) – Руководитель продукта и Fullstack Java-разработчик.
 
 ---
 
