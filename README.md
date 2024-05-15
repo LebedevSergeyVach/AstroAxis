@@ -26,11 +26,11 @@ when initializing build.gradle, compile the project on an Android device.
 git clone git@github.com:LebedevSergeyVach/AstroAxis.git
 ```
 
-### Downloading the main stable version of the mobile application [AstroAxis](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/v1.0.0/AstroAxis.apk)
-### Description of the release of the main stable version of the mobile application [AstroAxisRelease](https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/v1.0.0)
+### Downloading the main stable version of the mobile application [AstroAxis](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/Main/AstroAxis.apk)
+### Description of the release of the main stable version of the mobile application [AstroAxisRelease](https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/Main)
 
 ```commandline
-https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/v1.0.0
+https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/Main
 ```
 
 ### Downloading the ALPHA version of the mobile application [AstroAxisALPHA](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/ALPHA/AstroAxisALPHA.apk)
@@ -49,7 +49,7 @@ Samsung Innovation Campus at [Samsung IT-Cube school](https://innovationcampus.r
 
 ---
 
-# Мобильное приложение для Android
+# Мобильное Android приложение
 # Астрономический справочник AstroAxis
 
 Проект написан с помощью фреймворка [LibGDX](https://libgdx.com). 
@@ -77,11 +77,11 @@ ___
 git clone git@github.com:LebedevSergeyVach/AstroAxis.git
 ```
 
-### Загрузка основной стабильной версии мобильного приложения [AstroAxis](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/v1.0.0/AstroAxis.apk)
-### Описание релиза основной стабильной версии мобильного приложения [AstroAxisRelease](https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/v1.0.0)
+### Загрузка основной стабильной версии мобильного приложения [AstroAxis](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/Main/AstroAxis.apk)
+### Описание релиза основной стабильной версии мобильного приложения [AstroAxisRelease](https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/Main)
 
 ```commandline
-https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/v1.0.0
+https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/Main
 ```
 
 ### Загрузка АЛЬФА-версии мобильного приложения [AstroAxisALPHA](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/ALPHA/AstroAxisALPHA.apk)
