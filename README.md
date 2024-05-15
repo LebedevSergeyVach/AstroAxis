@@ -13,6 +13,7 @@ There is also a table with the translation of astronomical units of measurement.
 ___
 
 ### [Lebedev Sergey Vyacheslav](https://github.com/LebedevSergeyVach) – Product Lead & Fullstack Java-Developer.
+### The application is available for installation in the app store [RuStore](https://www.rustore.ru/catalog/app/com.astro.axis.planet.libgdx)
 
 ---
 
@@ -63,6 +64,8 @@ AstroAxis - android приложение-справочник для помощ�
 ___
 
 ### [Лебедев Сергей Вячеславович](https://github.com/LebedevSergeyVach) – Руководитель продукта и Fullstack Java-разработчик.
+
+### Приложения доступно к установке в магазине приложений [RuStore](https://www.rustore.ru/catalog/app/com.astro.axis.planet.libgdx)
 
 ---
 
