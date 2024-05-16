@@ -12,26 +12,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            tools:ignore="MissingConstraints"
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+
             app:layout_constraintHorizontal_bias="0.95"
             app:layout_constraintVertical_bias="0.1"
+
+            android:background="@drawable/rounded_corner"
             android:id="@+id/linearLayout">
 
         <TextView
                 android:id="@+id/planetName"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
                 android:textColor="@color/white"
                 android:textAlignment="center"
                 android:textSize="50sp"
                 style="@font/samsungone800c"
-                tools:ignore="MissingConstraints"
                 android:text="@string/planet"
+
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
         />
 
     </LinearLayout>
