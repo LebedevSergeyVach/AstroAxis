@@ -32,7 +32,7 @@ public class MercuryModel extends ApplicationAdapter {
         camera.far = 300f;
 
         // Загрузка текстуры
-        Texture texture = new Texture(Gdx.files.internal("Mercury.jpg"));
+        Texture texture = new Texture(Gdx.files.internal("Mercury2.jpg"));
         texture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
 
         // Создание материала с текстурой
