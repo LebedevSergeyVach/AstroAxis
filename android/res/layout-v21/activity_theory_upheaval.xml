@@ -96,14 +96,13 @@
             </LinearLayout>
 
             <ImageView
+                    android:id="@+id/schematic_image"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/schematic_representation_of_the_celestial_sphere"
-                    android:scaleType="centerCrop"
                     android:contentDescription="@string/schematic_representation_of_the_celestial_sphere"/>
 
             <LinearLayout
@@ -155,14 +154,13 @@
             </LinearLayout>
 
             <ImageView
+                    android:id="@+id/horizontal_image"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/horizontal_coordinate_system"
-                    android:scaleType="centerCrop"
                     android:contentDescription="@string/horizontal_coordinate_system"/>
 
             <LinearLayout

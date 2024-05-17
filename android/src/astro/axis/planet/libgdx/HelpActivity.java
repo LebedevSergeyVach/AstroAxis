@@ -21,7 +21,7 @@ public class HelpActivity extends AppCompatActivity {
     private static final String TAG = "APP:HelpActivity";
 
     private Button backButton;
-    private ImageView openGitHubButton;
+    private ImageView openGitHubButton, openRuStoreButton;
     private TextView helpTextView;
 
     private GestureDetector gestureDetector;
@@ -43,12 +43,19 @@ public class HelpActivity extends AppCompatActivity {
         Log.d(TAG, "Start HelpActivity");
 
         openGitHubButton = findViewById(R.id.openGithubButton);
+        openRuStoreButton = findViewById(R.id.openRuStoreButton);
         backButton = findViewById(R.id.backButton);
 
         openGitHubButton.setOnClickListener(view -> {
             Log.d(TAG, "~~~ Pressing the button 'open_github' ~~~");
 
             startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://github.com/LebedevSergeyVach/AstroAxis")));
+        });
+
+        openRuStoreButton.setOnClickListener(view -> {
+            Log.d(TAG, "~~~ Pressing the button 'open_rustore' ~~~");
+
+            startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://www.rustore.ru/catalog/app/com.astro.axis.planet.libgdx")));
         });
 
         backButton.setOnClickListener(view -> {

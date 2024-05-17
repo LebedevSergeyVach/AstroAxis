@@ -69,7 +69,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_corner"
                     android:layout_marginTop="20dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginBottom="0dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp">
 
@@ -91,23 +91,20 @@
             </LinearLayout>
 
             <ImageView
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
+                    android:id="@+id/schematic_image"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/schematic_representation_of_the_celestial_sphere"
-                    android:scaleType="centerCrop"
                     android:contentDescription="@string/schematic_representation_of_the_celestial_sphere"/>
-
-            <!--android:scaleType="centerCrop"-->
 
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_corner"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="0dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp">
@@ -130,7 +127,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_corner"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginBottom="0dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp">
 
@@ -152,21 +149,20 @@
             </LinearLayout>
 
             <ImageView
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
+                    android:id="@+id/horizontal_image"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/horizontal_coordinate_system"
-                    android:scaleType="centerCrop"
                     android:contentDescription="@string/horizontal_coordinate_system"/>
 
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_corner"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="0dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp">
@@ -232,7 +228,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.13"
+            app:layout_constraintHorizontal_bias="0.14"
             app:layout_constraintVertical_bias="0.997"
     />
 
@@ -252,7 +248,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.87"
+            app:layout_constraintHorizontal_bias="0.86"
             app:layout_constraintVertical_bias="0.997"
     />
 

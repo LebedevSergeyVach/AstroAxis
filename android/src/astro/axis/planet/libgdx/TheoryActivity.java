@@ -10,10 +10,7 @@ import android.util.TypedValue;
 import android.view.GestureDetector;
 import android.view.Gravity;
 import android.view.MotionEvent;
-import android.widget.Button;
-import android.widget.TableLayout;
-import android.widget.TableRow;
-import android.widget.TextView;
+import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 
@@ -45,7 +42,7 @@ public class TheoryActivity extends AppCompatActivity {
         exitButton = findViewById(R.id.backButton);
 
         openGLinkGuideButton.setOnClickListener(view -> {
-            startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://docs.yandex.ru/docs/view?tm=1712343804&tld=ru&lang=ru&name=65777082.pdf&text=Основные%20иены%20измерения%20астрономия%2011%20класс&url=https%3A%2F%2Fwww.litres.ru%2Fget_pdf_trial%2F65777082.pdf&lr=65&mime=pdf&l10n=ru&sign=5f049789bcb124afa918d794e59be610&keyno=0&serpParams=tm%3D1712343804%26tld%3Dru%26lang%3Dru%26name%3D65777082.pdf%26text%3D%25D0%259E%25D1%2581%25D0%25BD%25D0%25BE%25D0%25B2%25D0%25BD%25D1%258B%25D0%25B5%2B%25D0%25B8%25D0%25B5%25D0%25BD%25D1%258B%2B%25D0%25B8%25D0%25B7%25D0%25BC%25D0%25B5%25D1%2580%25D0%25B5%25D0%25BD%25D0%25B8%25D1%258F%2B%25D0%25B0%25D1%2581%25D1%2582%25D1%2580%25D0%25BE%25D0%25BD%25D0%25BE%25D0%25BC%25D0%25B8%25D1%258F%2B11%2B%25D0%25BA%25D0%25BB%25D0%25B0%25D1%2581%25D1%2581%26url%3Dhttps%253A%2F%2Fwww.litres.ru%2Fget_pdf_trial%2F65777082.pdf%26lr%3D65%26mime%3Dpdf%26l10n%3Dru%26sign%3D5f049789bcb124afa918d794e59be610%26keyno%3D0")));
+            startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse(getString(R.string.link_guide_pdf))));
         });
 
         exitButton.setOnClickListener(view -> finish());
@@ -53,20 +50,20 @@ public class TheoryActivity extends AppCompatActivity {
         tableLayout = findViewById(R.id.tableLayout);
 
         String[][] data = {
-                {"Астрон.\nединица"},
+                {"Астроном. единица", "Перевод в единицы измерения"},
                 {"Парсек", "4,848 * 10-⁶"},
-                {"Световой\nгод", "4,848 * 10-⁶"},
+                {"Световой год", "4,848 * 10-⁶"},
                 {"Километр", "1,496 * 10⁸"},
 
                 {""},
-                {"Парсек"},
-                {"Астрон.\nединица", "206 265"},
-                {"Световой\nгод", "3,26"},
+                {"Парсек", "Перевод в единицы измерения"},
+                {"Астроном. единица", "206 265"},
+                {"Световой год", "3,26"},
                 {"Километр", "3,086 * 10¹³"},
 
                 {""},
-                {"Световой\nгод"},
-                {"Астрон.\nединица", "63 241"},
+                {"Световой год", "Перевод в единицы измерения"},
+                {"Астроном. единица", "63 241"},
                 {"Парсек", "0,306"},
                 {"Километр", "9,461 * 10¹²"},
         };
@@ -103,6 +100,14 @@ public class TheoryActivity extends AppCompatActivity {
         horizontalView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
         horizontalView.setTextColor(getResources().getColor(R.color.white));
         horizontalView.setGravity(Gravity.CENTER);
+
+        ImageView schematicImageView = findViewById(R.id.schematic_image);
+        schematicImageView.setImageResource(R.drawable.schematic_representation_of_the_celestial_sphere);
+        schematicImageView.setColorFilter(null);
+
+        ImageView horizontalImageView = findViewById(R.id.horizontal_image);
+        horizontalImageView.setImageResource(R.drawable.horizontal_coordinate_system);
+        horizontalImageView.setColorFilter(null);
     }
 
     @Override
