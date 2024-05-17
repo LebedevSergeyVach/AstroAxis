@@ -49,13 +49,13 @@ public class HelpActivity extends AppCompatActivity {
         openGitHubButton.setOnClickListener(view -> {
             Log.d(TAG, "~~~ Pressing the button 'open_github' ~~~");
 
-            startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://github.com/LebedevSergeyVach/AstroAxis")));
+            startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse(getString(R.string.link_GitHub))));
         });
 
         openRuStoreButton.setOnClickListener(view -> {
             Log.d(TAG, "~~~ Pressing the button 'open_rustore' ~~~");
 
-            startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://www.rustore.ru/catalog/app/com.astro.axis.planet.libgdx")));
+            startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse(getString(R.string.link_RuStore))));
         });
 
         backButton.setOnClickListener(view -> {
