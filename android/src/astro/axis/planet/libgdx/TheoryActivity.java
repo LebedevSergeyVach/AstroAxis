@@ -1,6 +1,7 @@
 package astro.axis.planet.libgdx;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Typeface;
@@ -49,24 +50,8 @@ public class TheoryActivity extends AppCompatActivity {
 
         tableLayout = findViewById(R.id.tableLayout);
 
-        String[][] data = {
-                {"Астроном. единица", "Перевод в единицы измерения"},
-                {"Парсек", "4,848 * 10-⁶"},
-                {"Световой год", "4,848 * 10-⁶"},
-                {"Километр", "1,496 * 10⁸"},
-
-                {""},
-                {"Парсек", "Перевод в единицы измерения"},
-                {"Астроном. единица", "206 265"},
-                {"Световой год", "3,26"},
-                {"Километр", "3,086 * 10¹³"},
-
-                {""},
-                {"Световой год", "Перевод в единицы измерения"},
-                {"Астроном. единица", "63 241"},
-                {"Парсек", "0,306"},
-                {"Километр", "9,461 * 10¹²"},
-        };
+        PlanetDataArray dataTheory = new PlanetDataArray();
+        String[][] data = dataTheory.getTheoryData();
 
         for (String[] row : data) {
             TableRow tableRow = new TableRow(this);
@@ -76,7 +61,7 @@ public class TheoryActivity extends AppCompatActivity {
                 textView.setText(cell);
                 textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25); // Устанавливаем размер текста
                 textView.setTextColor(getColor(R.color.white)); // Устанавливаем цвет текста
-                textView.setPadding(50, 15, 50, 15);
+                textView.setPadding(20, 15, 20, 15);
 //                textView.setBackgroundResource(R.drawable.cell_border); // Добавляем фоновый рисунок для линий
                 textView.setLayoutParams(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)); // Добавляем параметры для переноса текста
                 tableRow.addView(textView);
@@ -91,23 +76,44 @@ public class TheoryActivity extends AppCompatActivity {
         schematicView = findViewById(R.id.schematic_representation_of_the_celestial_sphere_text);
         horizontalView = findViewById(R.id.horizontal_coordinate_system_text);
 
-        schematicView.setText(getString(R.string.description_schematic_representation_of_the_celestial_sphere));
-        schematicView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
-        schematicView.setTextColor(getResources().getColor(R.color.white));
-        schematicView.setGravity(Gravity.CENTER);
+        textDisplayView(schematicView, R.string.description_schematic_representation_of_the_celestial_sphere, R.color.white, 20);
+        textDisplayView(horizontalView, R.string.description_horizontal_coordinate_system, R.color.white, 20);
 
-        horizontalView.setText(getString(R.string.description_horizontal_coordinate_system));
-        horizontalView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
-        horizontalView.setTextColor(getResources().getColor(R.color.white));
-        horizontalView.setGravity(Gravity.CENTER);
 
         ImageView schematicImageView = findViewById(R.id.schematic_image);
-        schematicImageView.setImageResource(R.drawable.schematic_representation_of_the_celestial_sphere);
-        schematicImageView.setColorFilter(null);
-
         ImageView horizontalImageView = findViewById(R.id.horizontal_image);
-        horizontalImageView.setImageResource(R.drawable.horizontal_coordinate_system);
-        horizontalImageView.setColorFilter(null);
+
+        imageDisplayView(schematicImageView, R.drawable.schematic_representation_of_the_celestial_sphere);
+        imageDisplayView(horizontalImageView, R.drawable.horizontal_coordinate_system);
+    }
+
+    private void textDisplayView(TextView textView, int stringIdText, int colorIdText, int textSize) {
+        textView.setText(getString(stringIdText));
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize);
+        textView.setTextColor(getResources().getColor(colorIdText));
+        textView.setGravity(Gravity.CENTER);
+    }
+
+    private void imageDisplayView(ImageView imageView, int drawableIdImage) {
+        imageView.setImageResource(drawableIdImage);
+        imageView.setColorFilter(null);
+
+        fullScreenImage(imageView, drawableIdImage);
+    }
+
+    private void fullScreenImage(ImageView nameImage, int drawableIdImage) {
+        nameImage.setOnClickListener(view -> {
+            // Создаем диалог
+            Dialog dialog = new Dialog(TheoryActivity.this, android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+            dialog.setContentView(R.layout.dialog_full_screen_image);
+
+            // Получаем ImageView из диалога и устанавливаем изображение
+            ImageView fullScreenImageView = dialog.findViewById(R.id.full_screen_image);
+            fullScreenImageView.setImageResource(drawableIdImage);
+
+            // Отображаем диалог
+            dialog.show();
+        });
     }
 
     @Override

@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".TheoryActivity"
-        android:background="@drawable/backaround">
+        android:background="@drawable/background">
 
         <ScrollView
             android:layout_width="match_parent"

@@ -53,40 +53,18 @@ public class MainMenuActivity extends AppCompatActivity {
         applicationNameTextView = findViewById(R.id.applicationName);
         descriptionApplicationNameTextView = findViewById(R.id.descriptionApplication);
 
-        applicationNameTextView.setText(getString(R.string.app_name));
-        applicationNameTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeApplicationName);
-        applicationNameTextView.setTextColor(getResources().getColor(R.color.white));
-        applicationNameTextView.setGravity(Gravity.CENTER);
-
-        descriptionApplicationNameTextView.setText(getString(R.string.description_name));
-        descriptionApplicationNameTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeDescriptionApplication);
-        descriptionApplicationNameTextView.setTextColor(getResources().getColor(R.color.white));
-        descriptionApplicationNameTextView.setGravity(Gravity.CENTER);
+        textDisplayView(applicationNameTextView, R.string.app_name, R.color.white, textSizeApplicationName);
+        textDisplayView(descriptionApplicationNameTextView, R.string.description_name, R.color.white, textSizeDescriptionApplication);
 
         planetsButton = findViewById(R.id.planetsButton);
         theoryButton = findViewById(R.id.theoryButton);
         helpButton = findViewById(R.id.helpButton);
         exitButton = findViewById(R.id.backButton);
 
-        planetsButton.setText(getString(R.string.planets));
-        planetsButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
-        planetsButton.setTextColor(getResources().getColor(R.color.white));
-        planetsButton.setGravity(Gravity.CENTER);
-
-        theoryButton.setText(getString(R.string.theory));
-        theoryButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
-        theoryButton.setTextColor(getResources().getColor(R.color.white));
-        theoryButton.setGravity(Gravity.CENTER);
-
-        helpButton.setText(getString(R.string.help));
-        helpButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeButton);
-        helpButton.setTextColor(getResources().getColor(R.color.white));
-        helpButton.setGravity(Gravity.CENTER);
-
-        exitButton.setText(getString(R.string.exit));
-        exitButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeButton);
-        exitButton.setTextColor(getResources().getColor(R.color.white));
-        exitButton.setGravity(Gravity.CENTER);
+        buttonDisplayView(planetsButton, R.string.planets, 30, R.color.white);
+        buttonDisplayView(theoryButton, R.string.theory, 30, R.color.white);
+        buttonDisplayView(helpButton, R.string.help, textSizeButton, R.color.white);
+        buttonDisplayView(exitButton, R.string.exit, textSizeButton, R.color.white);
 
         planetsButton.setOnClickListener(view -> {
             Log.d(TAG, "The transition of their MainMenuActivity to MainActivity");
@@ -117,6 +95,20 @@ public class MainMenuActivity extends AppCompatActivity {
                 clickCount = 0;
             }
         });
+    }
+
+    private void textDisplayView(TextView textView, int stringIdText, int colorIdText, int textSize) {
+        textView.setText(getString(stringIdText));
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize);
+        textView.setTextColor(getResources().getColor(colorIdText));
+        textView.setGravity(Gravity.CENTER);
+    }
+
+    private void buttonDisplayView(Button buttonView, int stringIdTextButton, int colorIdTextButton, int textSizeButton) {
+        buttonView.setText(getString(stringIdTextButton));
+        buttonView.setTextSize(TypedValue.COMPLEX_UNIT_SP, colorIdTextButton);
+        buttonView.setTextColor(getResources().getColor(textSizeButton));
+        buttonView.setGravity(Gravity.CENTER);
     }
 
     private void exitApplication() {
