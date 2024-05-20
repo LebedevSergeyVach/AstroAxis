@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.AstroAxis" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <!-- Primary brand color. -->
+        Основной цвет приложения
+        <item name="colorPrimary">@color/dark_blue</item>
+        Вариация основного цвета
+        <item name="colorPrimaryVariant">@color/black</item>
+        Цвет текста, который будет использоваться на фоне основного цвета
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary brand color. -->
+        Вторичный цвет приложения
+        <item name="colorSecondary">@color/dark_blue</item>
+        Цвет текста, который будет использоваться на фоне вторичного цвета
+        <item name="colorSecondaryVariant">@color/dark_blue</item>
+        Цвет текста, который будет использоваться на фоне вторичного цвета
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Status bar color. -->
+        Цвет статус бара
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

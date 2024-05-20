@@ -66,10 +66,15 @@ public class HelpActivity extends AppCompatActivity {
         });
 
         helpTextView = findViewById(R.id.help_text);
-        helpTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
-        helpTextView.setText(getString(R.string.help_text));
-        helpTextView.setTextColor(getResources().getColor(R.color.white));
-        helpTextView.setGravity(Gravity.CENTER);
+
+        textDisplayView(helpTextView, R.string.help_text, R.color.white, 18);
+    }
+
+    private void textDisplayView(TextView textView, int stringIdText, int colorIdText, int textSize) {
+        textView.setText(getString(stringIdText));
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize);
+        textView.setTextColor(getResources().getColor(colorIdText));
+        textView.setGravity(Gravity.CENTER);
     }
 
     @Override

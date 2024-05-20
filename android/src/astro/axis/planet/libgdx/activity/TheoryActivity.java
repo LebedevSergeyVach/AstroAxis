@@ -82,7 +82,6 @@ public class TheoryActivity extends AppCompatActivity {
         textDisplayView(schematicView, R.string.description_schematic_representation_of_the_celestial_sphere, R.color.white, 20);
         textDisplayView(horizontalView, R.string.description_horizontal_coordinate_system, R.color.white, 20);
 
-
         ImageView schematicImageView = findViewById(R.id.schematic_image);
         ImageView horizontalImageView = findViewById(R.id.horizontal_image);
 

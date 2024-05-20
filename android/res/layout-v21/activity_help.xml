@@ -9,7 +9,7 @@
         android:background="@drawable/background">
 
     <LinearLayout
-            android:layout_width="310dp"
+            android:layout_width="330dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
 
@@ -33,7 +33,7 @@
 
         <TextView
                 android:id="@+id/help_text"
-                android:layout_width="290dp"
+                android:layout_width="310dp"
                 android:layout_height="wrap_content"
                 android:translationX="10dp"
                 android:translationY="10dp"
@@ -51,7 +51,7 @@
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/git_white"
                     android:id="@+id/openGithubButton"
-                    android:translationX="28dp"
+                    android:translationX="38dp"
                     android:importantForAccessibility="no"
             />
 
@@ -60,7 +60,7 @@
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/rustore"
                     android:id="@+id/openRuStoreButton"
-                    android:translationX="38dp"
+                    android:translationX="48dp"
                     android:importantForAccessibility="no"
             />
 
@@ -70,7 +70,7 @@
                     android:layout_width="120dp"
                     android:layout_height="70dp"
                     android:backgroundTint="@color/dark_blue"
-                    android:translationX="48dp"
+                    android:translationX="58dp"
 
                     android:textColor="@color/white"
                     android:textSize="22sp"
