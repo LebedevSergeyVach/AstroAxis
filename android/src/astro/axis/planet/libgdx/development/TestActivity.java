@@ -1,4 +1,4 @@
-package astro.axis.planet.libgdx;
+package astro.axis.planet.libgdx.development;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import astro.axis.planet.libgdx.R;
 
 public class TestActivity extends AppCompatActivity {
     private static final String TAG = "APP:TestActivity";

@@ -1,7 +1,9 @@
-package astro.axis.planet.libgdx;
+package astro.axis.planet.libgdx.launcher;
 
 import android.content.Intent;
 import android.os.Bundle;
+import astro.axis.planet.libgdx.*;
+import astro.axis.planet.libgdx.activity.MainMenuActivity;
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
 

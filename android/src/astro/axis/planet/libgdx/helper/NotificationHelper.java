@@ -1,4 +1,4 @@
-package astro.axis.planet.libgdx;
+package astro.axis.planet.libgdx.helper;
 
 import android.app.NotificationManager;
 import android.content.Context;
@@ -7,6 +7,7 @@ import android.app.NotificationChannel;
 import android.os.Build;
 import android.app.PendingIntent;
 import android.content.Intent;
+import astro.axis.planet.libgdx.R;
 
 
 public class NotificationHelper {

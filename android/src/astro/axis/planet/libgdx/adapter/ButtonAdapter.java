@@ -1,4 +1,4 @@
-package astro.axis.planet.libgdx;
+package astro.axis.planet.libgdx.adapter;
 
 import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
+import astro.axis.planet.libgdx.R;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;

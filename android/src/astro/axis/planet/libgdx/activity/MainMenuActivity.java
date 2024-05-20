@@ -1,4 +1,4 @@
-package astro.axis.planet.libgdx;
+package astro.axis.planet.libgdx.activity;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -14,6 +14,8 @@ import android.view.MotionEvent;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import astro.axis.planet.libgdx.helper.NotificationHelper;
+import astro.axis.planet.libgdx.R;
 
 
 public class MainMenuActivity extends AppCompatActivity {

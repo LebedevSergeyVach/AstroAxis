@@ -1,4 +1,4 @@
-package astro.axis.planet.libgdx;
+package astro.axis.planet.libgdx.development;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -7,6 +7,9 @@ import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import astro.axis.planet.libgdx.R;
+import astro.axis.planet.libgdx.activity.MainMenuActivity;
+import astro.axis.planet.libgdx.adapter.ButtonAdapter;
 
 import java.util.ArrayList;
 

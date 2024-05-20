@@ -1,4 +1,4 @@
-package astro.axis.planet.libgdx;
+package astro.axis.planet.libgdx.activity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -11,6 +11,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.GestureDetector;
 import android.view.MotionEvent;
+import astro.axis.planet.libgdx.adapter.ButtonAdapter;
+import astro.axis.planet.libgdx.R;
+import astro.axis.planet.libgdx.helper.SwipeGestureListener;
 
 import java.util.ArrayList;
 

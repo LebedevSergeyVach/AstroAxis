@@ -1,4 +1,4 @@
-package astro.axis.planet.libgdx;
+package astro.axis.planet.libgdx.helper;
 
 import android.view.GestureDetector;
 import android.view.MotionEvent;

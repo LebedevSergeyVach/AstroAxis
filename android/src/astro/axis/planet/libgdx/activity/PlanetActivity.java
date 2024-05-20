@@ -1,4 +1,4 @@
-package astro.axis.planet.libgdx;
+package astro.axis.planet.libgdx.activity;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
@@ -14,9 +14,13 @@ import android.util.TypedValue;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.widget.*;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
+import astro.axis.planet.libgdx.*;
+import astro.axis.planet.libgdx.helper.DatabaseHelper;
+import astro.axis.planet.libgdx.helper.PlanetDataArray;
+import astro.axis.planet.libgdx.helper.SwipeGestureListener;
+import astro.axis.planet.libgdx.launcher.AndroidLauncher;
 
 import java.util.Objects;
 import java.util.concurrent.RejectedExecutionException;

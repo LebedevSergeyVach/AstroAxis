@@ -1,14 +1,14 @@
-<!-- activity_full_screen_image.xml -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/background">
+                android:layout_height="match_parent">
 
     <ImageView
             android:id="@+id/full_screen_image"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:scaleType="fitCenter"
-            android:importantForAccessibility="no"/>
+            android:layout_centerInParent="true"
+            tools:ignore="ContentDescription"/>
 
 </RelativeLayout>

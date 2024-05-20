@@ -1,4 +1,4 @@
-package astro.axis.planet.libgdx;
+package astro.axis.planet.libgdx.helper;
 
 import android.content.ContentValues;
 import android.content.Context;

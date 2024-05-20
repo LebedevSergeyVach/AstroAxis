@@ -26,7 +26,7 @@
 
         <!--Главная активность-->
         <activity
-                android:name=".MainMenuActivity"
+                android:name=".activity.MainMenuActivity"
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,38 +36,38 @@
 
         <!--Основные активности-->
         <activity
-                android:name=".MainActivity"
+                android:name=".activity.MainActivity"
                 android:exported="true">
         </activity>
 
         <activity
-                android:name=".PlanetActivity"
+                android:name=".activity.PlanetActivity"
                 android:exported="true">
         </activity>
 
         <activity
-                android:name=".TestsActivity"
+                android:name=".development.TestsActivity"
                 android:exported="true">
         </activity>
 
         <activity
-                android:name=".TestActivity"
+                android:name=".development.TestActivity"
                 android:exported="true">
         </activity>
 
         <activity
-                android:name=".HelpActivity"
+                android:name=".activity.HelpActivity"
                 android:exported="true">
         </activity>
 
         <activity
-                android:name=".TheoryActivity"
+                android:name=".activity.TheoryActivity"
                 android:exported="true">
         </activity>
 
         <!--Активности 3D моделей -->
         <activity
-                android:name="astro.axis.planet.libgdx.AndroidLauncher"
+                android:name="astro.axis.planet.libgdx.launcher.AndroidLauncher"
                 android:screenOrientation="portrait"
                 android:configChanges="keyboard|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout|uiMode"
                 android:exported="true"

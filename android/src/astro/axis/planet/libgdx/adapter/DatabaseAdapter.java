@@ -1,11 +1,8 @@
-package astro.axis.planet.libgdx;
+package astro.axis.planet.libgdx.adapter;
 
-import android.annotation.SuppressLint;
-import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import java.util.ArrayList;
+import astro.axis.planet.libgdx.helper.DatabaseHelper;
 
 public class DatabaseAdapter {
 

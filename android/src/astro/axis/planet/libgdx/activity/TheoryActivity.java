@@ -1,4 +1,4 @@
-package astro.axis.planet.libgdx;
+package astro.axis.planet.libgdx.activity;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -14,6 +14,9 @@ import android.view.MotionEvent;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
+import astro.axis.planet.libgdx.helper.PlanetDataArray;
+import astro.axis.planet.libgdx.R;
+import astro.axis.planet.libgdx.helper.SwipeGestureListener;
 
 
 public class TheoryActivity extends AppCompatActivity {
@@ -104,7 +107,7 @@ public class TheoryActivity extends AppCompatActivity {
     private void fullScreenImage(ImageView nameImage, int drawableIdImage) {
         nameImage.setOnClickListener(view -> {
             // Создаем диалог
-            Dialog dialog = new Dialog(TheoryActivity.this, android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+            Dialog dialog = new Dialog(TheoryActivity.this, R.style.FullScreenDialogStyle);
             dialog.setContentView(R.layout.dialog_full_screen_image);
 
             // Получаем ImageView из диалога и устанавливаем изображение

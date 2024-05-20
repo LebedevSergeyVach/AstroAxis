@@ -1,4 +1,4 @@
-package astro.axis.planet.libgdx;
+package astro.axis.planet.libgdx.activity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -15,6 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.GestureDetector;
 import android.view.MotionEvent;
+import astro.axis.planet.libgdx.R;
+import astro.axis.planet.libgdx.helper.SwipeGestureListener;
 
 
 public class HelpActivity extends AppCompatActivity {
