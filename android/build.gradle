@@ -23,8 +23,8 @@ android {
         applicationId "com.astro.axis.planet.libgdx"
         minSdkVersion 19
         targetSdkVersion 34
-        versionCode 6
-        versionName "1.5.4"
+        versionCode 7
+        versionName "1.5.5"
     }
     buildTypes {
         release {

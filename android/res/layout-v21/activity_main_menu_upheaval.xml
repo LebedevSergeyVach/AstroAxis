@@ -10,7 +10,7 @@
 
     <LinearLayout
             android:layout_width="440dp"
-            android:layout_height="320dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
 
             android:background="@drawable/rounded_corner"
@@ -24,28 +24,28 @@
         <TextView
                 android:id="@+id/applicationName"
                 android:layout_width="match_parent"
-                android:layout_height="74dp"
-                android:translationY="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 style="@font/samsungone800c"/>
 
         <TextView
                 android:id="@+id/descriptionApplication"
                 android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:translationY="14dp"
+                android:layout_height="wrap_content"
                 style="@font/samsungone800c"/>
 
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:translationY="0dp">
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp">
 
             <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="110dp"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:translationY="20dp">
+                    android:layout_marginTop="5dp">
 
             <Button
                     android:layout_width="230dp"
@@ -71,9 +71,9 @@
 
             <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="110dp"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:translationY="10dp">
+                    android:layout_marginTop="5dp">
 
                 <Button
                         android:layout_width="230dp"

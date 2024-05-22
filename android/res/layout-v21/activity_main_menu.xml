@@ -9,8 +9,8 @@
         android:background="@drawable/background">
 
     <LinearLayout
-            android:layout_width="294dp"
-            android:layout_height="400dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
 
             android:background="@drawable/rounded_corner"
@@ -24,29 +24,31 @@
         <TextView
                 android:id="@+id/applicationName"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:translationY="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 style="@font/samsungone800c"
         />
 
         <TextView
                 android:id="@+id/descriptionApplication"
                 android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:translationY="10dp"
+                android:layout_height="wrap_content"
                 style="@font/samsungone800c"/>
 
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:translationY="10dp">
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp">
 
             <Button
-                    android:layout_width="270dp"
+                    android:layout_width="match_parent"
                     android:layout_height="90dp"
-                    android:translationX="13dp"
-                    android:translationY="10dp"
+
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="5dp"
 
                     android:id="@+id/planetsButton"
                     android:backgroundTint="@color/dark_blue"
@@ -54,10 +56,12 @@
             />
 
             <Button
-                    android:layout_width="270dp"
+                    android:layout_width="match_parent"
                     android:layout_height="90dp"
-                    android:translationX="13dp"
-                    android:translationY="15dp"
+
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="5dp"
 
                     android:id="@+id/theoryButton"
                     android:backgroundTint="@color/dark_blue"
@@ -68,7 +72,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:translationY="20dp">
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
 
                 <Button
                         android:layout_width="130dp"
@@ -83,7 +88,7 @@
                 <Button
                         android:layout_width="130dp"
                         android:layout_height="80dp"
-                        android:translationX="20dp"
+                        android:translationX="25dp"
 
                         android:id="@+id/backButton"
                         android:backgroundTint="@color/dark_blue"
