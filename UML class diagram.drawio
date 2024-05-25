@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-25T17:06:00.904Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 OPR/109.0.0.0 (Edition Yx GX)" etag="yT4ySglqnCgdVlcMhSIo" version="24.4.8" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-25T17:06:34.186Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 OPR/109.0.0.0 (Edition Yx GX)" etag="uJvSLzLwiaRBOWRUVdph" version="24.4.8" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="UML class diagram AstroAxis">
     <mxGraphModel dx="5483" dy="2373" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
@@ -587,7 +587,7 @@
           <mxGeometry y="190" width="320" height="26" as="geometry" />
         </mxCell>
         <mxCell id="TKGxbIr76rNyTOzxi1k0-42" value="PlanetActivity" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=5;fontSize=13;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="-880" y="1040" width="320" height="718" as="geometry" />
+          <mxGeometry x="-880" y="1040" width="320" height="450" as="geometry" />
         </mxCell>
         <mxCell id="TKGxbIr76rNyTOzxi1k0-43" value="-&amp;nbsp;gestureDetector:&amp;nbsp;GestureDetector" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=13;strokeWidth=5;" parent="TKGxbIr76rNyTOzxi1k0-42" vertex="1">
           <mxGeometry y="26" width="320" height="26" as="geometry" />
@@ -631,11 +631,14 @@
         <mxCell id="TKGxbIr76rNyTOzxi1k0-56" value="-&amp;nbsp;exitMainMenuActivity(errorMessage:&amp;nbsp;int):&amp;nbsp;void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=13;" parent="TKGxbIr76rNyTOzxi1k0-42" vertex="1">
           <mxGeometry y="346" width="320" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="TKGxbIr76rNyTOzxi1k0-57" value="#&amp;nbsp;onResume():&amp;nbsp;void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=13;direction=south;" parent="TKGxbIr76rNyTOzxi1k0-42" vertex="1">
-          <mxGeometry y="372" width="320" height="320" as="geometry" />
+        <mxCell id="TKGxbIr76rNyTOzxi1k0-57" value="#&amp;nbsp;onResume():&amp;nbsp;void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=13;" parent="TKGxbIr76rNyTOzxi1k0-42" vertex="1">
+          <mxGeometry y="372" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TKGxbIr76rNyTOzxi1k0-58" value="+&amp;nbsp;onTouchEvent(event:&amp;nbsp;MotionEvent):&amp;nbsp;boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=13;" parent="TKGxbIr76rNyTOzxi1k0-42" vertex="1">
+          <mxGeometry y="398" width="320" height="26" as="geometry" />
         </mxCell>
         <mxCell id="TKGxbIr76rNyTOzxi1k0-59" value="-&amp;nbsp;checkDataBase():&amp;nbsp;boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=13;" parent="TKGxbIr76rNyTOzxi1k0-42" vertex="1">
-          <mxGeometry y="692" width="320" height="26" as="geometry" />
+          <mxGeometry y="424" width="320" height="26" as="geometry" />
         </mxCell>
         <mxCell id="TKGxbIr76rNyTOzxi1k0-60" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;AppCompatActivity&lt;/font&gt;" style="html=1;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=5;fontStyle=1;fontSize=13;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-400" y="880" width="320" height="80" as="geometry" />
@@ -1457,9 +1460,6 @@
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="TKGxbIr76rNyTOzxi1k0-58" value="+&amp;nbsp;onTouchEvent(event:&amp;nbsp;MotionEvent):&amp;nbsp;boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=13;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="-1080" y="1830" width="320" height="26" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
