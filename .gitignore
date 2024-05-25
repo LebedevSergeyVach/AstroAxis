@@ -113,6 +113,9 @@ Thumbs.db
 /ios/IOSLauncher.app
 /ios/IOSLauncher.app.dSYM
 
+# Development
+/android/src/astro/axis/planet/libgdx/development
+
 ## APK
 /apk
 /android/release
