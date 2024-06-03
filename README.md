@@ -97,3 +97,9 @@ https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/ALPHA
 
 Проект по курсу «Мобильная разработка на Java» 
 Samsung Innovation Campus в [Samsung IT-Cube school](https://innovationcampus.ru/itschool/).
+
+---
+
+<p align="center">
+  <img src="school/Выпускник_курса_Мобильная_разработка_на_Java_Samsung_Innovation_Campus.png" alt="Мобильная разработка на Java Samsung Innovation Campus">
+</p>
