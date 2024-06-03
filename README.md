@@ -10,6 +10,8 @@ where you can read brief information about them, as well as consider their 3D mo
 The Theory section contains basic theoretical information on the astronomy course in high school.
 There is also a table with the translation of astronomical units of measurement.
 
+[Ссылка на диаграмму UML](#uml-diagram)
+
 ___
 
 ### [Lebedev Sergey Vyacheslav](https://github.com/LebedevSergeyVach) – Product Lead & Fullstack Java-Developer.
@@ -97,6 +99,17 @@ https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/ALPHA
 
 Проект по курсу «Мобильная разработка на Java» 
 Samsung Innovation Campus в [Samsung IT-Cube school](https://innovationcampus.ru/itschool/).
+
+---
+
+<p align="center">
+  <a id="uml-diagram"></a>
+  <img src="UML/UML%20class%20diagram-Classes.drawio.png" alt="UML class diagram">
+</p>
+<p align="center">
+  <strong style="font-style: normal;">UML class diagram of the project</strong>
+</p>
+
 
 ---
 
