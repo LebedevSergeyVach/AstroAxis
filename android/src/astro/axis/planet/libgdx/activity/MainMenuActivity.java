@@ -31,6 +31,7 @@ public class MainMenuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         gestureDetector = new GestureDetector(this, new MyGestureListener());
 
         int orientation = getResources().getConfiguration().orientation;
