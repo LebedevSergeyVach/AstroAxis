@@ -27,13 +27,12 @@ when initializing build.gradle, compile the project on an Android device.
 ```commandline
 git clone git@github.com:LebedevSergeyVach/AstroAxis.git
 ```
+---
 
 ### Downloading the main stable version of the mobile application [AstroAxis](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/Main/AstroAxis.apk).
 ### Description of the release of the main stable version of the mobile application [AstroAxisRelease](https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/Main).
 
-```commandline
-https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/Main
-```
+---
 
 ### View the UML class diagram of the project on the website [app.diagrams.net](https://app.diagrams.net/?page-id=C5RBs43oDa-KdzZeNtuy&hide-pages=1#HLebedevSergeyVach%2FAstroAxis%2Fmain%2FUML%20class%20diagram.drawio).
 ### View images of UML class diagrams [UML class diagram-Classes](UML%2FUML%20class%20diagram-Classes.drawio.png) and activities [UML class diagram-Activity](UML%2FUML%20class%20diagram-Activity.drawio.png).
@@ -76,13 +75,12 @@ ___
 ```commandline
 git clone git@github.com:LebedevSergeyVach/AstroAxis.git
 ```
+---
 
 ### Загрузка основной стабильной версии мобильного приложения [AstroAxis](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/Main/AstroAxis.apk).
 ### Описание релиза основной стабильной версии мобильного приложения [AstroAxisRelease](https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/Main).
 
-```commandline
-https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/Main
-```
+---
 
 ### Посмотреть UML диаграмму классов проекта на сайте [app.diagrams.net](https://app.diagrams.net/?page-id=C5RBs43oDa-KdzZeNtuy&hide-pages=1#HLebedevSergeyVach%2FAstroAxis%2Fmain%2FUML%20class%20diagram.drawio). 
 ### Посмотреть изображения UML диаграммы классов [UML class diagram-Classes.drawio.png](UML%2FUML%20class%20diagram-Classes.drawio.png) и активностей [UML class diagram-Activity.drawio.png](UML%2FUML%20class%20diagram-Activity.drawio.png).
