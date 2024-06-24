@@ -1,3 +1,4 @@
+<a name="up"></a>
 # Mobile Android application
 # AstroAxis astronomical reference book
 
@@ -13,7 +14,7 @@ There is also a table with the translation of astronomical units of measurement.
 ___
 
 ### [Lebedev Sergey Vyacheslav](https://github.com/LebedevSergeyVach) – Product Lead & Fullstack Java-Developer.
-### The application is available for installation in the app store [RuStore](https://www.rustore.ru/catalog/app/com.astro.axis.planet.libgdx)
+### The application is available for installation in the app store [RuStore](https://www.rustore.ru/catalog/app/com.astro.axis.planet.libgdx).
 
 ---
 
@@ -33,13 +34,6 @@ git clone git@github.com:LebedevSergeyVach/AstroAxis.git
 https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/Main
 ```
 
-### Downloading the ALPHA version of the mobile application [AstroAxisALPHA](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/ALPHA/AstroAxisALPHA.apk)
-### Description of the release of the ALPHA version of the mobile application [AstroAxisALPHARelease](https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/ALPHA)
-
-```commandline
-https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/ALPHA
-```
-
 ### View the UML class diagram of the project on the website [app.diagrams.net](https://app.diagrams.net/?page-id=C5RBs43oDa-KdzZeNtuy&hide-pages=1#HLebedevSergeyVach%2FAstroAxis%2Fmain%2FUML%20class%20diagram.drawio)
 
 ---
@@ -49,6 +43,11 @@ Samsung Innovation Campus at [Samsung IT-Cube school](https://innovationcampus.r
 
 ---
 
+#### [README](README.md) [UP](#up)
+
+---
+
+<a name="вверх"></a>
 # Мобильное Android приложение
 # Астрономический справочник AstroAxis
 
@@ -64,8 +63,8 @@ AstroAxis - android приложение-справочник для помощ�
 ___
 
 ### [Лебедев Сергей Вячеславович](https://github.com/LebedevSergeyVach) – Руководитель продукта и Fullstack Java-разработчик.
-
-### Приложения доступно к установке в магазине приложений [RuStore](https://www.rustore.ru/catalog/app/com.astro.axis.planet.libgdx)
+ф
+### Приложения доступно к установке в магазине приложений [RuStore](https://www.rustore.ru/catalog/app/com.astro.axis.planet.libgdx).
 
 ---
 
@@ -84,13 +83,6 @@ git clone git@github.com:LebedevSergeyVach/AstroAxis.git
 https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/Main
 ```
 
-### Загрузка АЛЬФА-версии мобильного приложения [AstroAxisALPHA](https://github.com/LebedevSergeyVach/AstroAxis/releases/download/ALPHA/AstroAxisALPHA.apk)
-### Описание релиза АЛЬФА-версии мобильного приложения [AstroAxisALPHARelease](https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/ALPHA)
-
-```commandline
-https://github.com/LebedevSergeyVach/AstroAxis/releases/tag/ALPHA
-```
-
 ### Посмотреть UML диаграмму классов проекта на сатйе [app.diagrams.net](https://app.diagrams.net/?page-id=C5RBs43oDa-KdzZeNtuy&hide-pages=1#HLebedevSergeyVach%2FAstroAxis%2Fmain%2FUML%20class%20diagram.drawio)
 
 ---
@@ -100,6 +92,4 @@ Samsung Innovation Campus в [Samsung IT-Cube school](https://innovationcampus.r
 
 ---
 
-<p align="center">
-  <img src="school/Выпускник_курса_Мобильная_разработка_на_Java_Samsung_Innovation_Campus.png" alt="Мобильная разработка на Java Samsung Innovation Campus">
-</p>
+#### [README](README.md) [ВВЕРХ](#вверх)
