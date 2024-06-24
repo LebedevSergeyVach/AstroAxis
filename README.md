@@ -1,5 +1,6 @@
-<a name="up"></a>
+
 # Mobile Android application
+<a name="up"></a>
 # AstroAxis astronomical reference book
 
 The project is written on the [LibGDX](https://libgdx.com) framework. 
