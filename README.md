@@ -99,15 +99,15 @@ Samsung Innovation Campus в [Samsung IT-Cube school](https://innovationcampus.r
 ---
 
 <a name="images"></a>
-## Изображения мобильного приложения AstroAxis.
+## Изображения мобильного приложения AstroAxis
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
-  <img src="media/images/entry.jpg" alt="Screenshot 1" style="width: 175px; margin: 5px; border: 1px solid #ccc; border-radius: 5px;" />
-  <img src="media/images/menu.jpg" alt="Screenshot 2" style="width: 175px; margin: 5px; border: 1px solid #ccc; border-radius: 5px;" />
-  <img src="media/images/planet.jpg" alt="Screenshot 3" style="width: 175px; margin: 5px; border: 1px solid #ccc; border-radius: 5px;" />
-  <img src="media/images/model.jpg" alt="Screenshot 4" style="width: 175px; margin: 5px; border: 1px solid #ccc; border-radius: 5px;" />
-  <img src="media/images/reference.jpg" alt="Screenshot 5" style="width: 175px; margin: 5px; border: 1px solid #ccc; border-radius: 5px;" />
-  <img src="media/images/help.jpg" alt="Screenshot 6" style="width: 175px; margin: 5px; border: 1px solid #ccc; border-radius: 5px;" />
+  <img src="media/images/entry.jpg" alt="Entry" style="width: 150px; margin: 15px; border: 10px solid #ccc; border-radius: 50px;" />
+  <img src="media/images/menu.jpg" alt="Menu" style="width: 150px; margin: 15px; border: 10px solid #ccc; border-radius: 50px;" />
+  <img src="media/images/planet.jpg" alt="Planet" style="width: 150px; margin: 15px; border: 10px solid #ccc; border-radius: 50px;" />
+  <img src="media/images/model.jpg" alt="Model" style="width: 150px; margin: 15px; border: 10px solid #ccc; border-radius: 50px;" />
+  <img src="media/images/reference.jpg" alt="Reference" style="width: 150px; margin: 15px; border: 10px solid #ccc; border-radius: 50px;" />
+  <img src="media/images/help.jpg" alt="Help" style="width: 150px; margin: 15px; border: 10px solid #ccc; border-radius: 50px;" />
 </div>
 
 ---
