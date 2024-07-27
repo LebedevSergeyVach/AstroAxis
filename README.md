@@ -93,3 +93,14 @@ Samsung Innovation Campus в [Samsung IT-Cube school](https://innovationcampus.r
 ---
 
 #### [README](README.md) [ВВЕРХ](#вверх)
+
+---
+
+<p float="left">
+  <img src="media/images/entry.jpg" width="200" />
+  <img src="media/images/menu.jpg" width="200" />
+  <img src="media/images/planet.jpg" width="200" />
+  <img src="media/images/model.jpg" width="200" />
+  <img src="media/images/reference.jpg" width="200" />
+  <img src="media/images/help.jpg" width="200" />
+</p>
