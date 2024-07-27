@@ -36,6 +36,7 @@ git clone git@github.com:LebedevSergeyVach/AstroAxis.git
 
 ### View the UML class diagram of the project on the website [app.diagrams.net](https://app.diagrams.net/?page-id=C5RBs43oDa-KdzZeNtuy&hide-pages=1#HLebedevSergeyVach%2FAstroAxis%2Fmain%2FUML%20class%20diagram.drawio).
 ### View images of UML class diagrams [UML class diagram-Classes](UML%2FUML%20class%20diagram-Classes.drawio.png) and activities [UML class diagram-Activity](UML%2FUML%20class%20diagram-Activity.drawio.png).
+### View images of the mobile application [AstroAxis](#images)
 
 ---
 
@@ -84,6 +85,7 @@ git clone git@github.com:LebedevSergeyVach/AstroAxis.git
 
 ### Посмотреть UML диаграмму классов проекта на сайте [app.diagrams.net](https://app.diagrams.net/?page-id=C5RBs43oDa-KdzZeNtuy&hide-pages=1#HLebedevSergeyVach%2FAstroAxis%2Fmain%2FUML%20class%20diagram.drawio). 
 ### Посмотреть изображения UML диаграммы классов [UML class diagram-Classes.drawio.png](UML%2FUML%20class%20diagram-Classes.drawio.png) и активностей [UML class diagram-Activity.drawio.png](UML%2FUML%20class%20diagram-Activity.drawio.png).
+### Посмотреть изображения мобильного приложения [AstroAxis](#images)
 
 ---
 
@@ -96,11 +98,16 @@ Samsung Innovation Campus в [Samsung IT-Cube school](https://innovationcampus.r
 
 ---
 
-<p float="left">
-  <img src="media/images/entry.jpg" width="200" />
-  <img src="media/images/menu.jpg" width="200" />
-  <img src="media/images/planet.jpg" width="200" />
-  <img src="media/images/model.jpg" width="200" />
-  <img src="media/images/reference.jpg" width="200" />
-  <img src="media/images/help.jpg" width="200" />
-</p>
+## Изображения мобильного приложения AstroAxis.
+<a name="images"></a>
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="media/images/entry.jpg" alt="Screenshot 1" style="width: 175px; margin: 5px; border: 1px solid #ccc; border-radius: 5px;" />
+  <img src="media/images/menu.jpg" alt="Screenshot 2" style="width: 175px; margin: 5px; border: 1px solid #ccc; border-radius: 5px;" />
+  <img src="media/images/planet.jpg" alt="Screenshot 3" style="width: 175px; margin: 5px; border: 1px solid #ccc; border-radius: 5px;" />
+  <img src="media/images/model.jpg" alt="Screenshot 4" style="width: 175px; margin: 5px; border: 1px solid #ccc; border-radius: 5px;" />
+  <img src="media/images/reference.jpg" alt="Screenshot 5" style="width: 175px; margin: 5px; border: 1px solid #ccc; border-radius: 5px;" />
+  <img src="media/images/help.jpg" alt="Screenshot 6" style="width: 175px; margin: 5px; border: 1px solid #ccc; border-radius: 5px;" />
+</div>
+
+---
