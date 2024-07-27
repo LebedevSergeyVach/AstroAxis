@@ -98,8 +98,8 @@ Samsung Innovation Campus в [Samsung IT-Cube school](https://innovationcampus.r
 
 ---
 
-## Изображения мобильного приложения AstroAxis.
 <a name="images"></a>
+## Изображения мобильного приложения AstroAxis.
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <img src="media/images/entry.jpg" alt="Screenshot 1" style="width: 175px; margin: 5px; border: 1px solid #ccc; border-radius: 5px;" />
