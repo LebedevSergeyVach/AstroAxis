@@ -12,6 +12,21 @@ where you can read brief information about them, as well as consider their 3D mo
 The Theory section contains basic theoretical information on the astronomy course in high school.
 There is also a table with the translation of astronomical units of measurement.
 
+<details open="open">
+    <summary><h2>🚀 The stack of technologies used</h2></summary>
+    <div align="left">
+        <img width="12" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="40" alt="java logo"  />
+        <img width="12" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gradle/gradle-original.svg" height="40" alt="gradle logo"  />
+        <img width="12" />
+        <img src="https://play-lh.googleusercontent.com/znREMBB1Oc7taxdlDElvWhLD1KSHhEwD5c6KM7bg0Xlu0p8Yad1h38RFMHM8zsANMEk" height="40" alt="debian logo"  />
+        <img width="12" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-plain-wordmark.svg" height="40" alt="android logo"  />
+        <img width="12" />
+    </div>
+</details>
+
 ___
 
 ### [Lebedev Sergey Vyacheslav](https://github.com/LebedevSergeyVach) – Product Lead & Fullstack Java-Developer.
@@ -61,6 +76,21 @@ AstroAxis - android приложение-справочник для помощ�
 где Вы можете прочесть краткую информацию о них, а также рассмотреть их 3D модели.
 В разделе Теория находится основная теоретическая информация по курсу астрономии в старших классах.
 А также находится таблица с переводом астрономических единиц измерения.
+
+<details open="open">
+    <summary><h2>🚀 Стек используемых технологий</h2></summary>
+    <div align="left">
+        <img width="12" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="40" alt="java logo"  />
+        <img width="12" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gradle/gradle-original.svg" height="40" alt="gradle logo"  />
+        <img width="12" />
+        <img src="https://play-lh.googleusercontent.com/znREMBB1Oc7taxdlDElvWhLD1KSHhEwD5c6KM7bg0Xlu0p8Yad1h38RFMHM8zsANMEk" height="40" alt="debian logo"  />
+        <img width="12" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-plain-wordmark.svg" height="40" alt="android logo"  />
+        <img width="12" />
+    </div>
+</details>
 
 ___
 
