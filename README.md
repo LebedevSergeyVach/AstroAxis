@@ -3,8 +3,8 @@
 <a name="up"></a>
 # AstroAxis astronomical reference book
 
-The project is written on the [LibGDX](https://libgdx.com) framework. 
-The backend is written in [Java](https://www.java.com).
+**The project is written using the [LibGDX](https://libgdx.com) framework on [Java](https://www.java.com). 
+The main part is written on [Kotlin](https://kotlinlang.org).**
 
 AstroAxis is an android reference application to help high school students learn astronomy.
 The Planets section contains basic information about the planets of the Solar System,
@@ -70,8 +70,8 @@ Samsung Innovation Campus at [Samsung IT-Cube school](https://innovationcampus.r
 <a name="вверх"></a>
 # Астрономический справочник AstroAxis
 
-Проект написан с помощью фреймворка [LibGDX](https://libgdx.com). 
-Бэк часть написана на [Java](https://www.java.com).
+**Проект написан с помощью фреймворка [LibGDX](https://libgdx.com) на [Java](https://www.java.com). 
+Основная часть написана на [Kotlin](https://kotlinlang.org).**
 
 AstroAxis - android приложение-справочник для помощи в изучении астрономии для старшеклассников.
 В разделе Планеты находится основная информация о планетах Солнечной Системы,
