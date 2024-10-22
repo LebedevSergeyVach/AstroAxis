@@ -13,7 +13,6 @@ import android.view.GestureDetector
 import android.view.GestureDetector.SimpleOnGestureListener
 import android.view.Gravity
 import android.view.MotionEvent
-import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -21,13 +20,16 @@ import astro.axis.planet.libgdx.R
 import astro.axis.planet.libgdx.helper.NotificationHelper.showNotification
 import kotlin.math.abs
 
+@Suppress("DEPRECATION")
 class MainMenuActivity : AppCompatActivity() {
-    private var planetsButton: Button? = null
-    private var theoryButton: Button? = null
-    private var helpButton: Button? = null
-    private var exitButton: Button? = null
-    private var applicationNameTextView: TextView? = null
-    private var descriptionApplicationNameTextView: TextView? = null
+    private val TAG = "APP:MainMenu"
+
+    private lateinit var planetsButton: Button
+    private lateinit var theoryButton: Button
+    private lateinit var helpButton: Button
+    private lateinit var exitButton: Button
+    private lateinit var applicationNameTextView: TextView
+    private lateinit var descriptionApplicationNameTextView: TextView
     private var clickCount = 0
 
     private var gestureDetector: GestureDetector? = null
@@ -78,26 +80,26 @@ class MainMenuActivity : AppCompatActivity() {
         buttonDisplayView(helpButton, R.string.help, textSizeButton, R.color.white)
         buttonDisplayView(exitButton, R.string.exit, textSizeButton, R.color.white)
 
-        planetsButton.setOnClickListener(View.OnClickListener { view: View? ->
+        planetsButton.setOnClickListener {
             Log.d(TAG, "The transition of their MainMenuActivity to MainActivity")
             startActivity(Intent(this@MainMenuActivity, MainActivity::class.java))
-        })
+        }
 
-        theoryButton.setOnClickListener(View.OnClickListener { view: View? ->
+        theoryButton.setOnClickListener {
             Log.d(TAG, "The transition of their MainMenuActivity to TestsActivity")
             startActivity(Intent(this@MainMenuActivity, TheoryActivity::class.java))
-        })
+        }
 
-        helpButton.setOnClickListener(View.OnClickListener { view: View? ->
+        helpButton.setOnClickListener {
             Log.d(TAG, "The transition of their MainMenuActivity to HelpActivity")
             startActivity(Intent(this@MainMenuActivity, HelpActivity::class.java))
-        })
+        }
 
-        exitButton.setOnClickListener(View.OnClickListener { view: View? -> exitApplication() })
+        exitButton.setOnClickListener { exitApplication() }
 
         val nameApp = findViewById<TextView>(R.id.applicationName)
 
-        nameApp.setOnClickListener { view: View? ->
+        nameApp.setOnClickListener {
             clickCount++
             if (clickCount == 5) {
                 val browserIntent =
@@ -138,7 +140,7 @@ class MainMenuActivity : AppCompatActivity() {
             .setIcon(R.drawable.space)
             .setTitle(getString(R.string.exit_application))
             .setMessage(getString(R.string.confirmation_exit_application))
-            .setPositiveButton("Да") { dialog: DialogInterface?, which: Int ->
+            .setPositiveButton("Да") { _: DialogInterface?, _: Int ->
                 // Пользователь подтвердил выход, закрываем приложение
                 finishAffinity()
             }
@@ -146,6 +148,7 @@ class MainMenuActivity : AppCompatActivity() {
             .show()
     }
 
+    @Deprecated("Deprecated in Java")
     @SuppressLint("MissingSuperCall")
     override fun onBackPressed() {
         exitApplication()
@@ -156,20 +159,14 @@ class MainMenuActivity : AppCompatActivity() {
     }
 
     private inner class MyGestureListener : SimpleOnGestureListener() {
+        private val SWIPE_MIN_DISTANCE = 200
+        private val SWIPE_THRESHOLD_VELOCITY = 200
+
         override fun onFling(e1: MotionEvent?, e2: MotionEvent, velocityX: Float, velocityY: Float): Boolean {
-            if (e1!!.x - e2.x < Companion.SWIPE_MIN_DISTANCE && abs(velocityX.toDouble()) > Companion.SWIPE_THRESHOLD_VELOCITY) {
+            if (e1!!.x - e2.x < SWIPE_MIN_DISTANCE && abs(velocityX.toDouble()) > SWIPE_THRESHOLD_VELOCITY) {
                 exitApplication()
             }
             return false
         }
-
-        companion object {
-            private const val SWIPE_MIN_DISTANCE = 200
-            private const val SWIPE_THRESHOLD_VELOCITY = 200
-        }
-    }
-
-    companion object {
-        private const val TAG = "APP:MainMenu"
     }
 }

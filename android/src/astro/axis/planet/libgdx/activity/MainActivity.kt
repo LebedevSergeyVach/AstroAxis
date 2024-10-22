@@ -1,6 +1,5 @@
 package astro.axis.planet.libgdx.activity
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
@@ -12,18 +11,19 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import astro.axis.planet.libgdx.R
 import astro.axis.planet.libgdx.adapter.ButtonAdapter
-import astro.axis.planet.libgdx.adapter.ButtonAdapter.OnButtonClickListener
 import astro.axis.planet.libgdx.helper.SwipeGestureListener
 
+@Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
+    private val TAG = "APP:MainActivity"
+
     // Объявление переменных для RecyclerView
-    private var recyclerView: RecyclerView? = null
-    private var adapter: RecyclerView.Adapter<*>? = null
-    private var layoutManager: RecyclerView.LayoutManager? = null
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: RecyclerView.Adapter<*>
+    private lateinit var layoutManager: RecyclerView.LayoutManager
 
-    private var gestureDetector: GestureDetector? = null
+    private lateinit var gestureDetector: GestureDetector
 
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -43,83 +43,50 @@ class MainActivity : AppCompatActivity() {
         recyclerView.setHasFixedSize(true)
 
         layoutManager = LinearLayoutManager(this)
-        recyclerView.setLayoutManager(layoutManager)
+        recyclerView.layoutManager = layoutManager
 
         // Создание списка кнопок
-        val buttonList = ArrayList<String>()
-        buttonList.add(getString(R.string.Mercury))
-        buttonList.add(getString(R.string.Venus))
-        buttonList.add(getString(R.string.Earth))
-        buttonList.add(getString(R.string.Mars))
-        buttonList.add(getString(R.string.Jupiter))
-        buttonList.add(getString(R.string.Saturn))
-        buttonList.add(getString(R.string.Uranium))
-        buttonList.add(getString(R.string.Neptune))
-        buttonList.add(getString(R.string.main_menu))
+        val buttonList = ArrayList<String>().apply {
+            add(getString(R.string.Mercury))
+            add(getString(R.string.Venus))
+            add(getString(R.string.Earth))
+            add(getString(R.string.Mars))
+            add(getString(R.string.Jupiter))
+            add(getString(R.string.Saturn))
+            add(getString(R.string.Uranium))
+            add(getString(R.string.Neptune))
+            add(getString(R.string.main_menu))
+        }
 
         // Инициализация адаптера и установка его для RecyclerView
         adapter = ButtonAdapter(buttonList)
-        recyclerView.setAdapter(adapter)
+        recyclerView.adapter = adapter
 
         // Установка слушателя нажатий на кнопки в адаптере
-        (adapter as ButtonAdapter).setOnButtonClickListener(OnButtonClickListener { position: Int ->
-            if (position == 0) {
-                val intent = Intent(this@MainActivity, PlanetActivity::class.java)
-                intent.putExtra(getString(R.string.planetName), getString(R.string.Mercury))
-                startActivity(intent)
-            }
-            if (position == 1) {
-                val intent = Intent(this@MainActivity, PlanetActivity::class.java)
-                intent.putExtra(getString(R.string.planetName), getString(R.string.Venus))
-                startActivity(intent)
-            }
-
-            if (position == 2) {
-                val intent = Intent(this@MainActivity, PlanetActivity::class.java)
-                intent.putExtra(getString(R.string.planetName), getString(R.string.Earth))
-                startActivity(intent)
-            }
-
-            if (position == 3) {
-                val intent = Intent(this@MainActivity, PlanetActivity::class.java)
-                intent.putExtra(getString(R.string.planetName), getString(R.string.Mars))
-                startActivity(intent)
-            }
-
-            if (position == 4) {
-                val intent = Intent(this@MainActivity, PlanetActivity::class.java)
-                intent.putExtra(getString(R.string.planetName), getString(R.string.Jupiter))
-                startActivity(intent)
-            }
-
-            if (position == 5) {
-                val intent = Intent(this@MainActivity, PlanetActivity::class.java)
-                intent.putExtra(getString(R.string.planetName), getString(R.string.Saturn))
-                startActivity(intent)
-            }
-
-            if (position == 6) {
-                val intent = Intent(this@MainActivity, PlanetActivity::class.java)
-                intent.putExtra(getString(R.string.planetName), getString(R.string.Uranium))
-                startActivity(intent)
-            }
-
-            if (position == 7) {
-                val intent = Intent(this@MainActivity, PlanetActivity::class.java)
-                intent.putExtra(getString(R.string.planetName), getString(R.string.Neptune))
-                startActivity(intent)
-            }
-            if (position == 8) {
-                finish()
+        (adapter as ButtonAdapter).setOnButtonClickListener(object : ButtonAdapter.OnButtonClickListener {
+            override fun onButtonClick(position: Int) {
+                when (position) {
+                    0 -> startPlanetActivity(R.string.Mercury)
+                    1 -> startPlanetActivity(R.string.Venus)
+                    2 -> startPlanetActivity(R.string.Earth)
+                    3 -> startPlanetActivity(R.string.Mars)
+                    4 -> startPlanetActivity(R.string.Jupiter)
+                    5 -> startPlanetActivity(R.string.Saturn)
+                    6 -> startPlanetActivity(R.string.Uranium)
+                    7 -> startPlanetActivity(R.string.Neptune)
+                    8 -> finish()
+                }
             }
         })
     }
 
-    override fun onTouchEvent(event: MotionEvent): Boolean {
-        return gestureDetector!!.onTouchEvent(event)
+    private fun startPlanetActivity(planetNameResId: Int) {
+        val intent = Intent(this, PlanetActivity::class.java)
+        intent.putExtra(getString(R.string.planetName), getString(planetNameResId))
+        startActivity(intent)
     }
 
-    companion object {
-        private const val TAG = "APP:MainActivity"
+    override fun onTouchEvent(event: MotionEvent): Boolean {
+        return gestureDetector.onTouchEvent(event)
     }
 }

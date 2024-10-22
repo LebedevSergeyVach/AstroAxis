@@ -14,6 +14,7 @@ object NotificationHelper {
     private const val CHANNEL_NAME = "My Channel"
     private const val CHANNEL_DESCRIPTION = "This is my channel for notifications"
 
+    @JvmStatic
     fun showNotification(context: Context, title: String?, message: String?, intent: Intent?) {
         val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 

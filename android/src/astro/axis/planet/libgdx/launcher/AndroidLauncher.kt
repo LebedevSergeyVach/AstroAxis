@@ -16,41 +16,53 @@ class AndroidLauncher : AndroidApplication() {
             planetName = intent.getStringExtra("planetName")
         }
 
-        if (planetName == getString(R.string.Sun)) {
-            val config = AndroidApplicationConfiguration()
-            initialize(SunModel(), config)
-        } else if (planetName == getString(R.string.Mercury)) {
-            val config = AndroidApplicationConfiguration()
-            initialize(MercuryModel(), config)
-        } else if (planetName == getString(R.string.Venus)) {
-            val config = AndroidApplicationConfiguration()
-            initialize(VenusModel(), config)
-        } else if (planetName == getString(R.string.Earth)) {
-            val config = AndroidApplicationConfiguration()
-            initialize(EarthModel(), config)
-        } else if (planetName == getString(R.string.Mars)) {
-            val config = AndroidApplicationConfiguration()
-            initialize(MarsModel(), config)
-        } else if (planetName == getString(R.string.Jupiter)) {
-            val config = AndroidApplicationConfiguration()
-            initialize(JupiterModel(), config)
-        } else if (planetName == getString(R.string.Saturn)) {
-            val config = AndroidApplicationConfiguration()
-            initialize(SaturnModel(), config)
-        } else if (planetName == getString(R.string.Uranium)) {
-            val config = AndroidApplicationConfiguration()
-            initialize(UranusModel(), config)
-        } else if (planetName == getString(R.string.Neptune)) {
-            val config = AndroidApplicationConfiguration()
-            initialize(NeptuneModel(), config)
-        } else if (planetName == getString(R.string.Pluto)) {
-            val config = AndroidApplicationConfiguration()
-            initialize(PlutoModel(), config)
-        } else {
-            val intentHome = Intent(this@AndroidLauncher, MainMenuActivity::class.java)
-            intentHome.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-            startActivity(intentHome)
-            finish()
+        when (planetName) {
+            getString(R.string.Sun) -> {
+                val config = AndroidApplicationConfiguration()
+                initialize(SunModel(), config)
+            }
+            getString(R.string.Mercury) -> {
+                val config = AndroidApplicationConfiguration()
+                initialize(MercuryModel(), config)
+            }
+            getString(R.string.Venus) -> {
+                val config = AndroidApplicationConfiguration()
+                initialize(VenusModel(), config)
+            }
+            getString(R.string.Earth) -> {
+                val config = AndroidApplicationConfiguration()
+                initialize(EarthModel(), config)
+            }
+            getString(R.string.Mars) -> {
+                val config = AndroidApplicationConfiguration()
+                initialize(MarsModel(), config)
+            }
+            getString(R.string.Jupiter) -> {
+                val config = AndroidApplicationConfiguration()
+                initialize(JupiterModel(), config)
+            }
+            getString(R.string.Saturn) -> {
+                val config = AndroidApplicationConfiguration()
+                initialize(SaturnModel(), config)
+            }
+            getString(R.string.Uranium) -> {
+                val config = AndroidApplicationConfiguration()
+                initialize(UranusModel(), config)
+            }
+            getString(R.string.Neptune) -> {
+                val config = AndroidApplicationConfiguration()
+                initialize(NeptuneModel(), config)
+            }
+            getString(R.string.Pluto) -> {
+                val config = AndroidApplicationConfiguration()
+                initialize(PlutoModel(), config)
+            }
+            else -> {
+                val intentHome = Intent(this@AndroidLauncher, MainMenuActivity::class.java)
+                intentHome.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                startActivity(intentHome)
+                finish()
+            }
         }
     }
 

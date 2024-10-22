@@ -1,125 +1,122 @@
-package astro.axis.planet.libgdx.activity;
+package astro.axis.planet.libgdx.activity
 
-import android.annotation.SuppressLint;
-import android.app.Dialog;
-import android.content.Intent;
-import android.content.res.Configuration;
-import android.graphics.Typeface;
-import android.net.Uri;
-import android.os.Bundle;
-import android.util.TypedValue;
-import android.view.GestureDetector;
-import android.view.Gravity;
-import android.view.MotionEvent;
-import android.widget.*;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.res.ResourcesCompat;
-import astro.axis.planet.libgdx.helper.PlanetDataArray;
-import astro.axis.planet.libgdx.R;
-import astro.axis.planet.libgdx.helper.SwipeGestureListener;
+import android.annotation.SuppressLint
+import android.app.Dialog
+import android.content.Intent
+import android.content.res.Configuration
+import android.net.Uri
+import android.os.Bundle
+import android.util.TypedValue
+import android.view.GestureDetector
+import android.view.Gravity
+import android.view.MotionEvent
+import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.res.ResourcesCompat
+import astro.axis.planet.libgdx.R
+import astro.axis.planet.libgdx.helper.PlanetDataArray
+import astro.axis.planet.libgdx.helper.SwipeGestureListener
 
+@Suppress("DEPRECATION")
+class TheoryActivity : AppCompatActivity() {
 
-public class TheoryActivity extends AppCompatActivity {
-
-    private GestureDetector gestureDetector;
-
-    private Button openGLinkGuideButton, exitButton;
-
-    private TableLayout tableLayout;
-    private TextView schematicView, horizontalView;
+    private lateinit var gestureDetector: GestureDetector
+    private lateinit var openGLinkGuideButton: Button
+    private lateinit var exitButton: Button
+    private lateinit var tableLayout: TableLayout
+    private lateinit var schematicView: TextView
+    private lateinit var horizontalView: TextView
 
     @SuppressLint("NewApi")
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
-        gestureDetector = new GestureDetector(new SwipeGestureListener(this));
-        int orientation = getResources().getConfiguration().orientation;
+        gestureDetector = GestureDetector(SwipeGestureListener(this))
+        val orientation = resources.configuration.orientation
 
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            setContentView(R.layout.activity_theory_upheaval);
+            setContentView(R.layout.activity_theory_upheaval)
         } else {
-            setContentView(R.layout.activity_theory);
+            setContentView(R.layout.activity_theory)
         }
 
-        openGLinkGuideButton = findViewById(R.id.openGLinkGuideButton);
-        exitButton = findViewById(R.id.backButton);
+        openGLinkGuideButton = findViewById(R.id.openGLinkGuideButton)
+        exitButton = findViewById(R.id.backButton)
 
-        openGLinkGuideButton.setOnClickListener(view -> {
-            startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse(getString(R.string.link_guide_pdf))));
-        });
+        openGLinkGuideButton.setOnClickListener {
+            startActivity(Intent(Intent.ACTION_VIEW).setData(Uri.parse(getString(R.string.link_guide_pdf))))
+        }
 
-        exitButton.setOnClickListener(view -> finish());
+        exitButton.setOnClickListener { finish() }
 
-        tableLayout = findViewById(R.id.tableLayout);
+        tableLayout = findViewById(R.id.tableLayout)
 
-        PlanetDataArray dataTheory = new PlanetDataArray();
-        String[][] data = dataTheory.getTheoryData();
+        val dataTheory = PlanetDataArray()
+        val data = dataTheory.getTheoryData()
 
-        for (String[] row : data) {
-            TableRow tableRow = new TableRow(this);
-            tableRow.setBackgroundResource(R.drawable.table_border); // Добавляем фоновый рисунок для линий
-            for (String cell : row) {
-                TextView textView = new TextView(this);
-                textView.setText(cell);
-                textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25); // Устанавливаем размер текста
-                textView.setTextColor(getColor(R.color.white)); // Устанавливаем цвет текста
-                textView.setPadding(20, 15, 20, 15);
-//                textView.setBackgroundResource(R.drawable.cell_border); // Добавляем фоновый рисунок для линий
-                textView.setLayoutParams(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f)); // Добавляем параметры для переноса текста
-                tableRow.addView(textView);
+        for (row in data) {
+            val tableRow = TableRow(this)
+            tableRow.setBackgroundResource(R.drawable.table_border) // Добавляем фоновый рисунок для линий
+            for (cell in row) {
+                val textView = TextView(this)
+                textView.text = cell
+                textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25f) // Устанавливаем размер текста
+                textView.setTextColor(resources.getColor(R.color.white)) // Устанавливаем цвет текста
+                textView.setPadding(20, 15, 20, 15)
+                // textView.setBackgroundResource(R.drawable.cell_border); // Добавляем фоновый рисунок для линий
+                textView.layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f) // Добавляем параметры для переноса текста
+                tableRow.addView(textView)
 
                 // Устанавливаем ваш шрифт
-                Typeface typeface = ResourcesCompat.getFont(this, R.font.samsungone700c);
-                textView.setTypeface(typeface);
+                val typeface = ResourcesCompat.getFont(this, R.font.samsungone700c)
+                textView.typeface = typeface
             }
-            tableLayout.addView(tableRow);
+            tableLayout.addView(tableRow)
         }
 
-        schematicView = findViewById(R.id.schematic_representation_of_the_celestial_sphere_text);
-        horizontalView = findViewById(R.id.horizontal_coordinate_system_text);
+        schematicView = findViewById(R.id.schematic_representation_of_the_celestial_sphere_text)
+        horizontalView = findViewById(R.id.horizontal_coordinate_system_text)
 
-        textDisplayView(schematicView, R.string.description_schematic_representation_of_the_celestial_sphere, R.color.white, 20);
-        textDisplayView(horizontalView, R.string.description_horizontal_coordinate_system, R.color.white, 20);
+        textDisplayView(schematicView, R.string.description_schematic_representation_of_the_celestial_sphere, R.color.white, 20)
+        textDisplayView(horizontalView, R.string.description_horizontal_coordinate_system, R.color.white, 20)
 
-        ImageView schematicImageView = findViewById(R.id.schematic_image);
-        ImageView horizontalImageView = findViewById(R.id.horizontal_image);
+        val schematicImageView = findViewById<ImageView>(R.id.schematic_image)
+        val horizontalImageView = findViewById<ImageView>(R.id.horizontal_image)
 
-        imageDisplayView(schematicImageView, R.drawable.schematic_representation_of_the_celestial_sphere);
-        imageDisplayView(horizontalImageView, R.drawable.horizontal_coordinate_system);
+        imageDisplayView(schematicImageView, R.drawable.schematic_representation_of_the_celestial_sphere)
+        imageDisplayView(horizontalImageView, R.drawable.horizontal_coordinate_system)
     }
 
-    private void textDisplayView(TextView textView, int stringIdText, int colorIdText, int textSize) {
-        textView.setText(getString(stringIdText));
-        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize);
-        textView.setTextColor(getResources().getColor(colorIdText));
-        textView.setGravity(Gravity.CENTER);
+    private fun textDisplayView(textView: TextView, stringIdText: Int, colorIdText: Int, textSize: Int) {
+        textView.text = getString(stringIdText)
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize.toFloat())
+        textView.setTextColor(resources.getColor(colorIdText))
+        textView.gravity = Gravity.CENTER
     }
 
-    private void imageDisplayView(ImageView imageView, int drawableIdImage) {
-        imageView.setImageResource(drawableIdImage);
-        imageView.setColorFilter(null);
+    private fun imageDisplayView(imageView: ImageView, drawableIdImage: Int) {
+        imageView.setImageResource(drawableIdImage)
+        imageView.colorFilter = null
 
-        fullScreenImage(imageView, drawableIdImage);
+        fullScreenImage(imageView, drawableIdImage)
     }
 
-    private void fullScreenImage(ImageView nameImage, int drawableIdImage) {
-        nameImage.setOnClickListener(view -> {
+    private fun fullScreenImage(nameImage: ImageView, drawableIdImage: Int) {
+        nameImage.setOnClickListener {
             // Создаем диалог
-            Dialog dialog = new Dialog(TheoryActivity.this, R.style.FullScreenDialogStyle);
-            dialog.setContentView(R.layout.dialog_full_screen_image);
+            val dialog = Dialog(this, R.style.FullScreenDialogStyle)
+            dialog.setContentView(R.layout.dialog_full_screen_image)
 
             // Получаем ImageView из диалога и устанавливаем изображение
-            ImageView fullScreenImageView = dialog.findViewById(R.id.full_screen_image);
-            fullScreenImageView.setImageResource(drawableIdImage);
+            val fullScreenImageView = dialog.findViewById<ImageView>(R.id.full_screen_image)
+            fullScreenImageView.setImageResource(drawableIdImage)
 
             // Отображаем диалог
-            dialog.show();
-        });
+            dialog.show()
+        }
     }
 
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        return gestureDetector.onTouchEvent(event);
+    override fun onTouchEvent(event: MotionEvent): Boolean {
+        return gestureDetector.onTouchEvent(event)
     }
 }

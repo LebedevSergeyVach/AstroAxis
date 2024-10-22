@@ -65,7 +65,7 @@ class ButtonAdapter // Конструктор класса ButtonAdapter
             val buttonText = buttonList[position - 1]
             holder.button.text = buttonText
 
-            holder.button.setOnClickListener { v: View? ->
+            holder.button.setOnClickListener { _: View? ->
                 if (onButtonClickListener != null) {
                     onButtonClickListener!!.onButtonClick(position - 1)
                 }
