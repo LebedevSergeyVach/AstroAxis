@@ -16,6 +16,8 @@ There is also a table with the translation of astronomical units of measurement.
     <summary><h2>🚀 The stack of technologies used</h2></summary>
     <div align="left">
         <img width="12" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" height="40" alt="kotlin logo"  />
+        <img width="12" />
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="40" alt="java logo"  />
         <img width="12" />
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gradle/gradle-original.svg" height="40" alt="gradle logo"  />
@@ -80,6 +82,8 @@ AstroAxis - android приложение-справочник для помощ�
 <details open="open">
     <summary><h2>🚀 Стек используемых технологий</h2></summary>
     <div align="left">
+        <img width="12" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" height="40" alt="kotlin logo"  />
         <img width="12" />
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="40" alt="java logo"  />
         <img width="12" />
