@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FLUSH_STATUS_BAR" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@mipmap/ic_launcher"
+        android:isGame="true"
+        android:appCategory="game"
+        android:label="@string/app_name"
+        tools:ignore="UnusedAttribute"
+        android:supportsRtl="true"
+        tools:targetApi="31"
+        android:theme="@style/AstroTheme">
+
+        <!--Главная активность-->
+        <activity
+                android:name=".activity.MainMenuActivity"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--Основные активности-->
+        <activity
+                android:name=".activity.MainActivity"
+                android:exported="true">
+        </activity>
+
+        <activity
+                android:name=".activity.PlanetActivity"
+                android:exported="true">
+        </activity>
+
+        <activity
+                android:name=".development.TestsActivity"
+                android:exported="true">
+        </activity>
+
+        <activity
+                android:name=".development.TestActivity"
+                android:exported="true">
+        </activity>
+
+        <activity
+                android:name=".activity.HelpActivity"
+                android:exported="true">
+        </activity>
+
+        <activity
+                android:name=".activity.TheoryActivity"
+                android:exported="true">
+        </activity>
+
+        <!--Активности 3D моделей -->
+        <activity
+                android:name="astro.axis.planet.libgdx.launcher.AndroidLauncher"
+                android:screenOrientation="portrait"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout|uiMode"
+                android:exported="true"
+                tools:ignore="LockedOrientationActivity">
+        </activity>
+
+    </application>
+
+</manifest>

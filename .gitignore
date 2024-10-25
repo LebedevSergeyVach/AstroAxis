@@ -101,6 +101,15 @@ gradle-app.setting
 /html/build/
 /ios/build/
 
+
+## app
+/app/build/
+/app/release/
+/app/libs/armeabi-v7a/
+/app/libs/arm64-v8a/
+/app/libs/x86/
+/app/libs/x86_64/
+
 ## OS Specific
 .DS_Store
 Thumbs.db

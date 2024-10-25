@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.MainMenuActivity"
+        android:background="@drawable/background">
+
+    <LinearLayout
+            android:layout_width="440dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:background="@drawable/rounded_corner"
+            tools:ignore="MissingConstraints"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+                android:id="@+id/applicationName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                style="@font/samsungone800c"/>
+
+        <TextView
+                android:id="@+id/descriptionApplication"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@font/samsungone800c"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+
+            <Button
+                    android:layout_width="230dp"
+                    android:layout_height="90dp"
+                    android:translationX="10dp"
+
+                    android:id="@+id/planetsButton"
+                    android:backgroundTint="@color/dark_blue"
+                    style="@font/samsungone800c"
+            />
+
+            <Button
+                    android:layout_width="180dp"
+                    android:layout_height="90dp"
+                    android:translationX="20dp"
+
+                    android:id="@+id/helpButton"
+                    android:backgroundTint="@color/dark_blue"
+                    style="@font/samsungone800c"
+            />
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+
+                <Button
+                        android:layout_width="230dp"
+                        android:layout_height="90dp"
+                        android:translationX="10dp"
+
+                        android:id="@+id/theoryButton"
+                        android:backgroundTint="@color/dark_blue"
+                        style="@font/samsungone800c"
+                />
+
+                <Button
+                        android:layout_width="180dp"
+                        android:layout_height="90dp"
+                        android:translationX="20dp"
+
+                        android:id="@+id/backButton"
+                        android:backgroundTint="@color/dark_blue"
+                        style="@font/samsungone800c"
+
+                />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
