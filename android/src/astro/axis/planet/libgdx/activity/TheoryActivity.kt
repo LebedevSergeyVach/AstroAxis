@@ -19,13 +19,13 @@ import astro.axis.planet.libgdx.helper.SwipeGestureListener
 
 @Suppress("DEPRECATION")
 class TheoryActivity : AppCompatActivity() {
-
     private lateinit var gestureDetector: GestureDetector
     private lateinit var openGLinkGuideButton: Button
     private lateinit var exitButton: Button
     private lateinit var tableLayout: TableLayout
     private lateinit var schematicView: TextView
     private lateinit var horizontalView: TextView
+    private lateinit var planetDataArray: PlanetDataArray
 
     @SuppressLint("NewApi")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,8 +51,8 @@ class TheoryActivity : AppCompatActivity() {
 
         tableLayout = findViewById(R.id.tableLayout)
 
-        val dataTheory = PlanetDataArray()
-        val data = dataTheory.getTheoryData()
+        planetDataArray = PlanetDataArray(this) // Передаем контекст в конструктор
+        val data = planetDataArray.getTheoryData()
 
         for (row in data) {
             val tableRow = TableRow(this)
@@ -67,7 +67,6 @@ class TheoryActivity : AppCompatActivity() {
                 textView.layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f) // Добавляем параметры для переноса текста
                 tableRow.addView(textView)
 
-                // Устанавливаем ваш шрифт
                 val typeface = ResourcesCompat.getFont(this, R.font.samsungone700c)
                 textView.typeface = typeface
             }

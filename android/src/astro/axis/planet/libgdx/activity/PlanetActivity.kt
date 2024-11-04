@@ -34,6 +34,7 @@ class PlanetActivity : AppCompatActivity() {
     private lateinit var planetData: Array<Array<String>>
     private var progressDialog: ProgressDialog? = null
     private lateinit var gestureDetector: GestureDetector
+    private lateinit var planetDataArray: PlanetDataArray
 
     @SuppressLint("NewApi") // ДЛЯ GetColor
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -77,6 +78,7 @@ class PlanetActivity : AppCompatActivity() {
         backButton.setOnClickListener { finish() }
 
         tableLayout = findViewById(R.id.tableLayout)
+        planetDataArray = PlanetDataArray(this) // Передаем контекст в конструктор
         planetData = getPlanetDataArray()
 
         for (row in planetData) {
@@ -99,7 +101,6 @@ class PlanetActivity : AppCompatActivity() {
 
     private fun getPlanetDataArray(): Array<Array<String>> {
         val planetData = Array(19) { "" }
-        val planetDataArray = PlanetDataArray()
 
         try {
             when (planetName) {

@@ -1,148 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     Название
-    <string name="app_name">AstroAxis</string>
-    <string name="description_name">astronomical reference book</string>
+    <string name="app_name" translatable="false">AstroAxis</string>
+    <string name="description_name" translatable="false">astronomical reference book</string>
 
     Главное меню входа
-    <string name="main_menu">Главное меню</string>
-    <string name="planets">Планеты</string>
-    <string name="planet">Планета</string>
-    <string name="help">Справка</string>
-    <string name="exit">Выход</string>
-    <string name="tests">Тесты</string>
-    <string name="test">Тест</string>
-    <string name="model">Модель</string>
-    <string name="models">Модели</string>
+    <string name="main_menu">Main menu</string>
+    <string name="planets">Planets</string>
+    <string name="planet">Planet</string>
+    <string name="help">Help</string>
+    <string name="exit">Exit</string>
+    <string name="model">Model</string>
     <string name="back">➥</string>
-    <string name="theory">Теория</string>
-    <string name="loading">Загрузка</string>
-    <string name="loading_model">Загрузка модели</string>
-    <string name="error_loading_model">Ошибка загрузка модели</string>
-    <string name="exit_application">Выход из приложения</string>
-    <string name="confirmation_exit_application">Вы действительно хотите выйти из приложения ?!</string>
+    <string name="theory">Theory</string>
+    <string name="loading">Loading</string>
+    <string name="loading_model">Loading the model</string>
+    <string name="error_loading_model">Error loading the model</string>
+    <string name="exit_application">Exiting the application</string>
+    <string name="confirmation_exit_application">Do you really want to exit the app ?!</string>
 
     Справка
     <string name="help_text">
-        AstroAxis - android приложение-справочник для помощи в изучении астрономии для старшеклассников.
-        В разделе Планеты находится основная информация о планетах Солнечной Системы,
-        где Вы можете прочесть краткую информацию о них, а также рассмотреть их 3D модели.
-        В разделе Теория находится основная теоретическая информация по курсу астрономии в старших классах.
-        А также находится таблица с переводом астрономических единиц измерения.
-        Оставьте, пожалуйста, отзыв на приложение в RuStore или на сайте GitHub в Releases.
+        Astral Axis is an android reference application to help high school students learn astronomy.
+        The Planets section contains basic information about the planets of the Solar System,
+        where you can read brief information about them, as well as consider their 3D models.
+        The Theory section contains basic theoretical information on the astronomy course in high school.
+        There is also a table with the translation of astronomical units of measurement.
+        Please leave a review on the app in RuStore or on the GitHub site in Releases.
     </string>
 
-    <string name="link_GitHub">
+    <string name="link_GitHub" translatable="false">
         https://github.com/LebedevSergeyVach/AstroAxis
     </string>
 
-    <string name="link_RuStore">
+    <string name="link_RuStore" translatable="false">
         https://www.rustore.ru/catalog/app/com.astro.axis.planet.libgdx
     </string>
 
     Планеты
-    <string name="Sun">Солнце</string>
-    <string name="Mercury">Меркурий</string>
-    <string name="Venus">Венера</string>
-    <string name="Earth">Земля</string>
-    <string name="Mars">Марс</string>
-    <string name="Jupiter">Юпитер</string>
-    <string name="Saturn">Сатурн</string>
-    <string name="Uranium">Уран</string>
-    <string name="Neptune">Нептун</string>
-    <string name="Pluto">Плутон</string>
-    <string name="planetName">planetName</string>
+    <string name="Sun">Sun</string>
+    <string name="Mercury">Mercury</string>
+    <string name="Venus">Venus</string>
+    <string name="Earth">Earth</string>
+    <string name="Mars">Mars</string>
+    <string name="Jupiter">Jupiter</string>
+    <string name="Saturn">Saturn</string>
+    <string name="Uranium">Uranium</string>
+    <string name="Neptune">Neptune</string>
+    <string name="Pluto">Pluto</string>
+    <string name="planetName" translatable="false">planetName</string>
 
     Таблица
-    <string name="name">Название</string>
-    <string name="radius">Радиус</string>
-    <string name="mass">Масса</string>
-    <string name="density">Плотность</string>
-    <string name="average_temperature">Средняя\nтемпература</string>
-    <string name="number_of_satellites">Количество\nспутников</string>
-    <string name="main_satellites">Основные\nспутники</string>
-    <string name="the_speed_of_rotation_around_its_axis">Скорость\nвращения\nвокруг\nсвоей оси</string>
-    <string name="the_speed_of_rotation_around_the_Sun">Скорость\nвращения\nвокруг\nСолнца</string>
-    <string name="rotation_period">Период\nвращения</string>
-    <string name="the_orbital_period">Орбитальный\nпериод</string>
-    <string name="large_semi_axis">Большая\nполуось</string>
-    <string name="rings">Наличие\nколец</string>
-    <string name="quantity_ring">Количество\nколец</string>
-    <string name="giant">Гигант</string>
-    <string name="the_presence_of_an_atmosphere">Наличие\nатмосферы</string>
-    <string name="atmospheric_layers">Слои\nатмосферы</string>
-    <string name="internal_structure">Внутреннее\nстроение</string>
-    <string name="features">Особенности</string>
+    <string name="name">Name</string>
+    <string name="radius">Radius</string>
+    <string name="mass">Weight</string>
+    <string name="density">Density</string>
+    <string name="average_temperature">Average temperature</string>
+    <string name="number_of_satellites">Number of satellites</string>
+    <string name="main_satellites">Main satellites</string>
+    <string name="the_speed_of_rotation_around_its_axis">The speed of rotation around its axis</string>
+    <string name="the_speed_of_rotation_around_the_Sun">The speed of rotation around the Sun</string>
+    <string name="rotation_period">Rotation period</string>
+    <string name="the_orbital_period">The orbital period</string>
+    <string name="large_semi_axis">Large semi-axis</string>
+    <string name="rings">The presence of rings</string>
+    <string name="quantity_ring">Number of rings</string>
+    <string name="giant">Number of rings</string>
+    <string name="the_presence_of_an_atmosphere">The presence of an atmosphere</string>
+    <string name="atmospheric_layers">Layers of the atmosphere</string>
+    <string name="internal_structure">Internal structure</string>
+    <string name="features">Features</string>
 
     Теория
-    <string name="theory_of_astronomy">Теоретический справочник</string>
-    <string name="guide">Справочник</string>
+    <string name="theory_of_astronomy">Theoretical reference book</string>
+    <string name="guide">Guide</string>
 
-    <string name="schematic_representation_of_the_celestial_sphere">Схематическое изображение небесной сферы</string>
-    <string name="horizontal_coordinate_system">Горизонтальная система координат</string>
-
-    <string name="description_schematic_representation_of_the_celestial_sphere">
-            Одной из важнейших астрономических задач, без которой невозможно
-        решение всех остальных задач астрономии, является определение положения
-        небесного светила на небесной сфере.\n\n
-            Люди в древности считали, что все звёзды располагаются на небесной
-        сфере, которая как единое целое вращается вокруг Земли. Это впечатление
-        связано с тем, что в результате огромной удалённости небесных светил человеческий глаз не в состоянии оценить различия в расстояниях до них и они
-        представляются одинаково удалёнными. С развитием научных знаний такой
-        взгляд на небесную сферу отпал. Однако заложенная в древности геометрия
-        небесной сферы в результате развития и совершенствования получила современный вид, в котором и используется в астрометрии.\n\n
-            Небесная сфера – это воображаемая сфера произвольного радиуса, на которую проецируются объекты,
-        видимые на небе, и в центре которой предполагается наблюдатель (рис. 1).\n\n
-            Расстояния на небесной сфере можно измерять только в угловых единицах:
-        в градусах, минутах, секундах или радианах. Например, угловые диаметры Луны и Солнца равны примерно 30 мин.\n\n
-            Одним из основных направлений, относительно которого определяется положение наблюдаемого небесного светила, является отвесная линия.
-        Отвесная линия, проходящая через центр небесной сферы, пересекает её
-        в точках зенита Z и надира Z′. Зенит находится над головой наблюдателя.\n\n
-            Плоскость, проходящая через центр небесной сферы и проведённая перпендикулярно отвесной линии, пересекает небесную сферу по большому кругу
-        – по линии математического (истинного) горизонта.\n\n
-            Полюс мира – точка на небесной сфере, вокруг которой происходит
-        видимое суточное движение звёзд из-за вращения Земли вокруг своей оси.\n\n
-            Ось мира (PP′) – прямая, вокруг которой происходит кажущееся вращение небесной сферы. Она пересекает небесную сферу в северном полюсе
-        мира P и в южном полюсе мира P′. Суточное движение светил происходит
-        так, как если бы вся небесная сфера вращалась как одно целое вокруг оси
-        мира в направлении с востока на запад. Это движение мнимое: оно является
-        отражением истинного движения – вращения Земли вокруг своей оси с запада на восток.\n\n
-            Небесный экватор – большой круг небесной сферы, плоскость которого
-        проходит через центр небесной сферы и перпендикулярна оси мира. Небесный экватор пересекается с горизонтом в точках востока E и запада W.
-        Небесный меридиан – большой круг небесной сферы, проходящий через
-        зенит и полюсы мира. Небесный меридиан пересекает горизонт в точках севера N и юга S.\n\n
-            Угол наклона оси мира к математическому горизонту равен географической широте (j) места наблюдения.
-        Большой круг небесной сферы, по которому происходит видимое годичное движение Солнца, называется эклиптикой. Эклиптика пересекается
-        с экватором в определённых точках: в точке весеннего (^) и в точке осеннего
-        равноденствия (d).
+    <string name="schematic_representation_of_the_celestial_sphere">
+        Schematic representation of the celestial sphere
     </string>
+    <string name="horizontal_coordinate_system">Horizontal coordinate system</string>
 
-    <string name="description_horizontal_coordinate_system">
-            Системы небесных координат используются в астрономии для описания
-        положения светил на небе или точек на воображаемой небесной сфере. В астрономии применяют несколько систем небесных координат, удобных для
-        решения различных научных и практических задач. При этом используются
-        известные плоскости, круги и точки небесной сферы.\n\n
-            Системы небесных координат отличаются друг от друга выбором основной
-        плоскости и началом отсчёта. В зависимости от стоящей задачи может быть
-        более удобно использовать ту или иную систему. Наиболее часто используются
-        горизонтальная и экваториальная системы координат.\n\n
-            Чтобы построить систему небесных координат, следует выбрать некоторую основную плоскость, проходящую через наблюдателя и пересекающую
-        небесную сферу по большому кругу. Затем через полюс этого круга и светило
-        провести ещё один большой круг, пересекающий первый, и в качестве координат принять угловое расстояние от точки пересечения до светила и угловое
-        расстояние от некоторой точки на основном круге до той же точки пересечения. В горизонтальной системе координат основной плоскостью является
-        плоскость горизонта, в экваториальной – плоскость небесного экватора.\n\n
-            Горизонтальная система координат – система небесных координат,
-        в которой центр помещается в месте нахождения наблюдателя на поверхности Земли, а основной плоскостью является плоскость математического горизонта. Одной координатой при этом является либо высота светила h, либо
-        его зенитное расстояние z. Другой координатой является азимут A (рис. 2).\n\n
-            Высота (h)  – одна из координат небесного светила в системе горизонтальных координат;
-        отсчитывается по окружности, проходящей через зенит
-        и светило, и выражается длиной дуги этой окружности от горизонта до светила.
-        Эта координата аналогична географической широте. Высоты отсчитываются в пределах
-        от 0 до +90° к зениту и от 0 до +90° к надиру.
-    </string>
-
-    <string name="link_guide_pdf">
+    <string name="link_guide_pdf" translatable="false">
         https://docs.yandex.ru/docs/view?tm=1712343804&amp;tld=ru&amp;lang=ru&amp;name=65777082.pdf&amp;text=Основные%20иены%20измерения%20астрономия%2011%20класс&amp;url=https%3A%2F%2Fwww.litres.ru%2Fget_pdf_trial%2F65777082.pdf&amp;lr=65&amp;mime=pdf&amp;l10n=ru&amp;sign=5f049789bcb124afa918d794e59be610&amp;keyno=0&amp;serpParams=tm%3D1712343804%26tld%3Dru%26lang%3Dru%26name%3D65777082.pdf%26text%3D%25D0%259E%25D1%2581%25D0%25BD%25D0%25BE%25D0%25B2%25D0%25BD%25D1%258B%25D0%25B5%2B%25D0%25B8%25D0%25B5%25D0%25BD%25D1%258B%2B%25D0%25B8%25D0%25B7%25D0%25BC%25D0%25B5%25D1%2580%25D0%25B5%25D0%25BD%25D0%25B8%25D1%258F%2B%25D0%25B0%25D1%2581%25D1%2582%25D1%2580%25D0%25BE%25D0%25BD%25D0%25BE%25D0%25BC%25D0%25B8%25D1%258F%2B11%2B%25D0%25BA%25D0%25BB%25D0%25B0%25D1%2581%25D1%2581%26url%3Dhttps%253A%2F%2Fwww.litres.ru%2Fget_pdf_trial%2F65777082.pdf%26lr%3D65%26mime%3Dpdf%26l10n%3Dru%26sign%3D5f049789bcb124afa918d794e59be610%26keyno%3D0
+    </string>
+
+    <string name="description_schematic_representation_of_the_celestial_sphere">" One of the most important astronomical
+        tasks, without which it is impossible to solve all other problems of astronomy, is determining the position of a
+        celestial body on the celestial sphere. \n\n In ancient times, people believed that all stars were located on
+        the celestial sphere, which as a whole rotates around the Earth. This impression is due to the fact that, as a
+        result of the immense distance of celestial bodies, the human eye is unable to assess the differences in
+        distances to them, and they appear equally distant. With the development of scientific knowledge, such a view of
+        the celestial sphere faded away. However, the geometry of the celestial sphere laid down in ancient times,
+        through development and refinement, has taken on its modern form, which is used in astrometry. \n\n The
+        celestial sphere is an imaginary sphere of arbitrary radius, onto which objects visible in the sky are
+        projected, with the observer assumed to be at its center (Fig. 1). \n\n Distances on the celestial sphere can
+        only be measured in angular units: degrees, minutes, seconds, or radians. For example, the angular diameters of
+        the Moon and the Sun are approximately 30 minutes. \n\n One of the main directions relative to which the
+        position of a celestial body is determined is the vertical line. The vertical line, passing through the center
+        of the celestial sphere, intersects it at the zenith Z and the nadir Z′. The zenith is directly above the
+        observer. \n\n The plane passing through the center of the celestial sphere and perpendicular to the vertical
+        line intersects the celestial sphere along a great circle – the line of the mathematical (true) horizon. \n\n
+        The celestial pole is the point on the celestial sphere around which the apparent daily motion of the stars
+        occurs due to the Earth's rotation around its axis. \n\n The celestial axis (PP′) is the line around which the
+        apparent rotation of the celestial sphere occurs. It intersects the celestial sphere at the north celestial pole
+        P and the south celestial pole P′. The daily motion of celestial bodies appears as if the entire celestial
+        sphere rotates as a whole around the celestial axis from east to west. This motion is apparent: it reflects the
+        true motion – the Earth's rotation around its axis from west to east. \n\n The celestial equator is a great
+        circle of the celestial sphere, the plane of which passes through the center of the celestial sphere and is
+        perpendicular to the celestial axis. The celestial equator intersects the horizon at the points of east E and
+        west W. The celestial meridian is a great circle of the celestial sphere passing through the zenith and the
+        celestial poles. The celestial meridian intersects the horizon at the points of north N and south S. \n\n The
+        angle between the celestial axis and the mathematical horizon is equal to the geographic latitude (φ) of the
+        observation site. The great circle of the celestial sphere along which the apparent annual motion of the Sun
+        occurs is called the ecliptic. The ecliptic intersects the equator at specific points: the vernal equinox (^)
+        and the autumnal equinox (d)."
+    </string>
+
+    <string name="description_horizontal_coordinate_system">" Systems of celestial coordinates are used in astronomy to
+        describe the position of celestial bodies in the sky or points on an imaginary celestial sphere. Several systems
+        of celestial coordinates are used in astronomy, convenient for solving various scientific and practical
+        problems. The known planes, circles, and points of the celestial sphere are used. \n\n The systems of celestial
+        coordinates differ from each other in the choice of the main plane and the origin of the coordinate system.
+        Depending on the task at hand, it may be more convenient to use one system or another. The most commonly used
+        are the horizontal and equatorial coordinate systems. \n\n To construct a system of celestial coordinates, one
+        should select a certain main plane passing through the observer and intersecting the celestial sphere along a
+        great circle. Then, through the pole of this circle and the celestial body, another great circle is drawn,
+        intersecting the first one, and as coordinates, the angular distance from the point of intersection to the
+        celestial body and the angular distance from a certain point on the main circle to the same point of
+        intersection are taken. In the horizontal coordinate system, the main plane is the plane of the horizon, and in
+        the equatorial coordinate system, it is the plane of the celestial equator. \n\n The horizontal coordinate
+        system is a system of celestial coordinates in which the center is placed at the observer's location on the
+        Earth's surface, and the main plane is the plane of the mathematical horizon. One of the coordinates is either
+        the altitude of the celestial body h or its zenith distance z. The other coordinate is the azimuth A (Fig.
+        2). \n\n Altitude (h) is one of the coordinates of a celestial body in the horizontal coordinate system; it is
+        measured along the circle passing through the zenith and the celestial body and expressed as the length of the
+        arc of this circle from the horizon to the celestial body. This coordinate is analogous to geographic latitude.
+        Altitudes are measured in the range from 0 to +90° towards the zenith and from 0 to +90° towards the nadir."
     </string>
 
 </resources>

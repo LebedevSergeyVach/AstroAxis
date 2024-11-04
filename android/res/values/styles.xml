@@ -1,23 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="android:Theme.Material.Light.NoActionBar.Fullscreen">
-        <item name="android:colorBackground">@color/ic_background_color</item>
-    </style>
-
-    <style name="SamsungOne500C">
-        <item name="android:fontFamily">@font/samsungone500c</item>
-    </style>
-
-    <style name="SamsungOne600C">
-        <item name="android:fontFamily">@font/samsungone600c</item>
-    </style>
 
     <style name="SamsungOne700C">
         <item name="android:fontFamily">@font/samsungone700c</item>
-    </style>
-
-    <style name="SamsungOne800C">
-        <item name="android:fontFamily">@font/samsungone800c</item>
     </style>
 
     Нужен для прозрачного статус бара
