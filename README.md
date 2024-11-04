@@ -11,6 +11,7 @@ The Planets section contains basic information about the planets of the Solar Sy
 where you can read brief information about them, as well as consider their 3D models.
 The Theory section contains basic theoretical information on the astronomy course in high school.
 There is also a table with the translation of astronomical units of measurement.
+Support for English and Russian language of the application depending on the language of the device system.
 
 <details open="open">
     <summary><h2>🚀 The stack of technologies used</h2></summary>
@@ -78,6 +79,7 @@ AstroAxis - android приложение-справочник для помощ�
 где Вы можете прочесть краткую информацию о них, а также рассмотреть их 3D модели.
 В разделе Теория находится основная теоретическая информация по курсу астрономии в старших классах.
 А также находится таблица с переводом астрономических единиц измерения.
+Поддержка английского и русского языков приложения в зависимости от языка системы устройства.
 
 <details open="open">
     <summary><h2>🚀 Стек используемых технологий</h2></summary>
